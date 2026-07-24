@@ -380,44 +380,35 @@ export function ProductInfo({
             })}
           </div>
 
-          {/* Custom Tailoring Toggle */}
-          <div className="mt-8">
+          {/* Custom Tailoring Option Link */}
+          <div className="mt-3">
             <button
+              type="button"
               onClick={() => setSelectedSize(selectedSize === "CUSTOM" ? null : "CUSTOM")}
-              className={`w-full flex items-center justify-between p-4 rounded-sm border transition-all duration-300 ${
-                selectedSize === "CUSTOM" 
-                  ? "bg-[#252525] border-[#252525] text-[#f8f5f0]" 
-                  : "bg-[#f8f5f0] border-[#e8e2d5] text-[#252525] hover:border-[#d4cbb8] hover:bg-[#f3eee5]"
-              }`}
+              className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-[#7a1b38] font-medium transition-colors cursor-pointer"
             >
-              <div className="flex items-center gap-3">
-                <Scissors className={`h-5 w-5 ${selectedSize === "CUSTOM" ? "text-amber-400" : "text-amber-600"}`} />
-                <span className="text-sm font-bold uppercase tracking-widest">
-                  {selectedSize === "CUSTOM" ? "Custom Tailoring Selected" : "Need Custom Tailoring?"}
-                </span>
-              </div>
-              <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${selectedSize === "CUSTOM" ? "rotate-180" : ""}`} />
+              <Scissors className="h-3.5 w-3.5 text-[#d4af37]" />
+              <span className="underline underline-offset-4">
+                {selectedSize === "CUSTOM" ? "Cancel custom tailoring" : "Need custom tailoring or sizing adjustments?"}
+              </span>
             </button>
-            
+
             {selectedSize === "CUSTOM" && (
-              <div className="mt-4 p-5 border border-foreground/10 bg-[#fafafa] rounded-md animate-in fade-in slide-in-from-top-2 duration-300 shadow-sm">
-                <label htmlFor="customNote" className="block text-xs font-bold uppercase tracking-wider text-foreground mb-3">
-                  Your Measurements & Requirements
+              <div className="mt-3 p-4 border border-[#d4af37]/30 bg-[#fdfaf5] rounded-md animate-in fade-in slide-in-from-top-1 duration-200 shadow-sm">
+                <label htmlFor="customNote" className="block text-xs font-bold uppercase tracking-wider text-[#7a1b38] mb-2">
+                  Custom Measurements & Specific Instructions
                 </label>
                 <textarea
                   id="customNote"
-                  rows={3}
+                  rows={2}
                   value={customNote}
                   onChange={(e) => setCustomNote(e.target.value)}
-                  placeholder="E.g., I want the body length to be 54 inches. Or any specific adjustments you need..."
-                  className="w-full p-3.5 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-foreground focus:ring-1 focus:ring-foreground rounded-sm resize-none shadow-inner"
+                  placeholder="Specify body length, chest, shoulder, or sleeve measurements..."
+                  className="w-full p-3 border border-border/80 bg-white text-xs text-foreground transition-all focus:outline-none focus:border-[#7a1b38] rounded-sm resize-none"
                 />
-                <div className="mt-3 flex items-start gap-2 bg-amber-50 p-3 rounded-sm border border-amber-100">
-                  <Info className="h-4 w-4 text-amber-600 shrink-0 mt-0.5" />
-                  <p className="text-[10px] text-amber-800 font-medium leading-relaxed">
-                    Custom tailoring orders require advance confirmation. Our team will verify your measurements via Call/WhatsApp ({BUSINESS.PHONE}).
-                  </p>
-                </div>
+                <p className="mt-2 text-[10px] text-muted-foreground leading-relaxed">
+                  Our team will verify your measurements via WhatsApp ({BUSINESS.PHONE}) before crafting.
+                </p>
               </div>
             )}
           </div>
