@@ -11,6 +11,7 @@ import { useState, useMemo, useEffect } from "react";
 import { Heart, Minus, Plus, ShoppingBag, Truck, ChevronDown, Scissors, Info, ShieldCheck, Star } from "lucide-react";
 import { toast } from "sonner";
 import { formatPrice } from "@/lib/utils";
+import { BUSINESS } from "@/lib/constants";
 import { useCartStore } from "@/store/cart-store";
 import { useWishlistStore } from "@/store/wishlist-store";
 import { SizeGuideModal } from "./size-guide-modal";
@@ -414,7 +415,7 @@ export function ProductInfo({
                 <div className="mt-3 flex items-start gap-2 bg-amber-50 p-3 rounded-sm border border-amber-100">
                   <Info className="h-4 w-4 text-amber-600 shrink-0 mt-0.5" />
                   <p className="text-[10px] text-amber-800 font-medium leading-relaxed">
-                    Custom orders require 100% advance payment (Tk 1020 minimum) for placing the order.
+                    Custom tailoring orders require advance confirmation. Our team will verify your measurements via Call/WhatsApp ({BUSINESS.PHONE}).
                   </p>
                 </div>
               </div>
@@ -575,9 +576,10 @@ export function ProductInfo({
           onToggle={() => toggleSection("shipping")}
         >
           <div className="space-y-2 text-xs md:text-sm text-muted-foreground leading-relaxed">
-            <p>• Dhaka: ৳{String(settings.shipping_dhaka ?? 80)} | Outside Dhaka: ৳{String(settings.shipping_outside ?? 150)}</p>
-            <p>• We are Pre-order based. ৳1,020 advance payment required for inside & outside Dhaka (bKash: 01860744181, 01871919159).</p>
-            <p>• For any custom tailoring order, 100% advance is required.</p>
+            <p>• Inside Dhaka: ৳{String(settings.shipping_dhaka ?? 80)} | Outside Dhaka: ৳{String(settings.shipping_outside ?? 150)}</p>
+            <p>• Cash on Delivery available across Bangladesh (Standard delivery: 2-4 working days).</p>
+            <p>• Pre-order & custom tailoring options available upon request (Call/WhatsApp: {BUSINESS.PHONE}).</p>
+            <p>• For any custom size or tailoring modifications, specify during checkout or contact us at {BUSINESS.PHONE}.</p>
           </div>
         </AccordionItem>
       </div>
