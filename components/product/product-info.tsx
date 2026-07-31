@@ -49,26 +49,47 @@ export function ProductInfo({
   const addItem = useCartStore((state) => state.addItem);
   const openCart = useCartStore((state) => state.openCart);
 
+  // Fallback variant if no variants exist in database
+  const fallbackVariant = useMemo(
+    () => ({
+      id: `default-${product.id}`,
+      sku: `${product.slug || product.id}-default`,
+      size: "Free Size",
+      color: "As Shown",
+      price: product.basePrice,
+      compareAtPrice: product.compareAtPrice,
+      stock: 100,
+      images: product.images,
+    }),
+    [product]
+  );
+
+  const effectiveVariants = useMemo(() => {
+    return product.variants && product.variants.length > 0
+      ? product.variants
+      : [fallbackVariant];
+  }, [product.variants, fallbackVariant]);
+
   // Normalize and deduplicate sizes, defaulting empty/null sizes to "Free Size"
   const availableSizes = useMemo(() => {
     const unique = new Set<string>();
-    product.variants.forEach((v) => {
+    effectiveVariants.forEach((v) => {
       const sizeStr = v.size ? v.size.trim() : "";
       unique.add(sizeStr || "Free Size");
     });
     return Array.from(unique);
-  }, [product.variants]);
+  }, [effectiveVariants]);
 
   // Normalize and deduplicate colors
   const availableColors = useMemo(() => {
     const unique = new Set<string>();
-    product.variants.forEach((v) => {
+    effectiveVariants.forEach((v) => {
       if (v.color && v.color.trim() !== "" && v.color !== "As Shown") {
         unique.add(v.color.trim());
       }
     });
     return Array.from(unique);
-  }, [product.variants]);
+  }, [effectiveVariants]);
 
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
@@ -83,25 +104,23 @@ export function ProductInfo({
 
   // Auto-select first available size and color on load
   useEffect(() => {
-    if (product.variants.length > 0) {
-      if (!selectedSize && availableSizes.length > 0) {
-        const firstInStock = availableSizes.find((s) => {
-          return product.variants.some((v) => (v.size?.trim() || "Free Size") === s && v.stock > 0);
-        });
-        setTimeout(() => setSelectedSize(firstInStock || availableSizes[0] || null), 0);
-      }
-      if (!selectedColor && availableColors.length > 0) {
-        const firstColorInStock = availableColors.find((c) => {
-          return product.variants.some((v) => v.color?.trim() === c && v.stock > 0);
-        });
-        setTimeout(() => setSelectedColor(firstColorInStock || availableColors[0] || null), 0);
-      }
+    if (!selectedSize && availableSizes.length > 0) {
+      const firstInStock = availableSizes.find((s) => {
+        return effectiveVariants.some((v) => (v.size?.trim() || "Free Size") === s && v.stock > 0);
+      });
+      setSelectedSize(firstInStock || availableSizes[0] || "Free Size");
     }
-  }, [product.variants, availableSizes, availableColors, selectedSize, selectedColor]);
+    if (!selectedColor && availableColors.length > 0) {
+      const firstColorInStock = availableColors.find((c) => {
+        return effectiveVariants.some((v) => v.color?.trim() === c && v.stock > 0);
+      });
+      setSelectedColor(firstColorInStock || availableColors[0] || null);
+    }
+  }, [effectiveVariants, availableSizes, availableColors, selectedSize, selectedColor]);
 
   // Find selected variant using normalized matching and fallback
   const selectedVariant = useMemo(() => {
-    let match = product.variants;
+    let match = effectiveVariants;
     if (availableSizes.length > 0 && selectedSize) {
       match = match.filter((v) => (v.size?.trim() || "Free Size") === selectedSize);
     }
@@ -109,8 +128,8 @@ export function ProductInfo({
       match = match.filter((v) => v.color?.trim() === selectedColor);
     }
     const inStockMatch = match.find((v) => v.stock > 0);
-    return inStockMatch ?? match[0] ?? product.variants[0] ?? null;
-  }, [product.variants, selectedSize, selectedColor, availableSizes, availableColors]);
+    return inStockMatch ?? match[0] ?? effectiveVariants[0];
+  }, [effectiveVariants, selectedSize, selectedColor, availableSizes, availableColors]);
 
   const currentPrice = selectedVariant?.price ?? product.basePrice;
   const isInStock = selectedVariant ? selectedVariant.stock > 0 : true;

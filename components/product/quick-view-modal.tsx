@@ -86,57 +86,72 @@ function QuickViewModalInner({ product, onClose }: QuickViewModalInnerProps) {
     };
   }, [product.id]);
 
-  // Derive unique sizes from real variants, defaulting empty/null sizes to "Free Size"
+  // Fallback variant if no variants exist in database
+  const fallbackVariant = useMemo<QuickViewVariant>(
+    () => ({
+      id: `default-${product.id}`,
+      sku: `${product.slug || product.id}-default`,
+      size: "Free Size",
+      color: "As Shown",
+      price: product.price,
+      stock: 100,
+      images: [product.image],
+    }),
+    [product]
+  );
+
+  const effectiveVariants = useMemo<QuickViewVariant[]>(() => {
+    return variants.length > 0 ? variants : [fallbackVariant];
+  }, [variants, fallbackVariant]);
+
+  // Derive unique sizes from effective variants
   const availableSizes = useMemo(() => {
     const unique = new Set<string>();
-    variants.forEach((v) => {
+    effectiveVariants.forEach((v) => {
       const sizeStr = v.size ? v.size.trim() : "";
       unique.add(sizeStr || "Free Size");
     });
     return Array.from(unique);
-  }, [variants]);
+  }, [effectiveVariants]);
 
-  // Derive unique colors from real variants
+  // Derive unique colors from effective variants
   const availableColors = useMemo(() => {
     const unique = new Set<string>();
-    variants.forEach((v) => {
+    effectiveVariants.forEach((v) => {
       if (v.color && v.color.trim() !== "" && v.color !== "As Shown") {
         unique.add(v.color.trim());
       }
     });
     return Array.from(unique);
-  }, [variants]);
+  }, [effectiveVariants]);
 
   // Auto-select first available in-stock size and color when variants load
   useEffect(() => {
-    if (!isLoadingVariants && variants.length > 0) {
-      if (!selectedSize && availableSizes.length > 0) {
-        const firstInStock = availableSizes.find((s) => {
-          return variants.some((v) => (v.size?.trim() || "Free Size") === s && v.stock > 0);
-        });
-        setTimeout(() => setSelectedSize(firstInStock || availableSizes[0] || null), 0);
-      }
-      if (!selectedColor && availableColors.length > 0) {
-        const firstColorInStock = availableColors.find((c) => {
-          return variants.some((v) => v.color?.trim() === c && v.stock > 0);
-        });
-        setTimeout(() => setSelectedColor(firstColorInStock || availableColors[0] || null), 0);
-      }
+    if (!selectedSize && availableSizes.length > 0) {
+      const firstInStock = availableSizes.find((s) => {
+        return effectiveVariants.some((v) => (v.size?.trim() || "Free Size") === s && v.stock > 0);
+      });
+      setSelectedSize(firstInStock || availableSizes[0] || "Free Size");
     }
-  }, [isLoadingVariants, variants, availableSizes, availableColors, selectedSize, selectedColor]);
+    if (!selectedColor && availableColors.length > 0) {
+      const firstColorInStock = availableColors.find((c) => {
+        return effectiveVariants.some((v) => v.color?.trim() === c && v.stock > 0);
+      });
+      setSelectedColor(firstColorInStock || availableColors[0] || null);
+    }
+  }, [effectiveVariants, availableSizes, availableColors, selectedSize, selectedColor]);
 
   // Find selected variant
   const selectedVariant = useMemo(() => {
-    if (variants.length === 0) return null;
-    let match = variants;
+    let match = effectiveVariants;
     if (selectedSize) {
       match = match.filter((v) => (v.size?.trim() || "Free Size") === selectedSize);
     }
     if (selectedColor) {
       match = match.filter((v) => v.color?.trim() === selectedColor);
     }
-    return match.find((v) => v.stock > 0) ?? match[0] ?? variants[0];
-  }, [variants, selectedSize, selectedColor]);
+    return match.find((v) => v.stock > 0) ?? match[0] ?? effectiveVariants[0];
+  }, [effectiveVariants, selectedSize, selectedColor]);
 
   const currentPrice = selectedVariant?.price ?? product.price;
   const isInStock = selectedVariant ? selectedVariant.stock > 0 : true;
