@@ -72,6 +72,7 @@ export function CheckoutForm({ settings = {} }: { settings?: Record<string, any>
   const [paymentSenderNumber, setPaymentSenderNumber] = useState("");
   const [paymentTrxId, setPaymentTrxId] = useState("");
   const [note, setNote] = useState("");
+  const [currentStep, setCurrentStep] = useState<1 | 2>(1);
   const [errors, setErrors] = useState<Partial<Record<keyof AddressData, string>>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [orderPlaced, setOrderPlaced] = useState(false);
@@ -84,6 +85,16 @@ export function CheckoutForm({ settings = {} }: { settings?: Record<string, any>
   const [couponError, setCouponError] = useState("");
   const [couponSuccess, setCouponSuccess] = useState("");
   const [isApplyingCoupon, setIsApplyingCoupon] = useState(false);
+
+  const handleNextStep = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (validateAddress()) {
+      setCurrentStep(2);
+      if (typeof window !== "undefined") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
+  };
 
   // Sync with localStorage on mount
   useEffect(() => {
@@ -219,7 +230,10 @@ export function CheckoutForm({ settings = {} }: { settings?: Record<string, any>
 
   const handlePlaceOrder = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!validateAddress()) return;
+    if (!validateAddress()) {
+      setCurrentStep(1);
+      return;
+    }
     setIsSubmitting(true);
 
     let finalNote = note.trim();
@@ -361,386 +375,494 @@ export function CheckoutForm({ settings = {} }: { settings?: Record<string, any>
       className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 max-w-7xl mx-auto items-start animate-scale-in"
     >
       {/* ── Left Column: Form Details (7 cols) ── */}
-      <div className="lg:col-span-7 space-y-8">
-        {/* Section 1: Delivery Information */}
-        <div className="space-y-6">
-          <div className="flex items-center gap-3">
-            <span className="flex items-center justify-center size-7 rounded-full bg-foreground text-background text-xs font-bold font-mono shadow-sm">
+      <div className="lg:col-span-7 space-y-6">
+        {/* Step Navigation Bar */}
+        <div className="flex items-center gap-2 md:gap-3 bg-[#fdfaf5] p-2 border border-[#d4af37]/30 rounded-lg mb-6 shadow-2xs">
+          <button
+            type="button"
+            onClick={() => setCurrentStep(1)}
+            className={`flex-1 py-3 px-3 md:px-4 rounded-md text-[11px] md:text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer ${
+              currentStep === 1
+                ? "bg-[#7a1b38] text-[#d4af37] shadow-sm"
+                : "bg-white/60 text-muted-foreground hover:text-foreground border border-border/20"
+            }`}
+          >
+            <span
+              className={`size-5 rounded-full text-[10px] flex items-center justify-center font-mono font-bold ${
+                currentStep === 1 ? "bg-[#d4af37] text-[#7a1b38]" : "bg-neutral-200 text-neutral-700"
+              }`}
+            >
               1
             </span>
-            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-foreground">
-              Delivery Information
-            </h2>
-          </div>
+            <span>Step 1: Delivery Details</span>
+          </button>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {/* Full Name */}
-            <div className="space-y-1.5">
-              <label
-                htmlFor="name"
-                className="text-[10px] uppercase tracking-wider text-foreground font-semibold flex items-center gap-1"
-              >
-                Full Name *
-              </label>
-              <input
-                id="name"
-                type="text"
-                value={address.name}
-                onChange={(e) => setAddress({ ...address, name: e.target.value })}
-                className="w-full h-11 px-4 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent rounded-sm placeholder:text-muted-foreground/30 font-medium text-foreground hover:border-accent/40"
-                placeholder="Receiver's Full Name"
-              />
-              {errors.name && (
-                <p className="text-[10px] text-sale font-bold uppercase tracking-wider mt-1 flex items-center gap-1">
-                  <XCircle className="h-3 w-3" /> {errors.name}
-                </p>
-              )}
-            </div>
+          <div className="h-4 w-px bg-border/40" />
 
-            {/* Phone Number */}
-            <div className="space-y-1.5">
-              <label
-                htmlFor="phone"
-                className="text-[10px] uppercase tracking-wider text-foreground font-semibold flex items-center gap-1"
-              >
-                Phone Number *
-              </label>
-              <input
-                id="phone"
-                type="tel"
-                value={address.phone}
-                onChange={(e) => setAddress({ ...address, phone: e.target.value })}
-                className="w-full h-11 px-4 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent rounded-sm placeholder:text-muted-foreground/30 font-medium text-foreground hover:border-accent/40"
-                placeholder="01XXXXXXXXX"
-              />
-              {errors.phone ? (
-                <p className="text-[10px] text-sale font-bold uppercase tracking-wider mt-1 flex items-center gap-1">
-                  <XCircle className="h-3 w-3" /> {errors.phone}
-                </p>
-              ) : (
-                <div className="flex items-center gap-1.5 mt-1 text-emerald-600 bg-emerald-50/50 border border-emerald-100/50 p-2 rounded-sm">
-                  <PhoneCall className="h-3.5 w-3.5 shrink-0" />
-                  <p className="text-[9px] font-semibold uppercase tracking-wider leading-relaxed">
-                    অর্ডার কনফার্ম করতে এই নাম্বারে ফোন করা হবে।
-                  </p>
-                </div>
-              )}
-            </div>
-
-            {/* Email Address */}
-            <div className="md:col-span-2 space-y-1.5">
-              <label
-                htmlFor="email"
-                className="text-[10px] uppercase tracking-wider text-foreground font-semibold"
-              >
-                Email Address *
-              </label>
-              <input
-                id="email"
-                type="email"
-                value={address.email}
-                onChange={(e) => setAddress({ ...address, email: e.target.value })}
-                className="w-full h-11 px-4 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent rounded-sm placeholder:text-muted-foreground/30 font-medium text-foreground hover:border-accent/40"
-                placeholder="customer@email.com"
-              />
-              {errors.email && (
-                <p className="text-[10px] text-sale font-bold uppercase tracking-wider mt-1 flex items-center gap-1">
-                  <XCircle className="h-3 w-3" /> {errors.email}
-                </p>
-              )}
-            </div>
-
-            {/* City (Dropdown selection specialized for BD Shipping) */}
-            <div className="space-y-1.5">
-              <label
-                htmlFor="city"
-                className="text-[10px] uppercase tracking-wider text-foreground font-semibold flex items-center gap-1"
-              >
-                City / Region *
-              </label>
-              <select
-                id="city"
-                value={address.city}
-                onChange={(e) => setAddress({ ...address, city: e.target.value })}
-                className="w-full h-11 px-4 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent rounded-sm font-semibold text-foreground hover:border-accent/40 cursor-pointer"
-              >
-                <option value="Dhaka">Dhaka Division (Inside Dhaka) — ৳{shippingDhaka}</option>
-                <option value="Chattogram">Chattogram Division — ৳{shippingOutside}</option>
-                <option value="Sylhet">Sylhet Division — ৳{shippingOutside}</option>
-                <option value="Rajshahi">Rajshahi Division — ৳{shippingOutside}</option>
-                <option value="Khulna">Khulna Division — ৳{shippingOutside}</option>
-                <option value="Barishal">Barishal Division — ৳{shippingOutside}</option>
-                <option value="Rangpur">Rangpur Division — ৳{shippingOutside}</option>
-                <option value="Mymensingh">Mymensingh Division — ৳{shippingOutside}</option>
-              </select>
-              {errors.city && (
-                <p className="text-[10px] text-sale font-bold uppercase tracking-wider mt-1 flex items-center gap-1">
-                  <XCircle className="h-3 w-3" /> {errors.city}
-                </p>
-              )}
-            </div>
-
-            {/* Area */}
-            <div className="space-y-1.5">
-              <label
-                htmlFor="area"
-                className="text-[10px] uppercase tracking-wider text-foreground font-semibold flex items-center gap-1"
-              >
-                Area / Police Station *
-              </label>
-              <input
-                id="area"
-                type="text"
-                value={address.area}
-                onChange={(e) => setAddress({ ...address, area: e.target.value })}
-                className="w-full h-11 px-4 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent rounded-sm placeholder:text-muted-foreground/30 font-medium text-foreground hover:border-accent/40"
-                placeholder="e.g. Gulshan, Mirpur, Savar, etc."
-              />
-              {errors.area && (
-                <p className="text-[10px] text-sale font-bold uppercase tracking-wider mt-1 flex items-center gap-1">
-                  <XCircle className="h-3 w-3" /> {errors.area}
-                </p>
-              )}
-            </div>
-
-            {/* Street Address */}
-            <div className="md:col-span-2 space-y-1.5">
-              <label
-                htmlFor="street"
-                className="text-[10px] uppercase tracking-wider text-foreground font-semibold flex items-center gap-1"
-              >
-                Full Address (Road, House, Block/Village) *
-              </label>
-              <textarea
-                id="street"
-                rows={2}
-                value={address.street}
-                onChange={(e) => setAddress({ ...address, street: e.target.value })}
-                className="w-full p-4 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent rounded-sm placeholder:text-muted-foreground/30 font-medium text-foreground hover:border-accent/40 resize-none"
-                placeholder="House #12, Road #4, Sector #3, Uttara"
-              />
-              {errors.street && (
-                <p className="text-[10px] text-sale font-bold uppercase tracking-wider mt-1 flex items-center gap-1">
-                  <XCircle className="h-3 w-3" /> {errors.street}
-                </p>
-              )}
-            </div>
-
-            {/* Order Note / Customization Details */}
-            <div className="md:col-span-2 space-y-1.5">
-              <label
-                htmlFor="note"
-                className="text-[10px] uppercase tracking-wider text-foreground font-semibold flex items-center gap-1"
-              >
-                Order Notes / Customization Details (Optional)
-              </label>
-              <textarea
-                id="note"
-                rows={2}
-                value={note}
-                onChange={(e) => setNote(e.target.value)}
-                className="w-full p-4 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent rounded-sm placeholder:text-muted-foreground/30 font-medium text-foreground hover:border-accent/40 resize-none"
-                placeholder="E.g., Please make the length 54 inches. Or any special delivery instructions."
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Section 2: Payment Method */}
-        <div className="space-y-6 pt-8 border-t border-border/40">
-          <div className="flex items-center gap-3">
-            <span className="flex items-center justify-center size-7 rounded-full bg-foreground text-background text-xs font-bold font-mono shadow-sm">
+          <button
+            type="button"
+            onClick={(e) => {
+              if (validateAddress()) {
+                setCurrentStep(2);
+              }
+            }}
+            className={`flex-1 py-3 px-3 md:px-4 rounded-md text-[11px] md:text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer ${
+              currentStep === 2
+                ? "bg-[#7a1b38] text-[#d4af37] shadow-sm"
+                : "bg-white/60 text-muted-foreground hover:text-foreground border border-border/20"
+            }`}
+          >
+            <span
+              className={`size-5 rounded-full text-[10px] flex items-center justify-center font-mono font-bold ${
+                currentStep === 2 ? "bg-[#d4af37] text-[#7a1b38]" : "bg-neutral-200 text-neutral-700"
+              }`}
+            >
               2
             </span>
-            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-foreground">
-              Payment Method
-            </h2>
-          </div>
+            <span>Step 2: Payment & Review</span>
+          </button>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Cash on Delivery */}
-            <div
-              onClick={() => setPaymentMethod("COD")}
-              className={`flex flex-col p-5 border transition-all cursor-pointer rounded-lg relative overflow-hidden select-none ${
-                paymentMethod === "COD"
-                  ? "border-accent bg-[#fcf9f2] ring-1 ring-accent"
-                  : "border-border/60 hover:bg-[#fcfcfc] hover:border-accent/40"
-              }`}
-            >
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-2">
-                  <div className="size-8 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center">
-                    <Truck className="h-4.5 w-4.5" strokeWidth={1.5} />
+        {/* ── STEP 1: Delivery Information ── */}
+        {currentStep === 1 && (
+          <div className="space-y-6 animate-fadeIn">
+            <div className="flex items-center gap-3 border-b border-border/30 pb-3">
+              <span className="flex items-center justify-center size-7 rounded-full bg-foreground text-background text-xs font-bold font-mono shadow-sm">
+                1
+              </span>
+              <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-foreground">
+                Delivery Information
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {/* Full Name */}
+              <div className="space-y-1.5">
+                <label
+                  htmlFor="name"
+                  className="text-[10px] uppercase tracking-wider text-foreground font-semibold flex items-center gap-1"
+                >
+                  Full Name *
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  value={address.name}
+                  onChange={(e) => setAddress({ ...address, name: e.target.value })}
+                  className="w-full h-11 px-4 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent rounded-sm placeholder:text-muted-foreground/30 font-medium text-foreground hover:border-accent/40"
+                  placeholder="Receiver's Full Name"
+                />
+                {errors.name && (
+                  <p className="text-[10px] text-sale font-bold uppercase tracking-wider mt-1 flex items-center gap-1">
+                    <XCircle className="h-3 w-3" /> {errors.name}
+                  </p>
+                )}
+              </div>
+
+              {/* Phone Number */}
+              <div className="space-y-1.5">
+                <label
+                  htmlFor="phone"
+                  className="text-[10px] uppercase tracking-wider text-foreground font-semibold flex items-center gap-1"
+                >
+                  Phone Number *
+                </label>
+                <input
+                  id="phone"
+                  type="tel"
+                  value={address.phone}
+                  onChange={(e) => setAddress({ ...address, phone: e.target.value })}
+                  className="w-full h-11 px-4 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent rounded-sm placeholder:text-muted-foreground/30 font-medium text-foreground hover:border-accent/40"
+                  placeholder="01XXXXXXXXX"
+                />
+                {errors.phone ? (
+                  <p className="text-[10px] text-sale font-bold uppercase tracking-wider mt-1 flex items-center gap-1">
+                    <XCircle className="h-3 w-3" /> {errors.phone}
+                  </p>
+                ) : (
+                  <div className="flex items-center gap-1.5 mt-1 text-emerald-600 bg-emerald-50/50 border border-emerald-100/50 p-2 rounded-sm">
+                    <PhoneCall className="h-3.5 w-3.5 shrink-0" />
+                    <p className="text-[9px] font-semibold uppercase tracking-wider leading-relaxed">
+                      অর্ডার কনফার্ম করতে এই নাম্বারে ফোন করা হবে।
+                    </p>
                   </div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-foreground">
-                    Cash on Delivery
+                )}
+              </div>
+
+              {/* Email Address */}
+              <div className="md:col-span-2 space-y-1.5">
+                <label
+                  htmlFor="email"
+                  className="text-[10px] uppercase tracking-wider text-foreground font-semibold"
+                >
+                  Email Address *
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  value={address.email}
+                  onChange={(e) => setAddress({ ...address, email: e.target.value })}
+                  className="w-full h-11 px-4 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent rounded-sm placeholder:text-muted-foreground/30 font-medium text-foreground hover:border-accent/40"
+                  placeholder="customer@email.com"
+                />
+                {errors.email && (
+                  <p className="text-[10px] text-sale font-bold uppercase tracking-wider mt-1 flex items-center gap-1">
+                    <XCircle className="h-3 w-3" /> {errors.email}
+                  </p>
+                )}
+              </div>
+
+              {/* City */}
+              <div className="space-y-1.5">
+                <label
+                  htmlFor="city"
+                  className="text-[10px] uppercase tracking-wider text-foreground font-semibold flex items-center gap-1"
+                >
+                  City / Region *
+                </label>
+                <select
+                  id="city"
+                  value={address.city}
+                  onChange={(e) => setAddress({ ...address, city: e.target.value })}
+                  className="w-full h-11 px-4 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent rounded-sm font-semibold text-foreground hover:border-accent/40 cursor-pointer"
+                >
+                  <option value="Dhaka">Dhaka Division (Inside Dhaka) — ৳{shippingDhaka}</option>
+                  <option value="Chattogram">Chattogram Division — ৳{shippingOutside}</option>
+                  <option value="Sylhet">Sylhet Division — ৳{shippingOutside}</option>
+                  <option value="Rajshahi">Rajshahi Division — ৳{shippingOutside}</option>
+                  <option value="Khulna">Khulna Division — ৳{shippingOutside}</option>
+                  <option value="Barishal">Barishal Division — ৳{shippingOutside}</option>
+                  <option value="Rangpur">Rangpur Division — ৳{shippingOutside}</option>
+                  <option value="Mymensingh">Mymensingh Division — ৳{shippingOutside}</option>
+                </select>
+                {errors.city && (
+                  <p className="text-[10px] text-sale font-bold uppercase tracking-wider mt-1 flex items-center gap-1">
+                    <XCircle className="h-3 w-3" /> {errors.city}
+                  </p>
+                )}
+              </div>
+
+              {/* Area */}
+              <div className="space-y-1.5">
+                <label
+                  htmlFor="area"
+                  className="text-[10px] uppercase tracking-wider text-foreground font-semibold flex items-center gap-1"
+                >
+                  Area / Police Station *
+                </label>
+                <input
+                  id="area"
+                  type="text"
+                  value={address.area}
+                  onChange={(e) => setAddress({ ...address, area: e.target.value })}
+                  className="w-full h-11 px-4 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent rounded-sm placeholder:text-muted-foreground/30 font-medium text-foreground hover:border-accent/40"
+                  placeholder="e.g. Gulshan, Mirpur, Savar, etc."
+                />
+                {errors.area && (
+                  <p className="text-[10px] text-sale font-bold uppercase tracking-wider mt-1 flex items-center gap-1">
+                    <XCircle className="h-3 w-3" /> {errors.area}
+                  </p>
+                )}
+              </div>
+
+              {/* Street Address */}
+              <div className="md:col-span-2 space-y-1.5">
+                <label
+                  htmlFor="street"
+                  className="text-[10px] uppercase tracking-wider text-foreground font-semibold flex items-center gap-1"
+                >
+                  Full Address (Road, House, Block/Village) *
+                </label>
+                <textarea
+                  id="street"
+                  rows={2}
+                  value={address.street}
+                  onChange={(e) => setAddress({ ...address, street: e.target.value })}
+                  className="w-full p-4 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent rounded-sm placeholder:text-muted-foreground/30 font-medium text-foreground hover:border-accent/40 resize-none"
+                  placeholder="House #12, Road #4, Sector #3, Uttara"
+                />
+                {errors.street && (
+                  <p className="text-[10px] text-sale font-bold uppercase tracking-wider mt-1 flex items-center gap-1">
+                    <XCircle className="h-3 w-3" /> {errors.street}
+                  </p>
+                )}
+              </div>
+
+              {/* Order Note */}
+              <div className="md:col-span-2 space-y-1.5">
+                <label
+                  htmlFor="note"
+                  className="text-[10px] uppercase tracking-wider text-foreground font-semibold flex items-center gap-1"
+                >
+                  Order Notes / Customization Details (Optional)
+                </label>
+                <textarea
+                  id="note"
+                  rows={2}
+                  value={note}
+                  onChange={(e) => setNote(e.target.value)}
+                  className="w-full p-4 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent rounded-sm placeholder:text-muted-foreground/30 font-medium text-foreground hover:border-accent/40 resize-none"
+                  placeholder="E.g., Please make the length 54 inches. Or any special delivery instructions."
+                />
+              </div>
+            </div>
+
+            {/* Next Button */}
+            <div className="pt-4">
+              <button
+                type="button"
+                onClick={handleNextStep}
+                className="flex items-center justify-center w-full h-13 bg-[#7a1b38] hover:bg-[#4a0516] text-[#d4af37] font-bold text-xs uppercase tracking-[0.2em] transition-all duration-300 shadow-md rounded-sm cursor-pointer active:scale-98"
+              >
+                Proceed to Step 2: Payment & Review →
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* ── STEP 2: Payment & Review ── */}
+        {currentStep === 2 && (
+          <div className="space-y-6 animate-fadeIn">
+            {/* Address Summary Badge */}
+            <div className="bg-[#fcf9f2] border border-[#d4af37]/40 rounded-lg p-5 flex items-center justify-between shadow-2xs">
+              <div className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-bold text-[#7a1b38] uppercase tracking-wider">
+                    {address.name || "Receiver Name"}
+                  </span>
+                  <span className="text-xs font-mono font-medium text-foreground">
+                    ({address.phone})
                   </span>
                 </div>
+                <p className="text-[11px] text-muted-foreground leading-tight">
+                  {address.street ? `${address.street}, ` : ""}{address.area ? `${address.area}, ` : ""}{address.city}
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setCurrentStep(1)}
+                className="text-[10px] font-bold uppercase tracking-wider text-[#7a1b38] hover:underline cursor-pointer bg-white px-3 py-1.5 border border-[#7a1b38]/20 rounded-xs shadow-3xs"
+              >
+                Edit Address
+              </button>
+            </div>
+
+            {/* Section 2: Payment Method */}
+            <div className="space-y-6">
+              <div className="flex items-center gap-3 border-b border-border/30 pb-3">
+                <span className="flex items-center justify-center size-7 rounded-full bg-foreground text-background text-xs font-bold font-mono shadow-sm">
+                  2
+                </span>
+                <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-foreground">
+                  Select Payment Method
+                </h2>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* Cash on Delivery */}
                 <div
-                  className={`size-4 rounded-full border flex items-center justify-center ${
+                  onClick={() => setPaymentMethod("COD")}
+                  className={`flex flex-col p-5 border transition-all cursor-pointer rounded-lg relative overflow-hidden select-none ${
                     paymentMethod === "COD"
-                      ? "border-accent bg-accent"
-                      : "border-neutral-300 bg-white"
+                      ? "border-accent bg-[#fcf9f2] ring-1 ring-accent"
+                      : "border-border/60 hover:bg-[#fcfcfc] hover:border-accent/40"
                   }`}
                 >
-                  {paymentMethod === "COD" && <div className="size-1.5 rounded-full bg-white" />}
-                </div>
-              </div>
-              <p className="text-[10px] text-muted-foreground uppercase tracking-widest leading-relaxed">
-                Pay in cash when our delivery professional reaches your address. Fully secure.
-              </p>
-            </div>
-
-            {/* bKash Wallet */}
-            <div
-              onClick={() => setPaymentMethod("BKASH")}
-              className={`flex flex-col transition-all cursor-pointer rounded-lg relative overflow-hidden select-none ${
-                paymentMethod === "BKASH"
-                  ? "border border-accent bg-[#fcf9f2] ring-1 ring-accent"
-                  : "border border-border/60 p-5 hover:bg-[#fcfcfc] hover:border-accent/40"
-              }`}
-            >
-              <div className={paymentMethod === "BKASH" ? "p-5 border-b border-accent/20" : ""}>
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-2">
-                    <div className="size-8 rounded-full bg-pink-50 text-pink-600 flex items-center justify-center">
-                      <CreditCard className="h-4.5 w-4.5" strokeWidth={1.5} />
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-2">
+                      <div className="size-8 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center">
+                        <Truck className="h-4.5 w-4.5" strokeWidth={1.5} />
+                      </div>
+                      <span className="text-xs font-bold uppercase tracking-wider text-foreground">
+                        Cash on Delivery
+                      </span>
                     </div>
-                    <span className="text-xs font-bold uppercase tracking-wider text-foreground">
-                      bKash
-                    </span>
+                    <div
+                      className={`size-4 rounded-full border flex items-center justify-center ${
+                        paymentMethod === "COD"
+                          ? "border-accent bg-accent"
+                          : "border-neutral-300 bg-white"
+                      }`}
+                    >
+                      {paymentMethod === "COD" && <div className="size-1.5 rounded-full bg-white" />}
+                    </div>
                   </div>
-                  <div
-                    className={`size-4 rounded-full border flex items-center justify-center ${
-                      paymentMethod === "BKASH"
-                        ? "border-accent bg-accent"
-                        : "border-neutral-300 bg-white"
-                    }`}
-                  >
-                    {paymentMethod === "BKASH" && <div className="size-1.5 rounded-full bg-white" />}
-                  </div>
+                  <p className="text-[10px] text-muted-foreground uppercase tracking-widest leading-relaxed">
+                    Pay in cash when our delivery professional reaches your address. Fully secure.
+                  </p>
                 </div>
-                <p className="text-[10px] text-muted-foreground uppercase tracking-widest leading-relaxed">
-                  Pay advance securely via bKash Personal.
-                </p>
-              </div>
 
-              {/* bKash Manual Fields */}
-              {paymentMethod === "BKASH" && (
-                <div className="p-5 space-y-4 bg-white/50">
-                  <div className="flex items-center gap-1.5 p-2.5 bg-pink-50 text-pink-700 rounded-sm border border-pink-100">
-                    <PhoneCall className="h-4 w-4 shrink-0" />
-                    <p className="text-[10px] uppercase tracking-wider font-bold">
-                      Send Money to: 017XXXXXXXX (Personal)
+                {/* bKash Wallet */}
+                <div
+                  onClick={() => setPaymentMethod("BKASH")}
+                  className={`flex flex-col transition-all cursor-pointer rounded-lg relative overflow-hidden select-none ${
+                    paymentMethod === "BKASH"
+                      ? "border border-accent bg-[#fcf9f2] ring-1 ring-accent"
+                      : "border border-border/60 p-5 hover:bg-[#fcfcfc] hover:border-accent/40"
+                  }`}
+                >
+                  <div className={paymentMethod === "BKASH" ? "p-5 border-b border-accent/20" : ""}>
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="flex items-center gap-2">
+                        <div className="size-8 rounded-full bg-pink-50 text-pink-600 flex items-center justify-center">
+                          <CreditCard className="h-4.5 w-4.5" strokeWidth={1.5} />
+                        </div>
+                        <span className="text-xs font-bold uppercase tracking-wider text-foreground">
+                          bKash
+                        </span>
+                      </div>
+                      <div
+                        className={`size-4 rounded-full border flex items-center justify-center ${
+                          paymentMethod === "BKASH"
+                            ? "border-accent bg-accent"
+                            : "border-neutral-300 bg-white"
+                        }`}
+                      >
+                        {paymentMethod === "BKASH" && <div className="size-1.5 rounded-full bg-white" />}
+                      </div>
+                    </div>
+                    <p className="text-[10px] text-muted-foreground uppercase tracking-widest leading-relaxed">
+                      Pay advance securely via bKash Personal.
                     </p>
                   </div>
-                  
-                  <div className="space-y-1.5">
-                    <label className="text-[10px] uppercase tracking-wider text-foreground font-semibold">
-                      bKash Sender Number *
-                    </label>
-                    <input
-                      type="tel"
-                      value={paymentSenderNumber}
-                      onChange={(e) => setPaymentSenderNumber(e.target.value)}
-                      className="w-full h-10 px-3 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent rounded-sm placeholder:text-muted-foreground/30 font-medium"
-                      placeholder="e.g. 017XXXXXXXX"
-                    />
-                  </div>
-                  <div className="space-y-1.5">
-                    <label className="text-[10px] uppercase tracking-wider text-foreground font-semibold">
-                      Transaction ID (TrxID) *
-                    </label>
-                    <input
-                      type="text"
-                      value={paymentTrxId}
-                      onChange={(e) => setPaymentTrxId(e.target.value)}
-                      className="w-full h-10 px-3 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent rounded-sm placeholder:text-muted-foreground/30 font-medium"
-                      placeholder="e.g. 8A7B6C5D4E"
-                    />
-                  </div>
+
+                  {/* bKash Manual Fields */}
+                  {paymentMethod === "BKASH" && (
+                    <div className="p-5 space-y-4 bg-white/50">
+                      <div className="flex items-center gap-1.5 p-2.5 bg-pink-50 text-pink-700 rounded-sm border border-pink-100">
+                        <PhoneCall className="h-4 w-4 shrink-0" />
+                        <p className="text-[10px] uppercase tracking-wider font-bold">
+                          Send Money to: 017XXXXXXXX (Personal)
+                        </p>
+                      </div>
+                      
+                      <div className="space-y-1.5">
+                        <label className="text-[10px] uppercase tracking-wider text-foreground font-semibold">
+                          bKash Sender Number *
+                        </label>
+                        <input
+                          type="tel"
+                          value={paymentSenderNumber}
+                          onChange={(e) => setPaymentSenderNumber(e.target.value)}
+                          className="w-full h-10 px-3 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent rounded-sm placeholder:text-muted-foreground/30 font-medium"
+                          placeholder="e.g. 017XXXXXXXX"
+                        />
+                      </div>
+                      <div className="space-y-1.5">
+                        <label className="text-[10px] uppercase tracking-wider text-foreground font-semibold">
+                          Transaction ID (TrxID) *
+                        </label>
+                        <input
+                          type="text"
+                          value={paymentTrxId}
+                          onChange={(e) => setPaymentTrxId(e.target.value)}
+                          className="w-full h-10 px-3 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent rounded-sm placeholder:text-muted-foreground/30 font-medium"
+                          placeholder="e.g. 8A7B6C5D4E"
+                        />
+                      </div>
+                    </div>
+                  )}
                 </div>
+
+                {/* Nagad Wallet */}
+                <div
+                  onClick={() => setPaymentMethod("NAGAD")}
+                  className={`flex flex-col transition-all cursor-pointer rounded-lg relative overflow-hidden select-none ${
+                    paymentMethod === "NAGAD"
+                      ? "border border-accent bg-[#fcf9f2] ring-1 ring-accent"
+                      : "border border-border/60 p-5 hover:bg-[#fcfcfc] hover:border-accent/40"
+                  }`}
+                >
+                  <div className={paymentMethod === "NAGAD" ? "p-5 border-b border-accent/20" : ""}>
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="flex items-center gap-2">
+                        <div className="size-8 rounded-full bg-orange-50 text-orange-600 flex items-center justify-center">
+                          <CreditCard className="h-4.5 w-4.5" strokeWidth={1.5} />
+                        </div>
+                        <span className="text-xs font-bold uppercase tracking-wider text-foreground">
+                          Nagad
+                        </span>
+                      </div>
+                      <div
+                        className={`size-4 rounded-full border flex items-center justify-center ${
+                          paymentMethod === "NAGAD"
+                            ? "border-accent bg-accent"
+                            : "border-neutral-300 bg-white"
+                        }`}
+                      >
+                        {paymentMethod === "NAGAD" && <div className="size-1.5 rounded-full bg-white" />}
+                      </div>
+                    </div>
+                    <p className="text-[10px] text-muted-foreground uppercase tracking-widest leading-relaxed">
+                      Pay advance securely via Nagad Personal.
+                    </p>
+                  </div>
+
+                  {/* Nagad Manual Fields */}
+                  {paymentMethod === "NAGAD" && (
+                    <div className="p-5 space-y-4 bg-white/50">
+                      <div className="flex items-center gap-1.5 p-2.5 bg-orange-50 text-orange-700 rounded-sm border border-orange-100">
+                        <PhoneCall className="h-4 w-4 shrink-0" />
+                        <p className="text-[10px] uppercase tracking-wider font-bold">
+                          Send Money to: 017XXXXXXXX (Personal)
+                        </p>
+                      </div>
+                      
+                      <div className="space-y-1.5">
+                        <label className="text-[10px] uppercase tracking-wider text-foreground font-semibold">
+                          Nagad Sender Number *
+                        </label>
+                        <input
+                          type="tel"
+                          value={paymentSenderNumber}
+                          onChange={(e) => setPaymentSenderNumber(e.target.value)}
+                          className="w-full h-10 px-3 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent rounded-sm placeholder:text-muted-foreground/30 font-medium"
+                          placeholder="e.g. 017XXXXXXXX"
+                        />
+                      </div>
+                      <div className="space-y-1.5">
+                        <label className="text-[10px] uppercase tracking-wider text-foreground font-semibold">
+                          Transaction ID (TrxID) *
+                        </label>
+                        <input
+                          type="text"
+                          value={paymentTrxId}
+                          onChange={(e) => setPaymentTrxId(e.target.value)}
+                          className="w-full h-10 px-3 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent rounded-sm placeholder:text-muted-foreground/30 font-medium"
+                          placeholder="e.g. 8A7B6C5D4E"
+                        />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {paymentError && (
+                <p className="text-[10px] text-sale font-bold uppercase tracking-wider mt-2 flex items-center gap-1">
+                  <XCircle className="h-3.5 w-3.5" /> {paymentError}
+                </p>
               )}
             </div>
 
-            {/* Nagad Wallet */}
-            <div
-              onClick={() => setPaymentMethod("NAGAD")}
-              className={`flex flex-col transition-all cursor-pointer rounded-lg relative overflow-hidden select-none ${
-                paymentMethod === "NAGAD"
-                  ? "border border-accent bg-[#fcf9f2] ring-1 ring-accent"
-                  : "border border-border/60 p-5 hover:bg-[#fcfcfc] hover:border-accent/40"
-              }`}
-            >
-              <div className={paymentMethod === "NAGAD" ? "p-5 border-b border-accent/20" : ""}>
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-2">
-                    <div className="size-8 rounded-full bg-orange-50 text-orange-600 flex items-center justify-center">
-                      <CreditCard className="h-4.5 w-4.5" strokeWidth={1.5} />
-                    </div>
-                    <span className="text-xs font-bold uppercase tracking-wider text-foreground">
-                      Nagad
-                    </span>
-                  </div>
-                  <div
-                    className={`size-4 rounded-full border flex items-center justify-center ${
-                      paymentMethod === "NAGAD"
-                        ? "border-accent bg-accent"
-                        : "border-neutral-300 bg-white"
-                    }`}
-                  >
-                    {paymentMethod === "NAGAD" && <div className="size-1.5 rounded-full bg-white" />}
-                  </div>
-                </div>
-                <p className="text-[10px] text-muted-foreground uppercase tracking-widest leading-relaxed">
-                  Pay advance securely via Nagad Personal.
-                </p>
-              </div>
-
-              {/* Nagad Manual Fields */}
-              {paymentMethod === "NAGAD" && (
-                <div className="p-5 space-y-4 bg-white/50">
-                  <div className="flex items-center gap-1.5 p-2.5 bg-orange-50 text-orange-700 rounded-sm border border-orange-100">
-                    <PhoneCall className="h-4 w-4 shrink-0" />
-                    <p className="text-[10px] uppercase tracking-wider font-bold">
-                      Send Money to: 017XXXXXXXX (Personal)
-                    </p>
-                  </div>
-                  
-                  <div className="space-y-1.5">
-                    <label className="text-[10px] uppercase tracking-wider text-foreground font-semibold">
-                      Nagad Sender Number *
-                    </label>
-                    <input
-                      type="tel"
-                      value={paymentSenderNumber}
-                      onChange={(e) => setPaymentSenderNumber(e.target.value)}
-                      className="w-full h-10 px-3 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent rounded-sm placeholder:text-muted-foreground/30 font-medium"
-                      placeholder="e.g. 017XXXXXXXX"
-                    />
-                  </div>
-                  <div className="space-y-1.5">
-                    <label className="text-[10px] uppercase tracking-wider text-foreground font-semibold">
-                      Transaction ID (TrxID) *
-                    </label>
-                    <input
-                      type="text"
-                      value={paymentTrxId}
-                      onChange={(e) => setPaymentTrxId(e.target.value)}
-                      className="w-full h-10 px-3 border border-border/60 bg-white text-sm transition-all focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent rounded-sm placeholder:text-muted-foreground/30 font-medium"
-                      placeholder="e.g. 8A7B6C5D4E"
-                    />
-                  </div>
-                </div>
-              )}
+            {/* Step 2 Action Buttons */}
+            <div className="pt-4 flex flex-col sm:flex-row gap-3">
+              <button
+                type="button"
+                onClick={() => setCurrentStep(1)}
+                className="flex-1 h-12 border border-[#7a1b38]/30 bg-white text-[#7a1b38] hover:bg-[#7a1b38]/5 font-bold text-xs uppercase tracking-[0.15em] transition-all duration-300 rounded-sm cursor-pointer"
+              >
+                ← Back to Step 1
+              </button>
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="flex-2 h-12 bg-[#7a1b38] hover:bg-[#4a0516] text-[#d4af37] font-bold text-xs uppercase tracking-[0.2em] transition-all duration-300 disabled:opacity-40 cursor-pointer shadow-md rounded-sm active:scale-98 animate-pulse-glow"
+              >
+                {isSubmitting ? "Processing Order..." : "Confirm & Place Order"}
+              </button>
             </div>
           </div>
-          {paymentError && (
-            <p className="text-[10px] text-sale font-bold uppercase tracking-wider mt-2 flex items-center gap-1">
-              <XCircle className="h-3.5 w-3.5" /> {paymentError}
-            </p>
-          )}
-        </div>
+        )}
       </div>
 
       {/* ── Right Column: Sticky Order Summary (5 cols) ── */}
@@ -943,14 +1065,24 @@ export function CheckoutForm({ settings = {} }: { settings?: Record<string, any>
             </div>
           </div>
 
-          {/* Confirm Checkout Action Button */}
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="flex items-center justify-center w-full h-13 bg-[#7a1b38] hover:bg-[#4a0516] text-[#d4af37] font-bold text-xs uppercase tracking-[0.2em] transition-all duration-300 disabled:opacity-40 cursor-pointer shadow-md rounded-sm active:scale-98 animate-pulse-glow"
-          >
-            {isSubmitting ? "Processing Luxury Order..." : "Confirm & Place Order"}
-          </button>
+          {/* Confirm Checkout / Next Step Action Button */}
+          {currentStep === 1 ? (
+            <button
+              type="button"
+              onClick={handleNextStep}
+              className="flex items-center justify-center w-full h-13 bg-[#7a1b38] hover:bg-[#4a0516] text-[#d4af37] font-bold text-xs uppercase tracking-[0.2em] transition-all duration-300 shadow-md rounded-sm cursor-pointer active:scale-98"
+            >
+              Continue to Step 2: Payment →
+            </button>
+          ) : (
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="flex items-center justify-center w-full h-13 bg-[#7a1b38] hover:bg-[#4a0516] text-[#d4af37] font-bold text-xs uppercase tracking-[0.2em] transition-all duration-300 disabled:opacity-40 cursor-pointer shadow-md rounded-sm active:scale-98 animate-pulse-glow"
+            >
+              {isSubmitting ? "Processing Luxury Order..." : "Confirm & Place Order"}
+            </button>
+          )}
 
           {/* Trust assurances for Bangladeshi consumers */}
           <div className="pt-2 grid grid-cols-2 gap-3 border-t border-border/20">
