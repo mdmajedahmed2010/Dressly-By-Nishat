@@ -57,9 +57,6 @@ export function FeaturedSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5 md:p-8">
-                  <p className="text-[10px] uppercase tracking-[0.15em] text-white/60 font-medium mb-1">
-                    {heroProduct.category}
-                  </p>
                   <h3 className="text-lg md:text-xl font-semibold text-white leading-snug">
                     {heroProduct.name}
                   </h3>

@@ -255,11 +255,6 @@ export function ProductInfo({
 
   return (
     <div className="space-y-6">
-      {/* Category/Brand overline */}
-      <p className="text-[10.5px] md:text-[11px] font-editorial-label text-[#d4af37]">
-        DRESSLY BY NISHAT EXCLUSIVE
-      </p>
-
       {/* Product Name */}
       <div>
         <h1 className="text-2xl md:text-3xl lg:text-[32px] font-bold leading-tight tracking-[-0.025em] font-serif text-[#7a1b38]">

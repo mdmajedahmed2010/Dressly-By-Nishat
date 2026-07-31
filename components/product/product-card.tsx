@@ -231,13 +231,6 @@ export function ProductCard({
 
       {/* Product Info — elegant whitespace and typography */}
       <div className="space-y-1">
-        {/* Category overline */}
-        {category && (
-          <p className="text-[9px] md:text-[10px] uppercase tracking-[0.15em] text-muted-foreground font-semibold">
-            {category}
-          </p>
-        )}
-
         {/* Product name */}
         <h3 className="text-[13px] md:text-[14px] font-medium leading-snug text-[#7a1b38] line-clamp-2 transition-colors duration-300 group-hover:text-[#7a1b38] font-serif">
           {name}

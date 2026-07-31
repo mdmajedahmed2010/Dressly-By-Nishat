@@ -296,11 +296,8 @@ function QuickViewModalInner({ product, onClose }: QuickViewModalInnerProps) {
       {/* Right Section: Details (50%) */}
       <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-between overflow-y-auto max-h-[50vh] md:max-h-full bg-white">
         <div className="space-y-5">
-          {/* Category / Brand Overline */}
+          {/* Brand & Product Title */}
           <div>
-            <p className="text-[10px] uppercase tracking-[0.2em] text-accent font-bold mb-1">
-              {product.category || "DRESSLY BY NISHAT LUXURY EDITION"}
-            </p>
             <h2 className="text-xl md:text-2xl font-bold leading-tight font-heading text-foreground tracking-[-0.01em]">
               {product.name}
             </h2>

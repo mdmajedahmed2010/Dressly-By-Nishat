@@ -362,29 +362,6 @@ export function CheckoutForm({ settings = {} }: { settings?: Record<string, any>
     >
       {/* ── Left Column: Form Details (7 cols) ── */}
       <div className="lg:col-span-7 space-y-8">
-        {/* Header indicator */}
-        <div className="flex items-center justify-between border-b border-border/40 pb-4">
-          <h2 className="text-[11px] font-bold uppercase tracking-[0.2em] text-accent">
-            Secure checkout dashboard
-          </h2>
-          <div className="flex items-center gap-1.5 text-muted-foreground text-[10px] uppercase tracking-wider font-bold">
-            <Lock className="h-3.5 w-3.5 text-emerald-600" />
-            256-bit encryption
-          </div>
-        </div>
-
-        {/* Delivery Policy Alert */}
-        <div className="bg-[#f7eded] border border-[#7a1b38]/20 rounded-sm p-4">
-          <h3 className="text-[11px] font-bold text-[#7a1b38] uppercase tracking-wider mb-2 flex items-center gap-1.5">
-            <CheckCircle2 className="h-4 w-4 text-[#7a1b38]" /> Delivery & Return Policy
-          </h3>
-          <ul className="text-[10px] text-[#8b1a2a] space-y-1.5 uppercase tracking-widest leading-relaxed font-semibold list-disc pl-5">
-            <li>Cash on Delivery available all over Bangladesh.</li>
-            <li>Delivery time: Inside Dhaka 1-2 days, Outside Dhaka 2-5 days.</li>
-            <li>No Return | No Exchange after order confirmation. Check products upon delivery.</li>
-          </ul>
-        </div>
-
         {/* Section 1: Delivery Information */}
         <div className="space-y-6">
           <div className="flex items-center gap-3">
