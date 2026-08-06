@@ -20,6 +20,8 @@ function ImageWithSkeleton({
   sizes,
   className = "",
   priority = false,
+  quality,
+  unoptimized,
 }: {
   src: string;
   alt: string;
@@ -27,6 +29,8 @@ function ImageWithSkeleton({
   sizes?: string;
   className?: string;
   priority?: boolean;
+  quality?: number;
+  unoptimized?: boolean;
 }) {
   return (
     <Image
@@ -35,6 +39,8 @@ function ImageWithSkeleton({
       fill={fill}
       sizes={sizes}
       priority={priority}
+      quality={quality}
+      unoptimized={unoptimized}
       className={className}
     />
   );
