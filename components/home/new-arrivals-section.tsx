@@ -1,5 +1,5 @@
 /**
- * BIBAZ — New Arrivals Section (Premium v2.0)
+ * Sew In Style — New Arrivals Section (Premium v2.0)
  * Clean product grid with generous spacing
  * Design Guide: 4-column grid, editorial heading, "View All" link
  */

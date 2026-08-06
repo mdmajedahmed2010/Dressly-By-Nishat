@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Notification Center
+ * Sew In Style — Notification Center
  * Live admin notification dropdown with auto-refresh polling.
  * Derives notifications from orders, low stock, and pending reviews.
  */
@@ -90,7 +90,7 @@ export function NotificationCenter() {
   // Load read state from localStorage
   useEffect(() => {
     try {
-      const stored = localStorage.getItem("bibaz-read-notifications");
+      const stored = localStorage.getItem("Sew In Style-read-notifications");
       if (stored) {
         // eslint-disable-next-line react-hooks/set-state-in-effect
         setReadIds(new Set(JSON.parse(stored)));
@@ -171,7 +171,7 @@ export function NotificationCenter() {
     setUnreadCount((prev) => Math.max(0, prev - 1));
 
     try {
-      localStorage.setItem("bibaz-read-notifications", JSON.stringify(Array.from(newReadIds)));
+      localStorage.setItem("Sew In Style-read-notifications", JSON.stringify(Array.from(newReadIds)));
     } catch {
       // Ignore storage errors
     }
@@ -186,7 +186,7 @@ export function NotificationCenter() {
     setUnreadCount(0);
 
     try {
-      localStorage.setItem("bibaz-read-notifications", JSON.stringify(Array.from(newReadIds)));
+      localStorage.setItem("Sew In Style-read-notifications", JSON.stringify(Array.from(newReadIds)));
     } catch {
       // Ignore storage errors
     }

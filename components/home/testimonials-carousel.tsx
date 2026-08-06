@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Testimonials Carousel (Extracted from home-client.tsx)
+ * Sew In Style — Testimonials Carousel (Extracted from home-client.tsx)
  * Auto-rotating carousel with pause on hover and Framer Motion.
  */
 

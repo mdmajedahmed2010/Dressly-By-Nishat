@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Cart Page Content (Client Component)
+ * Sew In Style — Cart Page Content (Client Component)
  * Premium full cart page with editorial 2-column grid layout, serif headers,
  * and high-end warm-cream sticky order summary panel.
  * SOP §২ — Frontend Plan F4.2-F4.6

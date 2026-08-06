@@ -1,6 +1,6 @@
 /**
- * Dressly By Nishat — Terms & Conditions
- * ড্রেসলি বাই নিশাত | Authentic Pakistani Luxury Suits & Designer Collections
+ * Sew In Style by Farzana — Terms & Conditions
+ * Sew In Style by Farzana | Authentic Pakistani Luxury Suits & Designer Collections
  */
 
 import type { Metadata } from "next";
@@ -8,18 +8,18 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions — Dressly By Nishat | ড্রেসলি বাই নিশাত",
+  title: "Terms & Conditions — Sew In Style by Farzana | Sew In Style by Farzana",
   description:
-    "ড্রেসলি বাই নিশাতের Terms & Conditions। Order Process, Delivery Policy, Cash on Delivery, 3-Day Exchange Policy সম্পর্কে বিস্তারিত জানুন।",
+    "Sew In Style by Farzanaের Terms & Conditions। Order Process, Delivery Policy, Cash on Delivery, 3-Day Exchange Policy সম্পর্কে বিস্তারিত জানুন।",
 };
 
 const sections = [
   {
     id: "01",
     title: "আমাদের পরিচয় ও ব্যবসায়িক মডেল",
-    content: `Dressly By Nishat (ড্রেসলি বাই নিশাত) বাংলাদেশে আসল পাকিস্তানি প্রিমিয়াম থ্রি-পিস, অরেঞ্জা এবং এম্ব্রয়ডার্ড শিফন কালেকশনের একটি নির্ভরযোগ্য বুটিক ব্র্যান্ড।
+    content: `Sew In Style by Farzana বাংলাদেশে প্রিমিয়াম ট্র্যাডিশনাল শাড়ি এবং এক্সক্লুসিভ কালেকশনের একটি নির্ভরযোগ্য বুটিক ব্র্যান্ড।
 
-আমরা ১০০% খাঁটি পাকিস্তানি অরিজিনাল কালেকশন ও ফ্যাব্রিক সরবরাহ করি। সকল ড্রেস প্রিমিয়াম ফিনিশিং এবং নিখুঁত সূচিকর্ম দ্বারা সমৃদ্ধ।`,
+আমরা ১০০% অরিজিনাল প্রিমিয়াম কালেকশন ও ফ্যাব্রিক সরবরাহ করি। সকল ড্রেস প্রিমিয়াম ফিনিশিং এবং নিখুঁত সূচিকর্ম দ্বারা সমৃদ্ধ।`,
   },
   {
     id: "02",
@@ -56,10 +56,10 @@ Cash on Delivery সুবিধায় পণ্য ডেলিভারি 
   {
     id: "05",
     title: "পণ্যের গুণমান ও অরিজিনালিটি",
-    content: `ড্রেসলি বাই নিশাতের প্রতিটি ড্রেস:
-• ১০০% আসল পাকিস্তানি থ্রি-পিস ও প্রিমিয়াম কাপড়ের নিশ্চয়তা
-• উন্নত কাটওয়ার্ক দোপাট্টা ও ভারী এম্ব্রয়ডারি
-• ১৫০K+ হ্যাপি কাস্টমার ও ৯৮% পজিটিভ ফিডব্যাক`,
+    content: `Sew In Style by Farzanaের প্রতিটি ড্রেস:
+• ১০০% আসল ও প্রিমিয়াম কাপড়ের নিশ্চয়তা
+• উন্নত ফিনিশিং ও নিখুঁত কাজ
+• Premium কোয়ালিটি ও পজিটিভ ফিডব্যাক`,
   },
   {
     id: "06",
@@ -71,10 +71,10 @@ Cash on Delivery সুবিধায় পণ্য ডেলিভারি 
     title: "যোগাযোগ",
     content: `যেকোনো প্রশ্ন বা সমস্যার জন্য:
 
-Facebook Page: facebook.com/dresslybynishat
+Facebook Page: facebook.com/sewinstylebyfarzana1
 ফোন/হোয়াটসঅ্যাপ: ${BUSINESS.PHONE}
 ইমেইল: ${BUSINESS.EMAIL}
-ঠিকানা: Plot-12, Road-7, Sector-3, Uttara, Dhaka-1230`,
+ঠিকানা: Shop No: 366, Level-2, Police Plaza Concord, Gulshan-1, Dhaka-1212`,
   },
 ];
 
@@ -94,7 +94,7 @@ export default function TermsPage() {
             Terms & Conditions
           </h1>
           <p className="text-[#fcfaf6]/80 text-sm leading-relaxed">
-            ড্রেসলি বাই নিশাতে কেনাকাটা করার আগে আমাদের শর্তাবলী পড়ুন।
+            Sew In Style by Farzanaে কেনাকাটা করার আগে আমাদের শর্তাবলী পড়ুন।
           </p>
           <p className="text-[#d4af37]/70 text-xs">সর্বশেষ আপডেট: জুলাই ২০২৬</p>
         </div>
@@ -128,7 +128,7 @@ export default function TermsPage() {
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#7a1b38]/5 border border-[#d4af37]/25">
               <span className="text-[#d4af37] text-sm">✦</span>
               <p className="text-xs text-[#7a1b38] font-medium">
-                ড্রেসলি বাই নিশাতে Order করে আপনি এই Terms & Conditions-এ সম্মত হচ্ছেন
+                Sew In Style by Farzanaে Order করে আপনি এই Terms & Conditions-এ সম্মত হচ্ছেন
               </p>
               <span className="text-[#d4af37] text-sm">✦</span>
             </div>

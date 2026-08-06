@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Size Guide Modal
+ * Sew In Style — Size Guide Modal
  * Shows size chart for products
  * SOP §২ — Frontend Plan: "Size Guide: Modal/drawer with size chart"
  */

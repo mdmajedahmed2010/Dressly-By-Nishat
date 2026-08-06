@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Admin Product List Page
+ * Sew In Style — Admin Product List Page
  * SOP §৬F — Product Management
  */
 

@@ -1,5 +1,5 @@
 /**
- * Dressly By Nishat — Collection/Category Page
+ * Sew In Style by Farzana — Collection/Category Page
  * Route: /collections/[slug]
  */
 
@@ -47,7 +47,7 @@ export async function generateMetadata({
   // Check special categories first
   if (specialCategories[slug]) {
     return {
-      title: `${specialCategories[slug].name} — Dressly By Nishat`,
+      title: `${specialCategories[slug].name} — Sew In Style by Farzana`,
       description: specialCategories[slug].description,
     };
   }
@@ -63,10 +63,10 @@ export async function generateMetadata({
     }
   }
 
-  if (!category) return { title: "Collection Not Found — Dressly By Nishat" };
+  if (!category) return { title: "Collection Not Found — Sew In Style by Farzana" };
 
   return {
-    title: `${category.name} — Dressly By Nishat`,
+    title: `${category.name} — Sew In Style by Farzana`,
     description: `Browse our ${category.name} collection — 100% authentic Pakistani luxury suits in Bangladesh.`,
   };
 }
@@ -177,7 +177,7 @@ export default async function CollectionPage({ params, searchParams }: Collectio
     const image =
       Array.isArray(variantImages) && variantImages.length > 0
         ? variantImages[0]
-        : "/images/dressly/image.jpg";
+        : "/images/Sew In Style/image.jpg";
 
     const variantPrice = p.variants?.[0]?.price ? Number(p.variants[0].price) : Number(p.basePrice);
 
@@ -205,7 +205,7 @@ export default async function CollectionPage({ params, searchParams }: Collectio
         
         <div className="relative z-10 max-w-2xl mx-auto">
           <p className="text-[10px] font-bold uppercase tracking-[0.2em] mb-3 text-[#d4af37]/90">
-            Dressly By Nishat Curations
+            Sew In Style by Farzana Curations
           </p>
           <h1 className="text-3xl md:text-5xl font-bold tracking-wide font-serif mb-4 text-white">
             {categoryName}

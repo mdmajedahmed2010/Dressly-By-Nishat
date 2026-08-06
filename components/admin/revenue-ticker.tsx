@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Revenue Ticker (Casino-Style Animated Counter)
+ * Sew In Style — Revenue Ticker (Casino-Style Animated Counter)
  * Premium slot-machine style digits that roll up on page load.
  * SOP-compliant: TypeScript strict, Framer Motion, no new deps.
  */

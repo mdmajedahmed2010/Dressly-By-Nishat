@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Account Sidebar Navigation
+ * Sew In Style — Account Sidebar Navigation
  * Desktop: Vertical sidebar | Mobile: Horizontal scroll tabs
  */
 

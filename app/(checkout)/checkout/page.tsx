@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Checkout Page
+ * Sew In Style — Checkout Page
  * Guest-first checkout flow (no login required)
  * SOP §২ — Frontend Plan PAGE 5
  *

@@ -89,7 +89,7 @@ export function Admin2FAVerify() {
 
         {/* Brand Heading */}
         <h1 className="font-serif text-2xl tracking-[0.2em] text-[#111] dark:text-white uppercase mb-2 text-center">
-          BIBAZ
+          Sew In Style
         </h1>
         <h2 className="text-[10px] font-bold tracking-[0.3em] text-[#d4af37] uppercase mb-6 text-center">
           2-Step Verification

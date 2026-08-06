@@ -19,7 +19,7 @@ export function OrderExportButton() {
         link.setAttribute("href", url);
         link.setAttribute(
           "download",
-          `bibaz_orders_export_${new Date().toISOString().split("T")[0]}.csv`
+          `Sew In Style_orders_export_${new Date().toISOString().split("T")[0]}.csv`
         );
         link.style.visibility = "hidden";
         document.body.appendChild(link);

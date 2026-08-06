@@ -1,8 +1,8 @@
 "use client";
 
 /**
- * Dressly By Nishat — Collections Showcase
- * ড্রেসলি বাই নিশাত | Authentic Pakistani Luxury Suits & Designer Collections
+ * Sew In Style by Farzana — Collections Showcase
+ * Sew In Style by Farzana | Authentic Pakistani Luxury Suits & Designer Collections
  */
 
 import Link from "next/link";

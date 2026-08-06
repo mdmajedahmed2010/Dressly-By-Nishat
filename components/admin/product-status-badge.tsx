@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Product Status Badge Component
+ * Sew In Style — Product Status Badge Component
  */
 
 export function ProductStatusBadge({ status }: { status: string }) {

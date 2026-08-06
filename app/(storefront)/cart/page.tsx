@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Cart Page (Full View)
+ * Sew In Style — Cart Page (Full View)
  * Detailed cart breakdown with coupon input
  * SOP §২ — Frontend Plan F4.2
  *

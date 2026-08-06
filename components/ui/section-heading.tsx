@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Section Heading Component
+ * Sew In Style — Section Heading Component
  * Reusable heading for homepage sections
  */
 

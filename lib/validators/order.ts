@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Order Validation Schemas (Zod)
+ * Sew In Style — Order Validation Schemas (Zod)
  * SOP §৪B — Input Validation
  * 
  * Key: Order করতে login দরকার নেই (Guest-first)

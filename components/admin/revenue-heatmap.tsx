@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Revenue Heatmap
+ * Sew In Style — Revenue Heatmap
  * 7×24 animated grid showing revenue intensity by day and hour.
  * Cells cascade in with stagger; hover shows exact revenue tooltip.
  */

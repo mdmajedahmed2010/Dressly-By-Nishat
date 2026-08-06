@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Addresses Page
+ * Sew In Style — Addresses Page
  * List, add, edit, delete, set default
  * SOP §২ — Frontend Plan F5.8
  */

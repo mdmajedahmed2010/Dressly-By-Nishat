@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Live Pulse Indicator
+ * Sew In Style — Live Pulse Indicator
  * Animated concentric ripple rings for nav items with pending actions.
  * Color-coded: red=urgent, amber=warning, blue=info, green=healthy.
  */

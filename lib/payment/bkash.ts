@@ -1,5 +1,5 @@
 /**
- * BIBAZ — bKash Sandbox Payment Gateway Integration
+ * Sew In Style — bKash Sandbox Payment Gateway Integration
  */
 
 // interface removed

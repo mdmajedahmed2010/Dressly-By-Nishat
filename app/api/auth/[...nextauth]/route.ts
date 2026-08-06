@@ -1,5 +1,5 @@
 /**
- * BIBAZ — NextAuth API Route Handler
+ * Sew In Style — NextAuth API Route Handler
  * Handles: /api/auth/signin, /api/auth/signout, /api/auth/session, etc.
  */
 

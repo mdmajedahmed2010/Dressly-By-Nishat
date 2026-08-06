@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Admin Reports & Premium Sales Analytics
+ * Sew In Style — Admin Reports & Premium Sales Analytics
  * SOP §৪ — High-end analytics, LTV calculation, and product variant resolution
  */
 

@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Order Status Update Form (Admin)
+ * Sew In Style — Order Status Update Form (Admin)
  */
 
 import { updateOrderStatus } from "@/actions/order.actions";

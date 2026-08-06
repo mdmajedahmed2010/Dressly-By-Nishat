@@ -1,6 +1,6 @@
 /**
- * Dressly By Nishat — Contact Us Page
- * ড্রেসলি বাই নিশাত | Authentic Pakistani Luxury Suits & Designer Collections
+ * Sew In Style by Farzana — Contact Us Page
+ * Sew In Style by Farzana | Authentic Pakistani Luxury Suits & Designer Collections
  */
 
 import type { Metadata } from "next";
@@ -9,9 +9,9 @@ import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Dressly By Nishat | ড্রেসলি বাই নিশাত",
+  title: "Contact Us — Sew In Style by Farzana | Sew In Style by Farzana",
   description:
-    "যোগাযোগ করুন ড্রেসলি বাই নিশাতের সাথে। Shop 2/73, Eastern Mollika Shopping Complex, Elephant Road, Dhaka. ফোন: +880 1792-635996. Order-এর জন্য Facebook Inbox করুন।",
+    "যোগাযোগ করুন Sew In Style by Farzana-এর সাথে। Shop No: 366, Level-2, Police Plaza Concord, Gulshan-1, Dhaka. ফোন: +880 1765-290018. Order-এর জন্য Facebook Inbox করুন।",
 };
 
 const contactDetails = [
@@ -25,7 +25,7 @@ const contactDetails = [
   {
     icon: MessageCircle,
     label: "Facebook Inbox",
-    value: "Dressly By Nishat",
+    value: "Sew In Style by Farzana",
     href: BUSINESS.FACEBOOK,
     note: "Order-এর জন্য Inbox করুন — সবচেয়ে দ্রুত সাড়া পাবেন",
   },
@@ -39,9 +39,9 @@ const contactDetails = [
   {
     icon: MapPin,
     label: "ঠিকানা",
-    value: "Shop 2/73, Eastern Mollika",
-    href: "https://maps.google.com/?q=Eastern+Mollika+Elephant+Road+Dhaka",
-    note: "Elephant Road, Dhaka, Bangladesh",
+    value: "Shop No: 366, Level-2, Police Plaza Concord",
+    href: "https://maps.google.com/?q=Police+Plaza+Concord+Gulshan+1+Dhaka",
+    note: "Gulshan-1, Dhaka-1212, Bangladesh",
   },
   {
     icon: Clock,
@@ -58,8 +58,8 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="relative h-[45vh] md:h-[55vh] overflow-hidden bg-[#7a1b38]">
         <Image
-          src="/images/dressly/banner.jpg"
-          alt="Dressly By Nishat — আমাদের সাথে যোগাযোগ করুন"
+          src="/images/banner.png"
+          alt="Sew In Style by Farzana — আমাদের সাথে যোগাযোগ করুন"
           fill
           className="object-cover opacity-40"
           priority
@@ -101,7 +101,7 @@ export default function ContactPage() {
                   <span className="italic font-normal text-[#7a1b38]">কথা বলুন</span>
                 </h2>
                 <p className="text-sm text-neutral-600 leading-relaxed">
-                  Dressly By Nishat — আসল পাকিস্তানি প্রিমিয়াম থ্রি-পিস, অর্গানজা ও শিফন কালেকশনের নির্ভরযোগ্য নাম।
+                  Sew In Style by Farzana — প্রিমিয়াম ট্র্যাডিশনাল শাড়ি ও এক্সক্লুসিভ কালেকশনের নির্ভরযোগ্য নাম।
                   অর্ডার, প্রোডাক্ট বা ডেলিভারি সংক্রান্ত যেকোনো তথ্যের জন্য সরাসরি যোগাযোগ করুন।
                 </p>
               </div>
@@ -187,7 +187,7 @@ export default function ContactPage() {
                     <input
                       type="tel"
                       required
-                      placeholder="+880 1792-635996"
+                      placeholder="+880 1765-290018"
                       className="w-full h-11 px-4 border border-[#d4af37]/30 rounded-sm text-sm text-[#1a0008] placeholder:text-neutral-400 focus:outline-none focus:border-[#7a1b38] focus:ring-1 focus:ring-[#7a1b38]/20 transition-colors bg-[#fdfaf5]"
                     />
                   </div>
@@ -214,7 +214,7 @@ export default function ContactPage() {
                   >
                     <option value="">বিষয় নির্বাচন করুন</option>
                     <option value="order">Order সংক্রান্ত</option>
-                    <option value="product">Pakistani Suit স্টক ও ইনফো</option>
+                    <option value="product">Saree স্টক ও ইনফো</option>
                     <option value="bridal">Bridal Special Collection</option>
                     <option value="delivery">Delivery সংক্রান্ত</option>
                     <option value="other">অন্যান্য</option>
@@ -264,12 +264,12 @@ export default function ContactPage() {
           <p className="text-[10px] uppercase tracking-[0.25em] text-[#7a1b38] font-bold mb-3">
             আমাদের অবস্থান
           </p>
-          <h2 className="text-2xl font-bold text-[#1a0008] mb-2 font-heading">Dressly By Nishat Showroom</h2>
+          <h2 className="text-2xl font-bold text-[#1a0008] mb-2 font-heading">Sew In Style by Farzana Showroom</h2>
           <p className="text-sm text-neutral-600 mb-6 font-medium">
-            Shop 2/73, Eastern Mollika Shopping Complex, Elephant Road, Dhaka, Bangladesh
+            Shop No: 366, Level-2, Police Plaza Concord Shopping Mall, Road No-144, Gulshan-1, Dhaka-1212, Bangladesh
           </p>
           <a
-            href="https://maps.google.com/?q=Eastern+Mollika+Elephant+Road+Dhaka"
+            href="https://maps.google.com/?q=Police+Plaza+Concord+Gulshan+1+Dhaka"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center h-12 px-8 bg-[#7a1b38] text-[#d4af37] text-xs font-bold uppercase tracking-[0.2em] hover:bg-[#5c132a] hover:text-white transition-all duration-300 rounded-sm shadow-luxury hover:shadow-gold-glow border border-[#d4af37]/40 active:scale-[0.98]"

@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Featured Section (Premium v2.0)
+ * Sew In Style — Featured Section (Premium v2.0)
  * Asymmetric editorial layout with premium spacing
  * Design Guide: 1 large hero + 3 standard cards
  */

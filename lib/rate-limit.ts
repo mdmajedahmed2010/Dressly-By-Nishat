@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Rate Limiting (Upstash Redis)
+ * Sew In Style — Rate Limiting (Upstash Redis)
  * SOP §৪D — Abuse Prevention
  *
  * Uses sliding window algorithm via Upstash Redis

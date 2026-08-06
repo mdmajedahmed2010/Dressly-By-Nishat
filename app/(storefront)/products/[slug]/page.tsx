@@ -1,5 +1,5 @@
 /**
- * Dressly By Nishat — Product Detail Page
+ * Sew In Style by Farzana — Product Detail Page
  * Route: /products/[slug]
  */
 
@@ -31,8 +31,8 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
         success: true,
         product: {
           name: demoProduct.name,
-          seoTitle: `${demoProduct.name} — Dressly By Nishat`,
-          seoDesc: `${demoProduct.name} — Authentic Pakistani luxury suit collection by Dressly By Nishat.`,
+          seoTitle: `${demoProduct.name} — Sew In Style by Farzana`,
+          seoDesc: `${demoProduct.name} — Authentic Pakistani luxury suit collection by Sew In Style by Farzana.`,
           description: `${demoProduct.name} — Exclusive authentic Pakistani luxury 3-piece suit with heavy embroidered dupatta and premium fabric.`,
         } as any,
       };
@@ -40,12 +40,12 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   }
 
   if (!result.success || !result.product) {
-    return { title: "Product Not Found — Dressly By Nishat" };
+    return { title: "Product Not Found — Sew In Style by Farzana" };
   }
 
   const product = result.product;
   return {
-    title: product.seoTitle || `${product.name} — Dressly By Nishat`,
+    title: product.seoTitle || `${product.name} — Sew In Style by Farzana`,
     description: (product.seoDesc || product.description).slice(0, 160),
     openGraph: {
       title: product.name,
@@ -109,7 +109,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const images: string[] =
     Array.isArray(variantImages) && variantImages.length > 0
       ? (variantImages as string[])
-      : ["/images/dressly/image.jpg"];
+      : ["/images/Sew In Style/image.jpg"];
 
   // Compute compareAtPrice as a dynamic fallback
   const prices = product.variants.map((v) => Number(v.price));

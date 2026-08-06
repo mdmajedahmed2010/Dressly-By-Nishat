@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Edit Category Page
+ * Sew In Style — Edit Category Page
  * SOP §৬A — Structural Category Edit Container
  */
 

@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Invoice PDF API Route
+ * Sew In Style — Invoice PDF API Route
  * GET /api/invoice/[orderId] — Generate and return PDF invoice
  */
 

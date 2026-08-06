@@ -1,5 +1,5 @@
 /**
- * Dressly By Nishat — All Categories Page
+ * Sew In Style by Farzana — All Categories Page
  * Route: /categories
  */
 
@@ -13,9 +13,9 @@ import { CATEGORIES } from "@/lib/demo-data";
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: "All Categories — Dressly By Nishat",
+  title: "All Categories — Sew In Style by Farzana",
   description:
-    "Browse all Dressly By Nishat Pakistani clothing categories — Luxury Organza Suits, Chiffon Embroidered, Lawn 3-Piece, Festive & Bridal Collections.",
+    "Browse all Sew In Style by Farzana Pakistani clothing categories — Luxury Organza Suits, Chiffon Embroidered, Lawn 3-Piece, Festive & Bridal Collections.",
 };
 
 type CategoryItem = {
@@ -61,7 +61,7 @@ export default async function CategoriesPage() {
         {/* Luxury Header */}
         <div className="mt-10 mb-14 text-center">
           <span className="inline-block px-3.5 py-1 rounded-full border border-[#7a1b38]/50 bg-[#7a1b38]/5 text-[#7a1b38] text-[10px] uppercase tracking-[0.28em] font-bold mb-4">
-            ✦ DRESSLY BY NISHAT EXCLUSIVE ✦
+            ✦ Sew In Style by Farzana EXCLUSIVE ✦
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#7a1b38] font-serif">
             All Categories
@@ -88,7 +88,7 @@ export default async function CategoriesPage() {
                 <Image
                   src={
                     cat.image ||
-                    "/images/dressly/image.jpg"
+                    "/images/Sew In Style/image.jpg"
                   }
                   alt={cat.name}
                   fill

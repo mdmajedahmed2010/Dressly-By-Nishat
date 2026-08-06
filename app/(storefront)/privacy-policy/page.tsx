@@ -1,6 +1,6 @@
 /**
- * Dressly By Nishat — Privacy Policy
- * ড্রেসলি বাই নিশাত | Authentic Pakistani Luxury Suits & Designer Collections
+ * Sew In Style by Farzana — Privacy Policy
+ * Sew In Style by Farzana | Authentic Pakistani Luxury Suits & Designer Collections
  */
 
 import type { Metadata } from "next";
@@ -8,9 +8,9 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Dressly By Nishat | ড্রেসলি বাই নিশাত",
+  title: "Privacy Policy — Sew In Style by Farzana | Sew In Style by Farzana",
   description:
-    "ড্রেসলি বাই নিশাতের Privacy Policy। আমরা আপনার ব্যক্তিগত তথ্যের নিরাপত্তাকে সর্বোচ্চ গুরুত্ব দিই।",
+    "Sew In Style by Farzanaের Privacy Policy। আমরা আপনার ব্যক্তিগত তথ্যের নিরাপত্তাকে সর্বোচ্চ গুরুত্ব দিই।",
 };
 
 const privacySections = [
@@ -116,7 +116,7 @@ export default function PrivacyPolicyPage() {
           {/* Intro */}
           <div className="bg-white border border-[#e8e0d0] rounded-sm p-6 md:p-8 mb-8 border-l-4 border-l-[#d4af37]">
             <p className="text-sm text-muted-foreground leading-relaxed">
-              ড্রেসলি বাই নিশাত (Dressly By Nishat) আপনার গোপনীয়তাকে সম্মান করে। এই Privacy Policy
+              Sew In Style by Farzana আপনার গোপনীয়তাকে সম্মান করে। এই Privacy Policy
               আপনাকে জানাবে আমরা কোন তথ্য সংগ্রহ করি, কীভাবে ব্যবহার করি এবং কীভাবে সুরক্ষিত রাখি।
               আমাদের Website ব্যবহার করে বা Order করে আপনি এই Policy-তে সম্মত হচ্ছেন।
             </p>

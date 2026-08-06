@@ -1,6 +1,6 @@
 /**
- * Dressly By Nishat — 404 Not Found Page
- * ড্রেসলি বাই নিশাত | Authentic Pakistani Luxury Suits & Designer Collections
+ * Sew In Style by Farzana — 404 Not Found Page
+ * Sew In Style by Farzana | Authentic Pakistani Luxury Suits & Designer Collections
  */
 
 import Link from "next/link";
@@ -14,8 +14,8 @@ export default function NotFound() {
         <div className="flex justify-center">
           <div className="relative w-20 h-20 rounded-full overflow-hidden ring-4 ring-[#d4af37]/30 shadow-lg">
             <Image
-              src="/images/dressly/logo.jpg"
-              alt="Dressly By Nishat"
+              src="/images/Sew In Style/logo.jpg"
+              alt="Sew In Style by Farzana"
               fill
               className="object-cover"
             />
@@ -37,7 +37,7 @@ export default function NotFound() {
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#7a1b38]/5 border border-[#d4af37]/20">
           <span className="text-[#d4af37] text-xs">✦</span>
           <p className="text-[11px] text-[#7a1b38] font-medium tracking-wide">
-            Dressly By Nishat — Authentic Pakistani Luxury Suits & Designer Collections
+            Sew In Style by Farzana — Authentic Pakistani Luxury Suits & Designer Collections
           </p>
           <span className="text-[#d4af37] text-xs">✦</span>
         </div>
@@ -69,7 +69,7 @@ export default function NotFound() {
           </Link>
           <span className="text-[#d4af37]">·</span>
           <a
-            href="https://www.facebook.com/dresslybynishat/"
+            href="https://www.facebook.com/sewinstylebyfarzana1/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#7a1b38] transition-colors font-medium"

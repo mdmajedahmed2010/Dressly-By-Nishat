@@ -5,7 +5,7 @@ import { ResetPasswordForm } from "@/components/auth/reset-password-form";
 
 export const metadata: Metadata = {
   title: "Reset Password",
-  description: "Set a new password for your Dressly By Nishat account.",
+  description: "Set a new password for your Sew In Style by Farzana account.",
 };
 
 export default function ResetPasswordPage() {
@@ -14,7 +14,7 @@ export default function ResetPasswordPage() {
       <div className="w-full max-w-md space-y-8">
         <div className="text-center space-y-2">
           <Link href="/" className="inline-block text-2xl font-extrabold tracking-wide uppercase text-[#7a1b38] font-heading">
-            Dressly By Nishat
+            Sew In Style by Farzana
           </Link>
           <h1 className="text-xl font-semibold">Set a new password</h1>
           <p className="text-sm text-muted-foreground">

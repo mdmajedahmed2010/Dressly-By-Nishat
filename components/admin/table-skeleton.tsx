@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Admin Table Skeleton
+ * Sew In Style — Admin Table Skeleton
  * Reusable loading skeleton for admin data tables with gold shimmer animation.
  */
 
@@ -44,7 +44,7 @@ export function TableSkeleton({ rows = 8, columns = 5 }: TableSkeletonProps) {
         </div>
       ))}
 
-      {/* Inline shimmer styles using the BIBAZ gold accent */}
+      {/* Inline shimmer styles using the Sew In Style gold accent */}
       <style jsx>{`
         .shimmer-skeleton {
           background: linear-gradient(90deg, #f3f4f6 25%, #e8dcc8 37%, #f3f4f6 63%);

@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Account Layout
+ * Sew In Style — Account Layout
  * Sidebar navigation (desktop) + tabs (mobile)
  * SOP §২ — Frontend Plan PAGE 7
  */
@@ -11,7 +11,7 @@ import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "My Account",
-  description: "Manage your BIBAZ account, orders, and addresses.",
+  description: "Manage your Sew In Style account, orders, and addresses.",
 };
 
 export default async function AccountLayout({ children }: { children: React.ReactNode }) {

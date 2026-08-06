@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Bulk Stock Management Page
+ * Sew In Style — Bulk Stock Management Page
  * SOP §১০ — Administrative catalog controls
  */
 

@@ -108,7 +108,7 @@ export function SeoAnalyzer({
         </p>
         <div className="max-w-[600px]">
           <p className="text-[14px] text-[#202124] leading-[1.3] truncate mb-[2px]">
-            bibaz.com › products
+            Sew In Style.com › products
           </p>
           <h4 className="text-[20px] text-[#1a0dab] leading-[1.3] truncate hover:underline cursor-pointer mb-1">
             {title || name || "Product Title"}

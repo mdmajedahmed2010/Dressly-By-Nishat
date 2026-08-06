@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Admin Coupons Page
+ * Sew In Style — Admin Coupons Page
  */
 
 import { getCoupons, deleteCoupon } from "@/actions/coupon.actions";

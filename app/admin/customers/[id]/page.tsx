@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Admin Customer Detail Page
+ * Sew In Style — Admin Customer Detail Page
  * SOP §৬F — Customer detail + order history + delete
  */
 

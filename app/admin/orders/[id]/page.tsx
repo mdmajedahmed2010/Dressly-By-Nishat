@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /**
- * BIBAZ — Admin Order Detail Page
+ * Sew In Style — Admin Order Detail Page
  * SOP §৬F — Order detail + status update + timeline
  */
 

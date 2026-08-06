@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Advanced Image Upload Component
+ * Sew In Style — Advanced Image Upload Component
  * Features: Drag & drop, multi-upload, preview, replace, remove
  * Uploads to Cloudinary via /api/upload
  */

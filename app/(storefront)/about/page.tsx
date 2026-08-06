@@ -3,14 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Us — Dressly By Nishat | ড্রেসলি বাই নিশাত",
+  title: "About Us — Sew In Style by Farzana | Sew In Style by Farzana",
   description:
-    "Dressly By Nishat — Authentic Pakistani luxury 3-piece suits, organza, chiffon & festive designer wear in Bangladesh. 52K+ followers, 100% customer recommend rate.",
+    "Sew In Style by Farzana — Premium boutique for saree lovers. Discover our exclusive Kanchipuram sarees and elegant traditional wear at Police Plaza Concord, Gulshan-1.",
   openGraph: {
-    title: "About Us — Dressly By Nishat",
+    title: "About Us — Sew In Style by Farzana",
     description:
-      "Exclusive authentic Pakistani luxury 3-piece suits, organza & chiffon collections in Bangladesh.",
-    images: ["/images/dressly/image.jpg"],
+      "A haven for saree lovers. Premium quality traditional wear, exclusive Kanchipuram sarees, and elegant outfits in Dhaka, Bangladesh.",
+    images: ["/images/logo.jpg"],
   },
 };
 
@@ -20,8 +20,8 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative h-[45vh] md:h-[55vh] overflow-hidden bg-[#7a1b38]">
         <Image
-          src="/images/dressly/banner.jpg"
-          alt="Dressly By Nishat — Luxury Pakistani Suit Store"
+          src="/images/banner.png"
+          alt="Sew In Style by Farzana — Premium Boutique"
           fill
           className="object-cover opacity-45"
           priority
@@ -32,10 +32,10 @@ export default function AboutPage() {
             আমাদের পরিচিতি • ABOUT US
           </span>
           <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight leading-tight mb-3 font-heading">
-            Dressly By Nishat
+            Sew In Style by Farzana
           </h1>
           <p className="text-[#d4af37] text-base md:text-lg font-medium tracking-wide">
-            ড্রেসলি বাই নিশাত — Authentic Pakistani Luxury Suits & Designer Collections
+            Sew In Style by Farzana — A Haven for Saree Lovers
           </p>
         </div>
       </section>
@@ -43,7 +43,7 @@ export default function AboutPage() {
       {/* Tagline Banner */}
       <section className="bg-[#7a1b38] py-6 px-6 text-center border-t border-[#d4af37]/30">
         <p className="text-[#d4af37] text-sm md:text-base font-semibold tracking-wide max-w-3xl mx-auto">
-          ✦ &quot;Exclusive Authentic Pakistani Luxury Suits & Designer Festive Wear Collection in Bangladesh&quot; ✦
+          ✦ &quot;Premium Quality Traditional Wear & Exclusive Kanchipuram Sarees in Bangladesh&quot; ✦
         </p>
       </section>
 
@@ -54,8 +54,8 @@ export default function AboutPage() {
             {/* Image */}
             <div className="relative aspect-[4/5] rounded-sm overflow-hidden shadow-lg border border-[#d4af37]/30">
               <Image
-                src="/images/dressly/image.jpg"
-                alt="Dressly By Nishat collection showcase"
+                src="/images/logo.jpg"
+                alt="Sew In Style by Farzana collection showcase"
                 fill
                 className="object-cover"
               />
@@ -63,7 +63,7 @@ export default function AboutPage() {
                 <p className="text-[#d4af37] text-[9px] uppercase tracking-widest font-bold">
                   Boutique Outlet
                 </p>
-                <p className="text-white text-xs font-medium mt-0.5">Shop 2/73, Eastern Mollika, Elephant Road, Dhaka</p>
+                <p className="text-white text-xs font-medium mt-0.5">Shop No: 366, Level-2, Police Plaza Concord, Gulshan-1</p>
               </div>
             </div>
 
@@ -76,31 +76,31 @@ export default function AboutPage() {
                 <h2 className="text-3xl md:text-4xl font-bold text-[#1a0008] leading-tight mb-4 font-heading">
                   Bangladesh&apos;s Preferred Destination for
                   <br />
-                  <span className="italic font-normal text-[#7a1b38]">Authentic Pakistani Elegance</span>
+                  <span className="italic font-normal text-[#7a1b38]">Sarees & Traditional Wear</span>
                 </h2>
               </div>
 
               <div className="border-l-4 border-[#d4af37] pl-5 py-2 bg-white rounded-r-sm">
                 <p className="text-[#7a1b38] italic text-sm leading-relaxed font-medium">
-                  ড্রেসলি বাই নিশাত — বাংলাদেশের ফ্যাশন সচেতন নারীদের জন্য আসল পাকিস্তানি থ্রি-পিস, অরেঞ্জা এবং এম্ব্রয়ডার্ড শিফন কালেকশনের এক বিশ্বস্ত ঠিকানা।
+                  Sew In Style by Farzana — বাংলাদেশের শাড়ি প্রেমীদের জন্য এক অনন্য নাম, যেখানে আভিজাত্য এবং স্টাইলের এক চমৎকার মেলবন্ধন ঘটেছে।
                 </p>
               </div>
 
               <div className="space-y-4 text-sm text-neutral-600 leading-relaxed">
                 <p>
-                  আমরা বিশ্বাস করি প্রতিটি উৎসব এবং বিশেষ দিন নারীদের জন্য অনন্য। তাই আমরা নিয়ে আসি ১০০% আসল পাকিস্তানি প্রিমিয়াম থ্রি-পিস suits, কাটওয়ার্ক অরেঞ্জা দোপাট্টা এবং প্রিমিয়াম ডিজিটাল প্রিন্ট লন কালেকশন।
+                  আমরা বিশ্বাস করি প্রতিটি শাড়ি একটি গল্প বলে। তাই আমরা আপনাদের জন্য নিয়ে এসেছি প্রিমিয়াম কোয়ালিটির ট্র্যাডিশনাল শাড়ি এবং এক্সক্লুসিভ কাঞ্চিপুরাম কালেকশন।
                 </p>
                 <p>
-                  ঈদ, গায়ে হলুদ, রিসেপশন কিংবা যেকোনো পার্টি — আমাদের অর্গানজা, শিফন এবং ভেলভেট থ্রি-পিস ড্রেসগুলো প্রতিটি অনুষ্ঠানে আপনার সৌন্দর্য বাড়িয়ে দেবে বহুগুণ।
+                  বিয়ে, গায়ে হলুদ, রিসেপশন কিংবা যেকোনো উৎসব — আমাদের শাড়িগুলো প্রতিটি অনুষ্ঠানে আপনার সৌন্দর্য এবং ব্যক্তিত্বকে ফুটিয়ে তুলবে অনন্য মাত্রায়।
                 </p>
               </div>
 
               {/* Stats */}
               <div className="grid grid-cols-3 gap-4 py-5 border-t border-b border-[#d4af37]/30">
                 <div className="text-center">
-                  <p className="text-2xl font-bold text-[#7a1b38]">52K+</p>
+                  <p className="text-2xl font-bold text-[#7a1b38]">Premium</p>
                   <p className="text-[10px] uppercase tracking-wide text-neutral-500 font-bold mt-1">
-                    Followers
+                    Quality
                   </p>
                 </div>
                 <div className="text-center border-x border-[#d4af37]/30">
@@ -136,37 +136,37 @@ export default function AboutPage() {
               {
                 name: "Luxury Organza Suits",
                 desc: "Pakistani organza 3-piece luxury suits with heavy embroidery & cutwork dupatta.",
-                img: "/images/dressly/738759155_122236921304097859_517106012241883883_n.jpg",
+                img: "/images/Sew In Style/738759155_122236921304097859_517106012241883883_n.jpg",
                 href: "/collections/organza-luxury-suits",
               },
               {
                 name: "Chiffon Embroidered Edition",
                 desc: "Pure chiffon designer suites with heavy zari, sequin, and thread needlework.",
-                img: "/images/dressly/739118005_122236931624097859_3877426082371806523_n.jpg",
+                img: "/images/Sew In Style/739118005_122236931624097859_3877426082371806523_n.jpg",
                 href: "/collections/chiffon-embroidered-edition",
               },
               {
                 name: "Premium Lawn 3-Piece",
                 desc: "Breezy luxury lawn collections featuring digital printed & embroidered lawn kameez.",
-                img: "/images/dressly/743361783_122237467322097859_7772378286743424024_n.jpg",
+                img: "/images/Sew In Style/743361783_122237467322097859_7772378286743424024_n.jpg",
                 href: "/collections/premium-lawn-3piece",
               },
               {
                 name: "Festive & Party Wear",
                 desc: "Opulent festive 3-piece suits ideal for Holud, Receptions, and Wedding Party celebrations.",
-                img: "/images/dressly/741464699_122237170736097859_278617854425347317_n.jpg",
+                img: "/images/Sew In Style/741464699_122237170736097859_278617854425347317_n.jpg",
                 href: "/collections/festive-party-wear",
               },
               {
                 name: "Velvet & Silk Pret",
                 desc: "Royal micro-velvet and pure silk unstitched & ready-to-wear designer suits.",
-                img: "/images/dressly/755332243_122238524504097859_5178805553998092524_n.jpg",
+                img: "/images/Sew In Style/755332243_122238524504097859_5178805553998092524_n.jpg",
                 href: "/collections/velvet-silk-pret",
               },
               {
                 name: "Bridal Special Collection",
                 desc: "Exclusive Pakistani bridal suits with heavy hand-embellished zari dupattas.",
-                img: "/images/dressly/753865484_122238524498097859_5700651935379609574_n.jpg",
+                img: "/images/Sew In Style/753865484_122238524498097859_5700651935379609574_n.jpg",
                 href: "/collections/bridal-special-collection",
               },
             ].map((item) => (
@@ -212,8 +212,9 @@ export default function AboutPage() {
               </div>
               <h3 className="font-bold text-[#1a0008] text-sm mb-2">ঠিকানা</h3>
               <p className="text-xs text-neutral-600 leading-relaxed">
-                Shop 2/73, Eastern Mollika,<br />
-                Elephant Road, Dhaka,<br />
+                Shop No: 366, Level-2,<br />
+                Police Plaza Concord,<br />
+                Gulshan-1, Dhaka-1212,<br />
                 Bangladesh
               </p>
             </div>
@@ -226,10 +227,10 @@ export default function AboutPage() {
               </div>
               <h3 className="font-bold text-[#1a0008] text-sm mb-2">ফোন / হোয়াটসঅ্যাপ</h3>
               <a
-                href="tel:+8801792635996"
+                href="tel:+8801765290018"
                 className="text-xs text-[#7a1b38] font-bold hover:underline"
               >
-                +880 1792-635996
+                +880 1765-290018
               </a>
             </div>
 
@@ -241,7 +242,7 @@ export default function AboutPage() {
               </div>
               <h3 className="font-bold text-[#1a0008] text-sm mb-2">Facebook Page</h3>
               <a
-                href="https://www.facebook.com/dresslybynishat/"
+                href="https://www.facebook.com/sewinstylebyfarzana1/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs text-[#7a1b38] font-bold hover:underline"

@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/purity */
 /**
- * BIBAZ — Customer Directory with Lifetime Value (LTV) Segmentation
+ * Sew In Style — Customer Directory with Lifetime Value (LTV) Segmentation
  * SOP §৪ — High-end customer details, spend calculations, and dynamic tier badges
  */
 

@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 /**
- * BIBAZ — Custom Utility Functions
+ * Sew In Style — Custom Utility Functions
  */
 
 import { CURRENCY } from "./constants";

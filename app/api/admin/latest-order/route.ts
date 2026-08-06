@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Latest Order API Route
+ * Sew In Style — Latest Order API Route
  * Lightweight endpoint for polling new orders (Sales Celebration feature).
  * Returns latest confirmed order to detect new sales.
  */

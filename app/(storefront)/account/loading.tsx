@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Account Loading State
+ * Sew In Style — Account Loading State
  */
 
 export default function AccountLoading() {

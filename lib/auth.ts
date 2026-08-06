@@ -1,5 +1,5 @@
 /**
- * BIBAZ — NextAuth.js v5 Configuration
+ * Sew In Style — NextAuth.js v5 Configuration
  * SOP §৪A — Authentication & Authorization
  *
  * Strategy: JWT in HttpOnly Secure Cookies

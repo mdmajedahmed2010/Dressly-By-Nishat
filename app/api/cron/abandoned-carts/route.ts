@@ -6,7 +6,7 @@ import { sendEmail, abandonedCartEmail } from "@/lib/email";
 export async function GET(request: Request) {
   try {
     // 1. Authenticate the cron job strictly
-    const expectedSecret = process.env.CRON_SECRET || "bibaz_cron_secret_2026";
+    const expectedSecret = process.env.CRON_SECRET || "Sew In Style_cron_secret_2026";
     const authHeader = request.headers.get("authorization");
     const querySecret = new URL(request.url).searchParams.get("secret");
     if (authHeader !== `Bearer ${expectedSecret}` && querySecret !== expectedSecret) {

@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Forgot Password Form
+ * Sew In Style — Forgot Password Form
  * Email input → sends reset link
  * SOP §৪A — Password Reset (expires 1 hour)
  */

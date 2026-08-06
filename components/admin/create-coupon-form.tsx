@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Create Coupon Form (Admin)
+ * Sew In Style — Create Coupon Form (Admin)
  */
 
 import { createCoupon } from "@/actions/coupon.actions";
@@ -59,7 +59,7 @@ export function CreateCouponForm() {
           required
           minLength={3}
           maxLength={20}
-          placeholder="e.g., BIBAZ20, EID2026"
+          placeholder="e.g., Sew In Style20, EID2026"
           className="w-full rounded-lg border border-gray-200 px-3 py-2.5 font-mono text-sm uppercase focus:border-gray-400 focus:outline-none"
         />
         <p className="mt-1 text-xs text-gray-400">Will be auto-converted to uppercase</p>

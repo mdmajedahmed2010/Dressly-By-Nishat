@@ -59,17 +59,17 @@ function createDummyPrisma() {
             if (prop === "siteSetting" && modelProp === "findUnique") {
               const whereKey = args[0]?.where?.key;
               if (whereKey === "store_favicon") return { key: "store_favicon", value: "/favicon.ico" };
-              if (whereKey === "store_logo") return { key: "store_logo", value: "/images/dressly/logo.jpg" };
+              if (whereKey === "store_logo") return { key: "store_logo", value: "/images/Sew In Style/logo.jpg" };
             }
             if (prop === "siteSetting" && modelProp === "findMany") {
               return [
-                { key: "store_name", value: "Dressly By Nishat" },
+                { key: "store_name", value: "Sew In Style by Farzana" },
                 { key: "store_phone", value: "+880 1792-635996" },
-                { key: "store_email", value: "info@dresslybynishat.com" },
+                { key: "store_email", value: "info@sewinstylebyfarzana1.com" },
                 { key: "store_address", value: "Shop 2/73, Eastern Mollika Shopping Complex, Elephant Road, Dhaka, Bangladesh" },
                 { key: "shipping_dhaka", value: "80" },
                 { key: "shipping_outside", value: "150" },
-                { key: "social_facebook", value: "https://www.facebook.com/dresslybynishat/" },
+                { key: "social_facebook", value: "https://www.facebook.com/sewinstylebyfarzana1/" },
               ];
             }
 

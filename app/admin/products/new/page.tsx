@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Admin Create Product Page
+ * Sew In Style — Admin Create Product Page
  */
 
 import { getCategories } from "@/actions/product.actions";

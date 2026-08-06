@@ -1,5 +1,5 @@
 /**
- * Dressly By Nishat — Storefront Layout
+ * Sew In Style by Farzana — Storefront Layout
  * Wraps all public-facing pages with Header + Footer + Mobile Bottom Nav + StorefrontOverlays
  */
 
@@ -59,11 +59,11 @@ function MaintenancePage() {
           Scheduled Maintenance
         </h1>
         <p className="text-muted-foreground text-sm leading-relaxed">
-          Dressly By Nishat is currently undergoing scheduled updates to provide you with a more premium shopping
+          Sew In Style by Farzana is currently undergoing scheduled updates to provide you with a more premium shopping
           experience. We will be back online shortly. Thank you for your patience!
         </p>
         <div className="pt-6 border-t border-[#d4af37]/30 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} Dressly By Nishat. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Sew In Style by Farzana. All rights reserved.</p>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Order Detail Page
+ * Sew In Style — Order Detail Page
  * Items, status timeline, tracking info
  * SOP §২ — Frontend Plan F5.7
  */

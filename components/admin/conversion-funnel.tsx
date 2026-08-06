@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Conversion Funnel
+ * Sew In Style — Conversion Funnel
  * Animated funnel: Visitors → Cart Adds → Checkout Starts → Orders.
  * Trapezoid shapes narrow with stagger animation; drop-off shown.
  */

@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Mobile Filter Drawer (Premium v2.0)
+ * Sew In Style — Mobile Filter Drawer (Premium v2.0)
  * Full-screen overlay for mobile filters
  */
 

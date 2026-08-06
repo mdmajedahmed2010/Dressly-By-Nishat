@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Sitemap
+ * Sew In Style — Sitemap
  * SOP §৭ — SEO Infrastructure
  * Auto-generated sitemap for search engines
  *

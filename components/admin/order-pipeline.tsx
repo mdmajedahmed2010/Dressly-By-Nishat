@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Order Flow Pipeline
+ * Sew In Style — Order Flow Pipeline
  * Horizontal animated pipeline showing order stages with flowing connectors.
  * Particle dots travel along connector lines simulating orders in transit.
  */

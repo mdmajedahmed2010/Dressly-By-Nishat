@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Login Page
+ * Sew In Style — Login Page
  * SOP §২ — Frontend Plan PAGE 6
  *
  * Route: /login
@@ -13,7 +13,7 @@ import { LoginForm } from "@/components/auth/login-form";
 
 export const metadata: Metadata = {
   title: "Login",
-  description: "Sign in to your Dressly By Nishat account.",
+  description: "Sign in to your Sew In Style by Farzana account.",
 };
 
 export default function LoginPage() {
@@ -23,7 +23,7 @@ export default function LoginPage() {
         {/* Header */}
         <div className="text-center space-y-2">
           <Link href="/" className="inline-block text-2xl font-extrabold tracking-wide uppercase text-[#7a1b38] font-heading">
-            Dressly By Nishat
+            Sew In Style by Farzana
           </Link>
           <h1 className="text-xl font-semibold">Welcome back</h1>
           <p className="text-sm text-muted-foreground">Sign in to your account to continue</p>

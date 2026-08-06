@@ -5,8 +5,8 @@ import { getProducts } from "@/actions/product.actions";
 import { ALL_PRODUCTS } from "@/lib/demo-data";
 
 export const metadata: Metadata = {
-  title: "Search Products — BIBAZ",
-  description: "Search exclusive BIBAZ collections, dresses, bridal wear, and accessories.",
+  title: "Search Products — Sew In Style",
+  description: "Search exclusive Sew In Style collections, dresses, bridal wear, and accessories.",
 };
 
 interface SearchPageProps {

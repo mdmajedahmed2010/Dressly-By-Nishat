@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Product Validation Schemas (Zod)
+ * Sew In Style — Product Validation Schemas (Zod)
  * SOP §৪B — Input Validation (Admin operations)
  */
 

@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Change Password Page
+ * Sew In Style — Change Password Page
  * Current + New + Confirm password
  * SOP §২ — Frontend Plan F5.10
  */

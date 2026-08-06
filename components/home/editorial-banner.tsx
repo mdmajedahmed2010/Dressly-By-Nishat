@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Editorial Banner (Premium v2.0)
+ * Sew In Style — Editorial Banner (Premium v2.0)
  * Full-width lifestyle image with text overlay
  * Design Guide: Between product sections for visual break
  */

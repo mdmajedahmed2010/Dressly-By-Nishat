@@ -2,9 +2,9 @@
 "use client";
 
 /**
- * Dressly By Nishat — Home UI Orchestrator
- * ড্রেসলি বাই নিশাত | Authentic Pakistani Luxury Suits & Designer Collections
- * All images served locally from /public/images/dressly/
+ * Sew In Style by Farzana — Home UI Orchestrator
+ * Sew In Style by Farzana | Authentic Pakistani Luxury Suits & Designer Collections
+ * All images served locally from /public/images/Sew In Style/
  */
 
 import { HeroSlider, type HeroSlide } from "@/components/home/hero-slider";
@@ -17,7 +17,7 @@ import { TestimonialsCarousel, type Testimonial } from "@/components/home/testim
 import { EditorialSection } from "@/components/home/editorial-section";
 import { ASSETS } from "@/lib/demo-data";
 
-/* ──────────────── Static Data — Dressly By Nishat ──────────────── */
+/* ──────────────── Static Data — Sew In Style by Farzana ──────────────── */
 
 // Hero slides featuring local brand images
 const heroSlides: HeroSlide[] = [
@@ -63,21 +63,21 @@ const heroSlides: HeroSlide[] = [
 const testimonials: Testimonial[] = [
   {
     quote:
-      "Dressly By Nishat-এর Pakistani Organza 3-piece ড্রেসটা হাতে পেয়ে আমি জাস্ট অভিভূত! কাপড়ের কোয়ালিটি এবং দোপাট্টার এমব্রয়ডারি অবিকল ছবির মত। ঢাকায় ১ দিনেই ডেলিভারি পেয়েছি!",
+      "Sew In Style by Farzana-এর Pakistani Organza 3-piece ড্রেসটা হাতে পেয়ে আমি জাস্ট অভিভূত! কাপড়ের কোয়ালিটি এবং দোপাট্টার এমব্রয়ডারি অবিকল ছবির মত। ঢাকায় ১ দিনেই ডেলিভারি পেয়েছি!",
     author: "Tazreen Nahar",
     designation: "Verified Buyer — Dhanmondi, Dhaka",
     stars: 5,
   },
   {
     quote:
-      "পাকিস্তানি ডিজাইনার ড্রেস কিনতে আমি সবসময় Dressly By Nishat কেই ট্রাস্ট করি। শিফন হেভি ওয়ার্কের ড্রেসটা বিয়ের অনুষ্ঠানে সবাই অনেক পছন্দ করেছে। ১০০% অরিজিনাল কালেকশন!",
+      "পাকিস্তানি ডিজাইনার ড্রেস কিনতে আমি সবসময় Sew In Style by Farzana কেই ট্রাস্ট করি। শিফন হেভি ওয়ার্কের ড্রেসটা বিয়ের অনুষ্ঠানে সবাই অনেক পছন্দ করেছে। ১০০% অরিজিনাল কালেকশন!",
     author: "Nusrat Jahan",
     designation: "Verified Buyer — Chattogram",
     stars: 5,
   },
   {
     quote:
-      "ইনবক্সে খুব দ্রুত রেসপন্স করেছে এবং ক্যাশ অন ডেলিভারিতে শপিং করতে পেরে খুব ভালো লেগেছে। ড্রেসলি বাই নিশাত সত্যিই প্রিমিয়াম কোয়ালিটি প্রদান করে।",
+      "ইনবক্সে খুব দ্রুত রেসপন্স করেছে এবং ক্যাশ অন ডেলিভারিতে শপিং করতে পেরে খুব ভালো লেগেছে। Sew In Style by Farzana সত্যিই প্রিমিয়াম কোয়ালিটি প্রদান করে।",
     author: "Farhana Sharmin",
     designation: "Verified Buyer — Uttara, Dhaka",
     stars: 5,
@@ -110,7 +110,7 @@ export function HomeUI({
     ASSETS.img16,
   ];
 
-  /* ── Map DB categories OR use Dressly By Nishat defaults ── */
+  /* ── Map DB categories OR use Sew In Style by Farzana defaults ── */
   const defaultCategories: CategoryItem[] = [
     {
       name: "Luxury Organza Suits",
@@ -160,7 +160,7 @@ export function HomeUI({
         }))
       : defaultCategories;
 
-  /* ── Map DB products OR use Dressly By Nishat defaults ── */
+  /* ── Map DB products OR use Sew In Style by Farzana defaults ── */
   const defaultProducts: ArrivalsProduct[] = [
     {
       id: "dn-p1",

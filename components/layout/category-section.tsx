@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Category Section (Premium v2.0)
+ * Sew In Style — Category Section (Premium v2.0)
  * Asymmetric editorial grid with real images
  * Design Guide: 1 large (60%) + 2 small stacked, OR 2x2
  */

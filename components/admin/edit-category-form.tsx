@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Edit Category Form (Admin)
+ * Sew In Style — Edit Category Form (Admin)
  * SOP §৬A — Structural Category edit with loops prevention & verified upload
  */
 

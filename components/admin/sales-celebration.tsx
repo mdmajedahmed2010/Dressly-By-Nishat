@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Sales Celebration System
+ * Sew In Style — Sales Celebration System
  * Confetti burst + animated banner when a new order is detected via polling.
  * Uses existing canvas-confetti dependency. Polls /api/admin/latest-order every 30s.
  */

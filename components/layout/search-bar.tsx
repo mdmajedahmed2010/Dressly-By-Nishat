@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Search Bar Component (v2.1)
+ * Sew In Style — Search Bar Component (v2.1)
  * Dual-mode search:
  *   Desktop: Persistent inline search input visible in the header bar
  *   Mobile:  Full-screen luxury search overlay (opens from icon tap)

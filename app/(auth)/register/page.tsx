@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Register Page
+ * Sew In Style — Register Page
  * SOP §২ — Frontend Plan PAGE 6
  *
  * Route: /register
@@ -14,7 +14,7 @@ import { Loader2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Create Account",
-  description: "Create your Dressly By Nishat account for a better shopping experience.",
+  description: "Create your Sew In Style by Farzana account for a better shopping experience.",
 };
 
 export default function RegisterPage() {
@@ -24,11 +24,11 @@ export default function RegisterPage() {
         {/* Header */}
         <div className="text-center space-y-2">
           <Link href="/" className="inline-block text-2xl font-extrabold tracking-wide uppercase text-[#7a1b38] font-heading">
-            Dressly By Nishat
+            Sew In Style by Farzana
           </Link>
           <h1 className="text-xl font-semibold">Create your account</h1>
           <p className="text-sm text-muted-foreground">
-            Join Dressly By Nishat for a personalized shopping experience
+            Join Sew In Style by Farzana for a personalized shopping experience
           </p>
         </div>
 

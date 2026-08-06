@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Hero Slider (Premium v5.0)
+ * Sew In Style — Hero Slider (Premium v5.0)
  * Cinematic hero with Ken Burns, parallax, animated progress line, and slide counter.
  */
 
@@ -146,6 +146,8 @@ export function HeroSlider({ slides }: HeroSliderProps) {
                 alt={slide.title}
                 sizes="100vw"
                 priority={index === 0}
+                quality={100}
+                unoptimized
                 className="object-cover"
               />
               <div

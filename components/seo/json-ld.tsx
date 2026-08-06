@@ -1,5 +1,5 @@
 /**
- * BIBAZ — JSON-LD Structured Data Components
+ * Sew In Style — JSON-LD Structured Data Components
  * SOP §৭ — SEO (Organization, BreadcrumbList, Product schemas)
  */
 
@@ -9,9 +9,9 @@ export function OrganizationJsonLd() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Dressly By Nishat",
+    name: "Sew In Style by Farzana",
     url: BUSINESS.WEBSITE,
-    logo: `${BUSINESS.WEBSITE}/images/dressly/logo.jpg`,
+    logo: `${BUSINESS.WEBSITE}/images/Sew In Style/logo.jpg`,
     contactPoint: {
       "@type": "ContactPoint",
       telephone: BUSINESS.PHONE,
@@ -41,7 +41,7 @@ export function WebsiteJsonLd() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Dressly By Nishat",
+    name: "Sew In Style by Farzana",
     url: BUSINESS.WEBSITE,
     potentialAction: {
       "@type": "SearchAction",

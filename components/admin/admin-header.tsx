@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Admin Header (Modernized)
+ * Sew In Style — Admin Header (Modernized)
  * NotificationCenter, CommandPalette (⌘K), Mobile Sidebar, User Menu
  */
 

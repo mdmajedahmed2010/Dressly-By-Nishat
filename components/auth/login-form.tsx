@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Login Form Component
+ * Sew In Style — Login Form Component
  * Email + Password with validation
  * SOP §৪A — Authentication
  */

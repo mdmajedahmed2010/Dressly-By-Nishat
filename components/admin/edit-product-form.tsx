@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Edit Product Form (Admin)
+ * Sew In Style — Edit Product Form (Admin)
  * Includes product details + variant management
  */
 

@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Customer Lifetime Value (CLV) Widget
+ * Sew In Style — Customer Lifetime Value (CLV) Widget
  * Top 5 customers by total spend, linked to customer details.
  */
 

@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Nagad Sandbox Payment Gateway Integration
+ * Sew In Style — Nagad Sandbox Payment Gateway Integration
  */
 
 // interface removed

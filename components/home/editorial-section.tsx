@@ -1,8 +1,8 @@
 "use client";
 
 /**
- * Dressly By Nishat — Short Brand Story Section (Homepage)
- * ড্রেসলি বাই নিশাত | Authentic Pakistani Luxury Suits & Designer Collections
+ * Sew In Style by Farzana — Short Brand Story Section (Homepage)
+ * Sew In Style by Farzana | Authentic Pakistani Luxury Suits & Designer Collections
  */
 
 import Link from "next/link";
@@ -36,8 +36,8 @@ export function EditorialSection() {
             <div className="absolute -inset-2 bg-[#7a1b38]/5 border border-[#d4af37]/30 rounded-sm -z-10 translate-x-3 translate-y-3 transition-transform duration-500 group-hover:translate-x-1.5 group-hover:translate-y-1.5" />
             <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-neutral-100 shadow-md">
               <Image
-                src="/images/dressly/image.jpg"
-                alt="Dressly By Nishat — Luxury Pakistani Fashion"
+                src="/images/Sew In Style/image.jpg"
+                alt="Sew In Style by Farzana — Luxury Pakistani Fashion"
                 fill
                 className="object-cover transition-transform duration-[1200ms] group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -61,7 +61,7 @@ export function EditorialSection() {
               <div className="flex items-center gap-2">
                 <Sparkles className="h-4 w-4 text-[#7a1b38] animate-pulse" />
                 <p className="text-[10px] uppercase tracking-[0.25em] text-[#7a1b38] font-bold">
-                  ABOUT DRESSLY BY NISHAT
+                  ABOUT Sew In Style by Farzana
                 </p>
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-[1.15] text-[#1a0008] font-heading">
@@ -70,7 +70,7 @@ export function EditorialSection() {
             </div>
 
             <p className="text-sm md:text-base text-neutral-600 leading-relaxed">
-              Dressly By Nishat is a premier boutique destination in Bangladesh dedicated to curated authentic Pakistani luxury 3-piece suits, organza, embroidered chiffon, and designer lawn collections.
+              Sew In Style by Farzana is a premier boutique destination in Bangladesh dedicated to curated authentic Pakistani luxury 3-piece suits, organza, embroidered chiffon, and designer lawn collections.
             </p>
 
             <div className="p-4 md:p-5 bg-white border-l-4 border-[#7a1b38] rounded-sm shadow-sm">

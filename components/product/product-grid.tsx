@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Product Grid Component
+ * Sew In Style — Product Grid Component
  * Responsive grid layout for product cards
  * SOP §২ — Frontend Plan F3.5
  */

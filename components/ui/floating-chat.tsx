@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Phone, X } from "lucide-react";
 
 export function FloatingChat({ 
-  phoneNumber = "8801792635996",
-  messengerUrl = "https://m.me/dresslybynishat"
+  phoneNumber = "8801765290018",
+  messengerUrl = "https://m.me/sewinstylebyfarzana1"
 }: { 
   phoneNumber?: string;
   messengerUrl?: string;
@@ -58,7 +58,7 @@ export function FloatingChat({
                   href={messengerUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative flex h-11 w-11 items-center justify-center rounded-full bg-[#0084FF] text-white shadow-lg hover:scale-110 transition-transform duration-200"
+                  className="group relative flex h-11 w-11 items-center justify-center rounded-full bg-[#7a1b38] text-white shadow-lg hover:scale-110 hover:shadow-[#d4af37]/30 transition-all duration-300 border border-[#d4af37]/20"
                   aria-label="Contact on Messenger"
                 >
                   <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
@@ -73,7 +73,7 @@ export function FloatingChat({
                 <motion.a
                   variants={itemVariants}
                   href={phoneHref}
-                  className="group relative flex h-11 w-11 items-center justify-center rounded-full bg-[#1e8b46] text-white shadow-lg hover:scale-110 transition-transform duration-200"
+                  className="group relative flex h-11 w-11 items-center justify-center rounded-full bg-[#7a1b38] text-white shadow-lg hover:scale-110 hover:shadow-[#d4af37]/30 transition-all duration-300 border border-[#d4af37]/20"
                   aria-label="Call Us"
                 >
                   <Phone className="h-5 w-5 fill-current" />
@@ -88,7 +88,7 @@ export function FloatingChat({
                   href={waHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative flex h-11 w-11 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg hover:scale-110 transition-transform duration-200"
+                  className="group relative flex h-11 w-11 items-center justify-center rounded-full bg-[#7a1b38] text-[#d4af37] shadow-lg hover:scale-110 hover:shadow-[#d4af37]/30 transition-all duration-300 border border-[#d4af37]/20"
                   aria-label="Contact on WhatsApp"
                 >
                   <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round">

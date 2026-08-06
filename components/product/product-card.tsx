@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Product Card (Premium v4.0)
+ * Sew In Style — Product Card (Premium v4.0)
  * Enhanced with wishlist button, low stock badge, and hover action bar.
  */
 
@@ -146,6 +146,8 @@ export function ProductCard({
           alt={name}
           fill
           sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          quality={95}
+          unoptimized
           className={`object-cover transition-all duration-300 ${
             canShowSecondary
               ? "group-hover:opacity-0 scale-100 group-hover:scale-105"
@@ -162,6 +164,8 @@ export function ProductCard({
             alt={`${name} detail view`}
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+            quality={95}
+            unoptimized
             className={`object-cover absolute inset-0 transition-all duration-[800ms] cubic-bezier(0.25, 1, 0.5, 1) scale-103 group-hover:scale-100 ${
               canShowSecondary ? "opacity-0 group-hover:opacity-100" : "opacity-0"
             }`}

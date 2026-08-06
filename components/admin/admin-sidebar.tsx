@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Admin Sidebar Navigation (Advanced)
+ * Sew In Style — Admin Sidebar Navigation (Advanced)
  * Collapsible, animated, with active indicators and section grouping
  */
 
@@ -174,7 +174,7 @@ export function AdminSidebar({ role, counts }: AdminSidebarProps) {
           </div>
           {!collapsed && (
             <div className="flex flex-col">
-              <span className="text-sm font-bold tracking-tight text-white">BIBAZ</span>
+              <span className="text-sm font-bold tracking-tight text-white">Sew In Style</span>
               <span className="text-[10px] font-medium text-gray-400">Admin Panel</span>
             </div>
           )}
@@ -310,7 +310,7 @@ export function AdminSidebar({ role, counts }: AdminSidebarProps) {
 
         {!collapsed ? (
           <div className="rounded-lg bg-gray-900 p-3 border border-gray-800">
-            <p className="text-[11px] font-semibold text-gray-300">BIBAZ Admin</p>
+            <p className="text-[11px] font-semibold text-gray-300">Sew In Style Admin</p>
             <p className="text-[10px] text-gray-500">v1.2 • Premium Suite Live</p>
           </div>
         ) : (

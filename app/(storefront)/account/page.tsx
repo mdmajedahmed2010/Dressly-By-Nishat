@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Account Profile Page
+ * Sew In Style — Account Profile Page
  * View + edit personal info
  * SOP §২ — Frontend Plan F5.5
  */

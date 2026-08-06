@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Product Info Component (Premium v4.1 - Production Ready)
+ * Sew In Style — Product Info Component (Premium v4.1 - Production Ready)
  * Upgraded with 50+ color map support, modern Pill/Chip color swatches,
  * and robust auto-fallback for empty sizes/colors to prevent "No sizes available" bug.
  */
@@ -181,10 +181,10 @@ export function ProductInfo({
 
     if (selectedSize === "CUSTOM" && customNote.trim()) {
       // Append to pending custom notes for checkout
-      const existing = localStorage.getItem("dressly_pending_custom_note") || localStorage.getItem("bibaz_pending_custom_note") || "";
+      const existing = localStorage.getItem("Sew In Style_pending_custom_note") || localStorage.getItem("Sew In Style_pending_custom_note") || "";
       const prefix = existing ? existing + "\n\n" : "";
       localStorage.setItem(
-        "dressly_pending_custom_note",
+        "Sew In Style_pending_custom_note",
         `${prefix}Customization for ${product.name} (${colorToUse}): ${customNote}`
       );
     }
@@ -229,10 +229,10 @@ export function ProductInfo({
 
     if (selectedSize === "CUSTOM" && customNote.trim()) {
       // Append to pending custom notes for checkout
-      const existing = localStorage.getItem("dressly_pending_custom_note") || localStorage.getItem("bibaz_pending_custom_note") || "";
+      const existing = localStorage.getItem("Sew In Style_pending_custom_note") || localStorage.getItem("Sew In Style_pending_custom_note") || "";
       const prefix = existing ? existing + "\n\n" : "";
       localStorage.setItem(
-        "dressly_pending_custom_note",
+        "Sew In Style_pending_custom_note",
         `${prefix}Customization for ${product.name} (${colorToUse}): ${customNote}`
       );
     }
@@ -478,7 +478,7 @@ export function ProductInfo({
             className={`flex-1 flex items-center justify-center gap-2 md:gap-2.5 min-h-[50px] md:min-h-[54px] px-3 md:px-4 text-[11px] md:text-xs font-extrabold uppercase tracking-[0.16em] md:tracking-[0.2em] transition-all duration-300 rounded-md cursor-pointer active:scale-[0.98] ${
               !isInStock
                 ? "bg-neutral-200 border border-neutral-300 text-neutral-500 font-bold opacity-100 cursor-not-allowed"
-                : "bg-[#fdfaf5] hover:bg-[#f9f1e5] text-[#7a1b38] border border-[#d4af37]/45 shadow-sm hover:border-[#d4af37] hover:-translate-y-0.5"
+                : "bg-[#7a1b38] hover:bg-[#4a0516] text-[#d4af37] border border-[#d4af37]/50 shadow-md hover:shadow-lg hover:-translate-y-0.5"
             }`}
           >
             <ShoppingBag className="h-4 w-4 text-[#d4af37] shrink-0" />

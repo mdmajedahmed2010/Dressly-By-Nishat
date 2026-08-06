@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Advanced Admin Audit Log Portal
+ * Sew In Style — Advanced Admin Audit Log Portal
  * SOP §৪F — Every administrative action logged & diffed
  */
 

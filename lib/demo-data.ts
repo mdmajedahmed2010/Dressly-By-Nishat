@@ -1,39 +1,39 @@
 /**
- * Dressly By Nishat — Demo Product Data & Catalog
- * ড্রেসলি বাই নিশাত | Premium Authentic Pakistani Luxury Suits & Designer Collections
- * All images served locally from /public/images/dressly/
+ * Sew In Style by Farzana — Demo Product Data & Catalog
+ * Sew In Style by Farzana | Premium Authentic Pakistani Luxury Suits & Designer Collections
+ * All images served locally from /public/images/Sew In Style/
  */
 
 import type { ProductCardProps } from "@/components/product/product-card";
 
 // ═══════════════════════════════════════════
-// Asset image paths (local, /public/images/dressly/)
+// Asset image paths (local, /public/images/Sew In Style/)
 // ═══════════════════════════════════════════
 export const ASSETS = {
-  logo: "/images/dressly/logo.jpg",
-  banner: "/images/dressly/banner.jpg",
-  heroImage: "/images/dressly/image.jpg",
-  img1: "/images/dressly/738759155_122236921304097859_517106012241883883_n.jpg",
-  img2: "/images/dressly/739118005_122236931624097859_3877426082371806523_n.jpg",
-  img3: "/images/dressly/741013326_122237048960097859_1450421403179542127_n.jpg",
-  img4: "/images/dressly/741464699_122237170736097859_278617854425347317_n.jpg",
-  img5: "/images/dressly/742511207_122237346122097859_3524625643911112596_n.jpg",
-  img6: "/images/dressly/743361783_122237467322097859_7772378286743424024_n.jpg",
-  img7: "/images/dressly/744440731_122237467388097859_4068411682530066851_n.jpg",
-  img8: "/images/dressly/744489498_122237449064097859_5220168349294219248_n.jpg",
-  img9: "/images/dressly/744821667_122237416682097859_9087124423473984627_n.jpg",
-  img10: "/images/dressly/747207965_122237713568097859_195467211344747453_n.jpg",
-  img11: "/images/dressly/749270081_122238087032097859_2182749398724445258_n.jpg",
-  img12: "/images/dressly/749301006_122237995466097859_8545484027614355806_n.jpg",
-  img13: "/images/dressly/749767513_122238389168097859_237109816836633158_n.jpg",
-  img14: "/images/dressly/750459479_122237897606097859_4824815076508209682_n.jpg",
-  img15: "/images/dressly/751752184_122238273056097859_7536252098882377208_n.jpg",
-  img16: "/images/dressly/753865484_122238524498097859_5700651935379609574_n.jpg",
-  img17: "/images/dressly/755332243_122238524504097859_5178805553998092524_n.jpg",
+  logo: "/images/logo_hq.jpg",
+  banner: "/images/banner.png",
+  heroImage: "/images/728637838_1615289890013049_2658242435754841211_n_hq.jpg",
+  img1: "/images/728637838_1615289890013049_2658242435754841211_n_hq.jpg",
+  img2: "/images/728760397_1682205009864129_8763326460166934979_n_hq.jpg",
+  img3: "/images/729139236_1750557062791862_7222316665621924949_n_hq.jpg",
+  img4: "/images/730749821_1615344106197724_7135912925053885740_n_hq.jpg",
+  img5: "/images/731031468_1904149560270689_3282748209998895624_n_hq.jpg",
+  img6: "/images/731093476_27189608070706041_6749501909087384384_n_hq.jpg",
+  img7: "/images/731808899_1334308374831843_7222113530617211681_n_hq.jpg",
+  img8: "/images/732675634_955669617521797_2773457596092441066_n_hq.jpg",
+  img9: "/images/733157142_1920826938559927_4791560861567041341_n_hq.jpg",
+  img10: "/images/733209465_1571577664628184_4158579103692325024_n_hq.jpg",
+  img11: "/images/733443298_1029214096246585_915180975862635647_n_hq.jpg",
+  img12: "/images/734384536_1562219958955593_3047803468069606658_n_hq.jpg",
+  img13: "/images/734664308_1669348764338039_7400307755056890326_n_hq.jpg",
+  img14: "/images/734685929_959330833809272_6343974826253921814_n_hq.jpg",
+  img15: "/images/731031468_1904149560270689_3282748209998895624_n_hq.jpg",
+  img16: "/images/732675634_955669617521797_2773457596092441066_n_hq.jpg",
+  img17: "/images/733157142_1920826938559927_4791560861567041341_n_hq.jpg",
 };
 
 // ═══════════════════════════════════════════
-// Product Categories — Dressly By Nishat
+// Product Categories — Sew In Style by Farzana
 // ═══════════════════════════════════════════
 export const CATEGORIES = [
   {
@@ -111,7 +111,7 @@ export const FEATURED_COLLECTIONS = [
 ];
 
 // ═══════════════════════════════════════════
-// All Products — Dressly By Nishat Catalog
+// All Products — Sew In Style by Farzana Catalog
 // ═══════════════════════════════════════════
 export const ALL_PRODUCTS: ProductCardProps[] = [
   // --- ORGANZA LUXURY SUITS ---

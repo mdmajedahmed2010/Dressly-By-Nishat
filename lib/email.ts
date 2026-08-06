@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Email System (Provider-Agnostic)
+ * Sew In Style — Email System (Provider-Agnostic)
  * SOP §১১ — Email & Notification System
  *
  * Phase 1: Hostinger SMTP (free, 500/day)
@@ -147,14 +147,14 @@ export function orderConfirmationEmail(data: {
 
   return {
     to: "", // Will be set by caller
-    subject: `Order Confirmed — ${data.orderNumber} | Dressly By Nishat`,
+    subject: `Order Confirmed — ${data.orderNumber} | Sew In Style by Farzana`,
     html: `
       <!DOCTYPE html>
       <html>
       <head><meta charset="utf-8"></head>
       <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #333;">
         <div style="text-align: center; padding: 20px 0; border-bottom: 2px solid #7a1b38;">
-          <h1 style="margin: 0; font-size: 24px; letter-spacing: 2px; color: #7a1b38;">Dressly By Nishat</h1>
+          <h1 style="margin: 0; font-size: 24px; letter-spacing: 2px; color: #7a1b38;">Sew In Style by Farzana</h1>
         </div>
 
         <div style="padding: 30px 0;">
@@ -230,14 +230,14 @@ export function orderShippedEmail(data: {
 }): EmailOptions {
   return {
     to: "",
-    subject: `Your Order ${data.orderNumber} Has Been Shipped! | Dressly By Nishat`,
+    subject: `Your Order ${data.orderNumber} Has Been Shipped! | Sew In Style by Farzana`,
     html: `
       <!DOCTYPE html>
       <html>
       <head><meta charset="utf-8"></head>
       <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #333;">
         <div style="text-align: center; padding: 20px 0; border-bottom: 2px solid #7a1b38;">
-          <h1 style="margin: 0; font-size: 24px; letter-spacing: 2px; color: #7a1b38;">Dressly By Nishat</h1>
+          <h1 style="margin: 0; font-size: 24px; letter-spacing: 2px; color: #7a1b38;">Sew In Style by Farzana</h1>
         </div>
 
         <div style="padding: 30px 0;">
@@ -267,19 +267,19 @@ export function orderShippedEmail(data: {
 export function welcomeEmail(data: { name: string }): EmailOptions {
   return {
     to: "",
-    subject: `Welcome to Dressly By Nishat! 🎉`,
+    subject: `Welcome to Sew In Style by Farzana! 🎉`,
     html: `
       <!DOCTYPE html>
       <html>
       <head><meta charset="utf-8"></head>
       <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #333;">
         <div style="text-align: center; padding: 20px 0; border-bottom: 2px solid #7a1b38;">
-          <h1 style="margin: 0; font-size: 24px; letter-spacing: 2px; color: #7a1b38;">Dressly By Nishat</h1>
+          <h1 style="margin: 0; font-size: 24px; letter-spacing: 2px; color: #7a1b38;">Sew In Style by Farzana</h1>
         </div>
 
         <div style="padding: 30px 0;">
           <h2 style="color: #111;">Welcome, ${data.name}! 🎉</h2>
-          <p>Thank you for creating an account with Dressly By Nishat. We're excited to have you!</p>
+          <p>Thank you for creating an account with Sew In Style by Farzana. We're excited to have you!</p>
 
           <p>With your account, you can:</p>
           <ul style="color: #555; line-height: 1.8;">
@@ -350,14 +350,14 @@ export function abandonedCartEmail(data: {
 }): EmailOptions {
   return {
     to: "",
-    subject: `Did you forget something? 🛒 | Dressly By Nishat`,
+    subject: `Did you forget something? 🛒 | Sew In Style by Farzana`,
     html: `
       <!DOCTYPE html>
       <html>
       <head><meta charset="utf-8"></head>
       <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #333;">
         <div style="text-align: center; padding: 20px 0; border-bottom: 2px solid #7a1b38;">
-          <h1 style="margin: 0; font-size: 24px; letter-spacing: 2px; color: #7a1b38;">Dressly By Nishat</h1>
+          <h1 style="margin: 0; font-size: 24px; letter-spacing: 2px; color: #7a1b38;">Sew In Style by Farzana</h1>
         </div>
 
         <div style="padding: 30px 0; text-align: center;">

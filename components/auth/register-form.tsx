@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Register Form Component
+ * Sew In Style — Register Form Component
  * Name, Email, Phone, Password, Confirm Password with luxury visual guidelines.
  * SOP §৪A — Authentication + client validation
  */

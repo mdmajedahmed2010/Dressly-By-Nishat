@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Auth Validation Schemas (Zod)
+ * Sew In Style — Auth Validation Schemas (Zod)
  * SOP §৪B — Input Validation
  */
 

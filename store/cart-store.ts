@@ -95,7 +95,7 @@ export const useCartStore = create<CartStore>()(
       },
     }),
     {
-      name: "dressly-cart-storage",
+      name: "Sew In Style-cart-storage",
       partialize: (state) => ({ items: state.items }),
     }
   )

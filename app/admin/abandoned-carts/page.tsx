@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
 
 export const metadata = {
-  title: "Abandoned Carts | BIBAZ Admin",
+  title: "Abandoned Carts | Sew In Style Admin",
   description: "Recover lost sales and manage abandoned carts",
 };
 

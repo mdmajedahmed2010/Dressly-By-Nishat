@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Error Page (500)
+ * Sew In Style — Error Page (500)
  * Branded error boundary
  * SOP §২ — Frontend Plan F6.6
  */

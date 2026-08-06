@@ -1,5 +1,5 @@
 /**
- * BIBAZ — My Orders Page
+ * Sew In Style — My Orders Page
  * Order list with status badges
  * SOP §২ — Frontend Plan F5.6
  */

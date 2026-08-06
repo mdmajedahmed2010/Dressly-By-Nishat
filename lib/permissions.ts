@@ -1,5 +1,5 @@
 /**
- * Dressly By Nishat — Hierarchical Role-Based Access Control (RBAC)
+ * Sew In Style by Farzana — Hierarchical Role-Based Access Control (RBAC)
  * Centralized permissions mapping and verification
  */
 
@@ -11,7 +11,7 @@ import { prisma } from "./db";
 export type RoleLevel = "CUSTOMER" | "STAFF" | "MANAGER" | "ADMIN" | "SUPER_ADMIN";
 
 export function sign2FACookie(userId: string): string {
-  const secret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET || "dressly-by-nishat-default-secret";
+  const secret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET || "Sew In Style-by-nishat-default-secret";
   const hmac = crypto.createHmac("sha256", secret).update(userId).digest("hex");
   return `${userId}.${hmac}`;
 }

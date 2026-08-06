@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Bulk Stock Management Form (Interactive)
+ * Sew In Style — Bulk Stock Management Form (Interactive)
  * Premium spreadsheet-like interface for managing stock quantities
  */
 

@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Order Quick View Drawer
+ * Sew In Style — Order Quick View Drawer
  * Slide-out drawer from the right showing order details inline.
  */
 

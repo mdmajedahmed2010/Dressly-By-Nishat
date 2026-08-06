@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Forgot Password Page
+ * Sew In Style — Forgot Password Page
  * SOP §২ — Frontend Plan PAGE 6
  *
  * Route: /forgot-password
@@ -12,7 +12,7 @@ import { ForgotPasswordForm } from "@/components/auth/forgot-password-form";
 
 export const metadata: Metadata = {
   title: "Forgot Password",
-  description: "Reset your Dressly By Nishat account password.",
+  description: "Reset your Sew In Style by Farzana account password.",
 };
 
 export default function ForgotPasswordPage() {
@@ -22,7 +22,7 @@ export default function ForgotPasswordPage() {
         {/* Header */}
         <div className="text-center space-y-2">
           <Link href="/" className="inline-block text-2xl font-extrabold tracking-wide uppercase text-[#7a1b38] font-heading">
-            Dressly By Nishat
+            Sew In Style by Farzana
           </Link>
           <h1 className="text-xl font-semibold">Reset your password</h1>
           <p className="text-sm text-muted-foreground">

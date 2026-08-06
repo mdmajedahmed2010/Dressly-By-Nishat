@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Collections Manager
+ * Sew In Style — Collections Manager
  * Create, edit, delete, reorder collections
  */
 

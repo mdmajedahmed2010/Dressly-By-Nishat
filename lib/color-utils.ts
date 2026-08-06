@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Comprehensive Color Palette & Swatch Utility
+ * Sew In Style — Comprehensive Color Palette & Swatch Utility
  * Supports 50+ fashion & luxury colors, Bengali color names, and automatic hash-based aesthetic fallback.
  */
 

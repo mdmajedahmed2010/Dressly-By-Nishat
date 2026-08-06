@@ -2,7 +2,7 @@
 
 /* eslint-disable */
 /**
- * BIBAZ — Checkout Form Component (Premium v3.0)
+ * Sew In Style — Checkout Form Component (Premium v3.0)
  * Ultra-Premium, Interactive Single-Page 2-Column Checkout Dashboard.
  * Specialized for the Bangladeshi Market:
  * - Inside/Outside Dhaka selection dropdown
@@ -98,7 +98,7 @@ export function CheckoutForm({ settings = {} }: { settings?: Record<string, any>
 
   // Sync with localStorage on mount
   useEffect(() => {
-    const saved = localStorage.getItem("dressly_applied_coupon") || localStorage.getItem("bibaz_applied_coupon");
+    const saved = localStorage.getItem("Sew In Style_applied_coupon") || localStorage.getItem("Sew In Style_applied_coupon");
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
@@ -111,7 +111,7 @@ export function CheckoutForm({ settings = {} }: { settings?: Record<string, any>
     }
     
     // Load pending custom notes
-    const customNote = localStorage.getItem("dressly_pending_custom_note") || localStorage.getItem("bibaz_pending_custom_note");
+    const customNote = localStorage.getItem("Sew In Style_pending_custom_note") || localStorage.getItem("Sew In Style_pending_custom_note");
     if (customNote) {
       setTimeout(() => {
         setNote(customNote);
@@ -178,7 +178,7 @@ export function CheckoutForm({ settings = {} }: { settings?: Record<string, any>
     };
 
     setAppliedCoupon(couponData);
-    localStorage.setItem("dressly_applied_coupon", JSON.stringify(couponData));
+    localStorage.setItem("Sew In Style_applied_coupon", JSON.stringify(couponData));
     setCouponSuccess(`"${code}" applied successfully!`);
     setCouponInput("");
     setIsApplyingCoupon(false);
@@ -187,8 +187,8 @@ export function CheckoutForm({ settings = {} }: { settings?: Record<string, any>
   // Remove Coupon Handler
   const handleRemoveCoupon = () => {
     setAppliedCoupon(null);
-    localStorage.removeItem("dressly_applied_coupon");
-    localStorage.removeItem("bibaz_applied_coupon");
+    localStorage.removeItem("Sew In Style_applied_coupon");
+    localStorage.removeItem("Sew In Style_applied_coupon");
     setCouponError("");
     setCouponSuccess("");
     setCouponInput("");
@@ -266,10 +266,10 @@ export function CheckoutForm({ settings = {} }: { settings?: Record<string, any>
       setConfirmedTotal(total); // Capture the exact finalized total BEFORE cart is cleared!
       setOrderPlaced(true);
       clearCart();
-      localStorage.removeItem("dressly_applied_coupon");
-      localStorage.removeItem("bibaz_applied_coupon");
-      localStorage.removeItem("dressly_pending_custom_note");
-      localStorage.removeItem("bibaz_pending_custom_note");
+      localStorage.removeItem("Sew In Style_applied_coupon");
+      localStorage.removeItem("Sew In Style_applied_coupon");
+      localStorage.removeItem("Sew In Style_pending_custom_note");
+      localStorage.removeItem("Sew In Style_pending_custom_note");
 
       // Fire confetti!
       confetti({
@@ -321,7 +321,7 @@ export function CheckoutForm({ settings = {} }: { settings?: Record<string, any>
             Order Confirmed!
           </h2>
           <p className="text-xs text-[#7a1b38] uppercase tracking-widest max-w-md mx-auto leading-relaxed font-bold">
-            Thank you for choosing Dressly By Nishat. Our customer support team will call you shortly to confirm
+            Thank you for choosing Sew In Style by Farzana. Our customer support team will call you shortly to confirm
             your delivery.
           </p>
         </div>
@@ -990,10 +990,10 @@ export function CheckoutForm({ settings = {} }: { settings?: Record<string, any>
                   <div className="flex flex-wrap gap-2">
                     <button
                       type="button"
-                      onClick={() => handleApplyCoupon("DRESSLY10")}
+                      onClick={() => handleApplyCoupon("Sew In Style10")}
                       className="text-[9px] font-mono font-bold px-2.5 py-1 bg-white border border-dashed border-[#d4af37] text-[#7a1b38] hover:bg-[#7a1b38]/5 rounded-xs transition-all shadow-3xs cursor-pointer active:scale-95"
                     >
-                      DRESSLY10 (10% OFF)
+                      Sew In Style10 (10% OFF)
                     </button>
                     <button
                       type="button"

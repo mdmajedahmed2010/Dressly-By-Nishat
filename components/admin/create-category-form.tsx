@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Create Category Form (Admin)
+ * Sew In Style — Create Category Form (Admin)
  * SOP §৬A — Structural Category creation with verified image upload
  */
 

@@ -1,5 +1,5 @@
 /**
- * BIBAZ — PDF Invoice Generator
+ * Sew In Style — PDF Invoice Generator
  * SOP §৬B — Order Management (Auto-generated on confirm)
  *
  * Generates a branded PDF invoice for orders
@@ -153,7 +153,7 @@ export function generateInvoice(data: InvoiceData): string {
   doc.setFontSize(8);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(150);
-  doc.text("Thank you for shopping with Dressly By Nishat!", 105, 280, { align: "center" });
+  doc.text("Thank you for shopping with Sew In Style by Farzana!", 105, 280, { align: "center" });
   doc.text("This is a computer-generated invoice. No signature required.", 105, 285, {
     align: "center",
   });

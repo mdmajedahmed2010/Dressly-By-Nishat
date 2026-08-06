@@ -1,8 +1,8 @@
 "use client";
 
 /**
- * Dressly By Nishat — Header Component
- * ড্রেসলি বাই নিশাত | Premium Authentic Pakistani Luxury Suits & Designer Collections
+ * Sew In Style by Farzana — Header Component
+ * Sew In Style by Farzana | Premium Authentic Pakistani Luxury Suits & Designer Collections
  * Deep Maroon, Rose & Gold Elegance
  */
 
@@ -47,7 +47,7 @@ const megaMenuData: Record<
     featured: {
       title: "Royal Organza Edition",
       subtitle: "Intricate cutwork dupattas & gold threadwork — From ৳5,500",
-      image: "/images/dressly/738759155_122236921304097859_517106012241883883_n.jpg",
+      image: "/images/728637838_1615289890013049_2658242435754841211_n.jpg",
       href: "/collections/organza-luxury-suits",
     },
   },
@@ -64,7 +64,7 @@ const megaMenuData: Record<
     featured: {
       title: "Chiffon Heavy Zari Collection",
       subtitle: "Opulent thread & hand embroidery for reception & holud",
-      image: "/images/dressly/739118005_122236931624097859_3877426082371806523_n.jpg",
+      image: "/images/728760397_1682205009864129_8763326460166934979_n.jpg",
       href: "/collections/chiffon-embroidered-edition",
     },
   },
@@ -81,7 +81,7 @@ const megaMenuData: Record<
     featured: {
       title: "Festive & Party Wear 2026",
       subtitle: "Royal colors and heavy handwork embroidery for grand celebrations",
-      image: "/images/dressly/741464699_122237170736097859_278617854425347317_n.jpg",
+      image: "/images/729139236_1750557062791862_7222316665621924949_n.jpg",
       href: "/collections/festive-party-wear",
     },
   },
@@ -98,7 +98,7 @@ const megaMenuData: Record<
     featured: {
       title: "Exclusive Pakistani Bridal Pret",
       subtitle: "Heavy hand-embellished zari dupattas & velvet luxury suits",
-      image: "/images/dressly/753865484_122238524498097859_5700651935379609574_n.jpg",
+      image: "/images/730749821_1615344106197724_7135912925053885740_n.jpg",
       href: "/collections/bridal-special-collection",
     },
   },
@@ -122,7 +122,7 @@ export function Header({ settings = {} }: { settings?: Record<string, unknown> }
 
   const freeShippingThreshold = Number(settings.free_shipping_threshold || 5000);
   const announcementText =
-    `✨ ড্রেসলি বাই নিশাত — 100% Authentic Pakistani Luxury Suits | Free Express Delivery on orders over ৳${freeShippingThreshold.toLocaleString()} | Cash on Delivery Nationwide`;
+    `✨ Sew In Style by Farzana — 100% Authentic Pakistani Luxury Suits | Free Express Delivery on orders over ৳${freeShippingThreshold.toLocaleString()} | Cash on Delivery Nationwide`;
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-xl supports-[backdrop-filter]:bg-white/90 border-b border-[#7a1b38]/15 shadow-sm transition-all duration-300">
@@ -131,7 +131,7 @@ export function Header({ settings = {} }: { settings?: Record<string, unknown> }
         <div className="bg-[#7a1b38] text-[#fcfaf6] border-b border-[#d4af37]/30 text-center text-[9.5px] md:text-[10.5px] font-semibold tracking-[0.14em] md:tracking-[0.18em] uppercase py-2 md:py-2.5 px-6 relative">
           <p className="flex items-center justify-center gap-1.5 md:gap-2 truncate">
             <span className="text-[#d4af37] shrink-0">✦</span>
-            <span className="md:hidden truncate">ড্রেসলি বাই নিশাত • CASH ON DELIVERY</span>
+            <span className="md:hidden truncate">Sew In Style by Farzana • CASH ON DELIVERY</span>
             <span className="hidden md:inline">{announcementText}</span>
             <span className="text-[#d4af37] shrink-0">✦</span>
           </p>
@@ -155,8 +155,8 @@ export function Header({ settings = {} }: { settings?: Record<string, unknown> }
               <Link href="/" className="flex items-center gap-3 group">
                 <div className="relative">
                   <Image
-                    src={typeof settings?.store_logo === "string" && settings.store_logo ? settings.store_logo : "/images/dressly/logo.jpg"}
-                    alt="Dressly By Nishat"
+                    src={typeof settings?.store_logo === "string" && settings.store_logo ? settings.store_logo : "/images/logo.jpg"}
+                    alt="Sew In Style by Farzana"
                     width={44}
                     height={44}
                     className="h-11 w-11 object-cover rounded-full ring-2 ring-[#d4af37]/40 group-hover:ring-[#d4af37] transition-all duration-300"
@@ -164,10 +164,10 @@ export function Header({ settings = {} }: { settings?: Record<string, unknown> }
                 </div>
                 <div className="hidden sm:block">
                   <p className="text-[13px] font-extrabold tracking-[0.08em] text-[#7a1b38] leading-tight uppercase">
-                    Dressly By Nishat
+                    Sew In Style by Farzana
                   </p>
                   <p className="text-[9px] font-medium tracking-[0.18em] text-[#7a1b38]/70 uppercase">
-                    ড্রেসলি বাই নিশাত
+                    Sew In Style by Farzana
                   </p>
                 </div>
               </Link>

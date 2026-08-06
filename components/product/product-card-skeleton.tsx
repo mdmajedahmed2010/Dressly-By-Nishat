@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Product Card Skeleton
+ * Sew In Style — Product Card Skeleton
  * Loading placeholder for product cards
  */
 

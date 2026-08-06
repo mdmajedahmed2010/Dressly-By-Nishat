@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Horizontal Collection Filters (Premium v2.0)
+ * Sew In Style — Horizontal Collection Filters (Premium v2.0)
  * Biba-style horizontal sticky dropdown filters.
  * Connected to URL search params for instant, shareable, SEO-friendly filter states.
  */

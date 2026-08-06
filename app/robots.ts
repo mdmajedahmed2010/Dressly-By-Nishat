@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Robots.txt
+ * Sew In Style — Robots.txt
  * SOP §৭ — SEO Infrastructure
  */
 

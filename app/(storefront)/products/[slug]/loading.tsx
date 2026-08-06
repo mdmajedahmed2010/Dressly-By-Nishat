@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Product Detail Loading State
+ * Sew In Style — Product Detail Loading State
  */
 
 export default function ProductLoading() {

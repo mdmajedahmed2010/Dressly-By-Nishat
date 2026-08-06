@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Animated Toast System
+ * Sew In Style — Animated Toast System
  * Premium notification toasts: elastic bounce-in, progress bar countdown,
  * type-specific icon animations, spring-stacked queue.
  */

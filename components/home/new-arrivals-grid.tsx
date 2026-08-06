@@ -1,8 +1,8 @@
 "use client";
 
 /**
- * Dressly By Nishat — New Arrivals Grid
- * ড্রেসলি বাই নিশাত | Authentic Pakistani Luxury Suits & Designer Collections
+ * Sew In Style by Farzana — New Arrivals Grid
+ * Sew In Style by Farzana | Authentic Pakistani Luxury Suits & Designer Collections
  */
 
 import Link from "next/link";
@@ -80,7 +80,7 @@ export function NewArrivalsGrid({ products }: NewArrivalsGridProps) {
           <div>
             <div className="flex items-center gap-3 mb-3">
               <span className="inline-block px-3 py-1 rounded-full border border-[#d4af37]/50 bg-[#7a1b38]/5 text-[#7a1b38] text-[10px] uppercase tracking-[0.26em] font-bold">
-                ✦ DRESSLY BY NISHAT EID DROP ✦
+                ✦ Sew In Style by Farzana EID DROP ✦
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold tracking-tight text-[#7a1b38] font-heading">

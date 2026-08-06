@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Confirmation Modal
+ * Sew In Style — Confirmation Modal
  * Reusable confirmation dialog with destructive variant.
  */
 

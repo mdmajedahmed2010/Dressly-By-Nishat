@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Collection Page Loading State
+ * Sew In Style — Collection Page Loading State
  */
 
 export default function CollectionLoading() {

@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Admin Orders Page
+ * Sew In Style — Admin Orders Page
  * SOP §৬F — Order Management
  */
 

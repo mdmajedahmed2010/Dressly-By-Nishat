@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Low Stock Quick-Action Update Widget
+ * Sew In Style — Low Stock Quick-Action Update Widget
  * Highly interactive card showing variants running low on stock (< 5)
  * allowing admins to quick-update stock values directly from the main dashboard.
  */

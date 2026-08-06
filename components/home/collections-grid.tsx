@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Collections Grid (Premium v2.0)
+ * Sew In Style — Collections Grid (Premium v2.0)
  * Clean collection cards with minimal design
  * Design Guide: Clean cards, consistent sizing
  */

@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Sort Dropdown Component
+ * Sew In Style — Sort Dropdown Component
  * Product sorting options for collection pages
  * SOP §২ — Frontend Plan F3.4
  */

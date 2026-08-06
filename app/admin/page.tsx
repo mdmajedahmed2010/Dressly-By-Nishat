@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Admin Dashboard (Advanced 10x)
+ * Sew In Style — Admin Dashboard (Advanced 10x)
  * Premium dashboard with stats, quick actions, recent activity, revenue overview, and Pro Insights
  */
 

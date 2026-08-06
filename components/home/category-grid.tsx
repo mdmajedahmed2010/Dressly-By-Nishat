@@ -1,8 +1,8 @@
 "use client";
 
 /**
- * Dressly By Nishat — Category Grid
- * ড্রেসলি বাই নিশাত | Authentic Pakistani Luxury Suits & Designer Collections
+ * Sew In Style by Farzana — Category Grid
+ * Sew In Style by Farzana | Authentic Pakistani Luxury Suits & Designer Collections
  */
 
 import Link from "next/link";
@@ -104,6 +104,7 @@ export function CategoryGrid({ categories }: CategoryGridProps) {
                   alt={category.name}
                   fill
                   sizes="(max-width: 768px) 50vw, 25vw"
+                  unoptimized
                   className="object-cover transition-transform duration-[1200ms] group-hover:scale-110 group-active:scale-105"
                 />
                 <div className="absolute inset-3.5 border border-[#d4af37]/25 group-hover:border-[#d4af37]/70 transition-all duration-500 pointer-events-none z-10" />

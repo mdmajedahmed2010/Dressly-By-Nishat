@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Related Products Section
+ * Sew In Style — Related Products Section
  * "You may also like" — same category products
  * SOP §২ — Frontend Plan F3.12
  *

@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Product Images Gallery (Premium v2.0 — Aarong Inspired)
+ * Sew In Style — Product Images Gallery (Premium v2.0 — Aarong Inspired)
  * Editorial split layout: Vertical thumbnails left, main image right on desktop.
  * Includes a premium, high-resolution Full-Screen Lightbox Zoom Viewer.
  */
@@ -83,6 +83,8 @@ export function ProductImages({ images, productName }: ProductImagesProps) {
             alt={`${productName} - Main image view`}
             fill
             sizes="(max-width: 1024px) 100vw, 55vw"
+            quality={100}
+            unoptimized
             className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.07]"
             priority
           />
@@ -165,6 +167,8 @@ export function ProductImages({ images, productName }: ProductImagesProps) {
               fill
               className="object-contain"
               sizes="100vw"
+              quality={100}
+              unoptimized
               priority
             />
           </div>

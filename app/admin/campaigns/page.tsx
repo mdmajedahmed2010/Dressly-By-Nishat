@@ -4,7 +4,7 @@ import { Timer } from "lucide-react";
 import { prisma } from "@/lib/db";
 
 export const metadata = {
-  title: "Flash Sales & Campaigns | BIBAZ Admin",
+  title: "Flash Sales & Campaigns | Sew In Style Admin",
   description: "Manage flash sales and promotional campaigns",
 };
 

@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Cart Button with Badge
+ * Sew In Style — Cart Button with Badge
  * Shows cart icon with item count badge
  * Opens cart drawer on click
  */

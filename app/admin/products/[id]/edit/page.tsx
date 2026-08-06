@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Admin Edit Product Page
+ * Sew In Style — Admin Edit Product Page
  */
 
 import { prisma } from "@/lib/db";

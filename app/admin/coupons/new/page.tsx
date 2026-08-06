@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Admin Create Coupon Page
+ * Sew In Style — Admin Create Coupon Page
  */
 
 import { CreateCouponForm } from "@/components/admin/create-coupon-form";

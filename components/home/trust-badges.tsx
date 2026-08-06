@@ -1,8 +1,8 @@
 "use client";
 
 /**
- * Dressly By Nishat — Trust Badges
- * ড্রেসলি বাই নিশাত | Authentic Pakistani Luxury Suits
+ * Sew In Style by Farzana — Trust Badges
+ * Sew In Style by Farzana | Authentic Pakistani Luxury Suits
  */
 
 import { useEffect, useRef, useState } from "react";
@@ -36,7 +36,7 @@ const badges = [
   },
   {
     icon: Users,
-    title: "52K+ ফলোয়ার",
+    title: "50K+ ফলোয়ার",
     description: "Trusted by thousands in BD",
   },
 ];

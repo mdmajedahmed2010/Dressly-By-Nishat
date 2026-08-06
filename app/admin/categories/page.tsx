@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /**
- * BIBAZ — Admin Categories Page
+ * Sew In Style — Admin Categories Page
  * SOP §৬A — Structural Category Directory UI
  */
 

@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Mega Menu
+ * Sew In Style — Mega Menu
  * Animated dropdown menu for storefront header.
  * Displays category links, styles, and a featured product image.
  */

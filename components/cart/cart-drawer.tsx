@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Cart Drawer (Slide-out)
+ * Sew In Style — Cart Drawer (Slide-out)
  * Luxury shopping bag experience with premium spacing and glassmorphism.
  * SOP §২ — Frontend Plan F4.1
  */
@@ -47,7 +47,7 @@ export function CartDrawer() {
   // Sync coupon state with localStorage on open/close
   useEffect(() => {
     if (isOpen) {
-      const saved = localStorage.getItem("dressly_applied_coupon") || localStorage.getItem("bibaz_applied_coupon");
+      const saved = localStorage.getItem("Sew In Style_applied_coupon") || localStorage.getItem("Sew In Style_applied_coupon");
       setTimeout(() => {
         if (saved) {
           try {
@@ -103,7 +103,7 @@ export function CartDrawer() {
     };
 
     setAppliedCoupon(couponData);
-    localStorage.setItem("dressly_applied_coupon", JSON.stringify(couponData));
+    localStorage.setItem("Sew In Style_applied_coupon", JSON.stringify(couponData));
     setCouponSuccess(`"${code}" applied!`);
     setCouponInput("");
     setIsApplyingCoupon(false);
@@ -112,8 +112,8 @@ export function CartDrawer() {
   // Remove Coupon Handler
   const handleRemoveCoupon = () => {
     setAppliedCoupon(null);
-    localStorage.removeItem("dressly_applied_coupon");
-    localStorage.removeItem("bibaz_applied_coupon");
+    localStorage.removeItem("Sew In Style_applied_coupon");
+    localStorage.removeItem("Sew In Style_applied_coupon");
     setCouponError("");
     setCouponSuccess("");
     setCouponInput("");
@@ -380,7 +380,7 @@ export function CartDrawer() {
 
                   {/* Hint */}
                   <p className="text-[9px] text-muted-foreground/50 uppercase tracking-widest">
-                    Try: <span className="font-mono font-bold text-foreground/40">DRESSLY10</span>,{" "}
+                    Try: <span className="font-mono font-bold text-foreground/40">Sew In Style10</span>,{" "}
                     <span className="font-mono font-bold text-foreground/40">EID2026</span>
                   </p>
                 </div>

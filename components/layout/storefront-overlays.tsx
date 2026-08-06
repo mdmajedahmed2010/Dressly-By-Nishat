@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Storefront Client Overlays
+ * Sew In Style — Storefront Client Overlays
  * Wraps dynamic overlays in a Client Component boundary for Next.js App Router
  */
 
@@ -42,7 +42,7 @@ export function StorefrontOverlays() {
       <ScrollReveal />
       <ScrollProgress />
       <BackToTop />
-      <FloatingChat phoneNumber="8801792635996" messengerUrl="https://www.facebook.com/dresslybynishat/" />
+      <FloatingChat phoneNumber="8801792635996" messengerUrl="https://m.me/sewinstylebyfarzana1" />
       <PageTracker />
     </>
   );

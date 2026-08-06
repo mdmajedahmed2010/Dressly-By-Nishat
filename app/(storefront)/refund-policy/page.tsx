@@ -1,6 +1,6 @@
 /**
- * Dressly By Nishat — Refund & Exchange Policy
- * ড্রেসলি বাই নিশাত | Authentic Pakistani Luxury Suits & Designer Collections
+ * Sew In Style by Farzana — Refund & Exchange Policy
+ * Sew In Style by Farzana | Authentic Pakistani Luxury Suits & Designer Collections
  */
 
 import type { Metadata } from "next";
@@ -9,9 +9,9 @@ import { ShieldCheck, Truck, Eye, Phone, AlertTriangle, CheckCircle2 } from "luc
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Refund & Exchange Policy — Dressly By Nishat | ড্রেসলি বাই নিশাত",
+  title: "Refund & Exchange Policy — Sew In Style by Farzana | Sew In Style by Farzana",
   description:
-    "ড্রেসলি বাই নিশাতের Refund ও 3-Day Exchange Policy। Delivery-র সময় পণ্য দেখে নিন। 100% আসল পাকিস্তানি কাপড়ের নিশ্চয়তা।",
+    "Sew In Style by Farzanaের Refund ও 3-Day Exchange Policy। Delivery-র সময় পণ্য দেখে নিন। 100% অরিজিনাল কাপড়ের নিশ্চয়তা।",
 };
 
 const policyPoints = [
@@ -41,8 +41,8 @@ const policyPoints = [
   },
   {
     icon: CheckCircle2,
-    title: "100% Authentic Pakistani Suits",
-    body: "ড্রেসলি বাই নিশাতের সকল থ্রি-পিস ও অরেঞ্জা ড্রেস ১০০% অরিজিনাল কাপড়ের নিশ্চয়তা সহ সরবরাহ করা হয়।",
+    title: "100% Authentic Premium Collection",
+    body: "Sew In Style by Farzanaের সকল শাড়ি ও ড্রেস ১০০% অরিজিনাল কাপড়ের নিশ্চয়তা সহ সরবরাহ করা হয়।",
     type: "success",
   },
 ];
@@ -64,7 +64,7 @@ export default function RefundPolicyPage() {
             Refund & Exchange Policy
           </h1>
           <p className="text-[#fcfaf6]/80 text-sm leading-relaxed">
-            Dressly By Nishat-এ অর্ডার করার আগে আমাদের এক্সচেঞ্জ ও রিফান্ড নীতিমালা সম্পর্কে জেনে নিন।
+            Sew In Style by Farzana-এ অর্ডার করার আগে আমাদের এক্সচেঞ্জ ও রিফান্ড নীতিমালা সম্পর্কে জেনে নিন।
           </p>
         </div>
       </section>
@@ -75,7 +75,7 @@ export default function RefundPolicyPage() {
           <div className="flex items-center gap-3 justify-center flex-wrap text-center">
             <CheckCircle2 className="h-5 w-5 text-[#d4af37] shrink-0" />
             <p className="text-[#fcfaf6] text-sm font-bold tracking-wide">
-              100% Authentic Original Pakistani Luxury Suits & 3-Day Exchange Guarantee
+              100% Authentic Original Premium Collection & 3-Day Exchange Guarantee
             </p>
             <CheckCircle2 className="h-5 w-5 text-[#d4af37] shrink-0" />
           </div>

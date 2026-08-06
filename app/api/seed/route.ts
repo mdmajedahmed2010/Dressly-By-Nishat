@@ -10,7 +10,7 @@ export async function GET(request: Request) {
 
     const userRole = (session?.user as { role?: string })?.role;
     const isAdmin = userRole === "ADMIN" || userRole === "SUPER_ADMIN";
-    const expectedSecret = process.env.SEED_SECRET || "bibaz2026";
+    const expectedSecret = process.env.SEED_SECRET || "Sew In Style2026";
 
     if (!isAdmin && secret !== expectedSecret) {
       return NextResponse.json({ error: "Unauthorized seed request" }, { status: 401 });
@@ -29,84 +29,84 @@ export async function GET(request: Request) {
         name: "Kaftan",
         slug: "kaftan",
         image:
-          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961964/bibaz/products/0bcafce4-8d43-4f3e-a1c2-59642e51c611.png",
+          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961964/Sew In Style/products/0bcafce4-8d43-4f3e-a1c2-59642e51c611.png",
         sortOrder: 1,
       },
       {
         name: "Cord Set",
         slug: "cord-set",
         image:
-          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961963/bibaz/products/0417aaaa-da0e-4170-9955-ce2a591954c6.png",
+          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961963/Sew In Style/products/0417aaaa-da0e-4170-9955-ce2a591954c6.png",
         sortOrder: 2,
       },
       {
         name: "Abaya",
         slug: "abaya",
         image:
-          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961978/bibaz/products/72cd69a9-0f87-4b3e-b9a2-318c1f09538f.png",
+          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961978/Sew In Style/products/72cd69a9-0f87-4b3e-b9a2-318c1f09538f.png",
         sortOrder: 3,
       },
       {
         name: "Cape",
         slug: "cape",
         image:
-          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961968/bibaz/products/1ca3cc49-6152-4f4c-b11c-f44fd63b37dc.png",
+          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961968/Sew In Style/products/1ca3cc49-6152-4f4c-b11c-f44fd63b37dc.png",
         sortOrder: 4,
       },
       {
         name: "Kamij Set",
         slug: "kamij-set",
         image:
-          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961972/bibaz/products/60224609-864e-45e5-a7e6-1f14b097f09f.png",
+          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961972/Sew In Style/products/60224609-864e-45e5-a7e6-1f14b097f09f.png",
         sortOrder: 5,
       },
       {
         name: "Shari",
         slug: "shari",
         image:
-          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961964/bibaz/products/0bcafce4-8d43-4f3e-a1c2-59642e51c611.png",
+          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961964/Sew In Style/products/0bcafce4-8d43-4f3e-a1c2-59642e51c611.png",
         sortOrder: 6,
       },
       {
         name: "Blouse",
         slug: "blouse",
         image:
-          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961968/bibaz/products/1ca3cc49-6152-4f4c-b11c-f44fd63b37dc.png",
+          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961968/Sew In Style/products/1ca3cc49-6152-4f4c-b11c-f44fd63b37dc.png",
         sortOrder: 7,
       },
       {
         name: "Inner & Leggings",
         slug: "inner-leggings",
         image:
-          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961963/bibaz/products/0417aaaa-da0e-4170-9955-ce2a591954c6.png",
+          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961963/Sew In Style/products/0417aaaa-da0e-4170-9955-ce2a591954c6.png",
         sortOrder: 8,
       },
       {
         name: "Scarf / Hijab",
         slug: "scarf-hijab",
         image:
-          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961978/bibaz/products/72cd69a9-0f87-4b3e-b9a2-318c1f09538f.png",
+          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961978/Sew In Style/products/72cd69a9-0f87-4b3e-b9a2-318c1f09538f.png",
         sortOrder: 9,
       },
       {
         name: "Eid & Festive Edit",
         slug: "eid-festive-edit",
         image:
-          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961972/bibaz/products/60224609-864e-45e5-a7e6-1f14b097f09f.png",
+          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961972/Sew In Style/products/60224609-864e-45e5-a7e6-1f14b097f09f.png",
         sortOrder: 10,
       },
       {
         name: "Bridal & Trousseau",
         slug: "bridal-trousseau",
         image:
-          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961964/bibaz/products/0bcafce4-8d43-4f3e-a1c2-59642e51c611.png",
+          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961964/Sew In Style/products/0bcafce4-8d43-4f3e-a1c2-59642e51c611.png",
         sortOrder: 11,
       },
       {
         name: "Everyday Luxury",
         slug: "everyday-luxury",
         image:
-          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961963/bibaz/products/0417aaaa-da0e-4170-9955-ce2a591954c6.png",
+          "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961963/Sew In Style/products/0417aaaa-da0e-4170-9955-ce2a591954c6.png",
         sortOrder: 12,
       },
     ];
@@ -136,8 +136,8 @@ export async function GET(request: Request) {
             price: 7050,
             stock: 15,
             images: [
-              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961964/bibaz/products/0bcafce4-8d43-4f3e-a1c2-59642e51c611.png",
-              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961968/bibaz/products/1ca3cc49-6152-4f4c-b11c-f44fd63b37dc.png",
+              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961964/Sew In Style/products/0bcafce4-8d43-4f3e-a1c2-59642e51c611.png",
+              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961968/Sew In Style/products/1ca3cc49-6152-4f4c-b11c-f44fd63b37dc.png",
             ],
           },
         ],
@@ -156,8 +156,8 @@ export async function GET(request: Request) {
             price: 7050,
             stock: 12,
             images: [
-              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961968/bibaz/products/1ca3cc49-6152-4f4c-b11c-f44fd63b37dc.png",
-              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961972/bibaz/products/60224609-864e-45e5-a7e6-1f14b097f09f.png",
+              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961968/Sew In Style/products/1ca3cc49-6152-4f4c-b11c-f44fd63b37dc.png",
+              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961972/Sew In Style/products/60224609-864e-45e5-a7e6-1f14b097f09f.png",
             ],
           },
         ],
@@ -176,7 +176,7 @@ export async function GET(request: Request) {
             price: 7050,
             stock: 10,
             images: [
-              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961972/bibaz/products/60224609-864e-45e5-a7e6-1f14b097f09f.png",
+              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961972/Sew In Style/products/60224609-864e-45e5-a7e6-1f14b097f09f.png",
             ],
           },
         ],
@@ -195,7 +195,7 @@ export async function GET(request: Request) {
             price: 7050,
             stock: 8,
             images: [
-              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961978/bibaz/products/72cd69a9-0f87-4b3e-b9a2-318c1f09538f.png",
+              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961978/Sew In Style/products/72cd69a9-0f87-4b3e-b9a2-318c1f09538f.png",
             ],
           },
         ],
@@ -214,7 +214,7 @@ export async function GET(request: Request) {
             price: 7050,
             stock: 14,
             images: [
-              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961964/bibaz/products/0bcafce4-8d43-4f3e-a1c2-59642e51c611.png",
+              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961964/Sew In Style/products/0bcafce4-8d43-4f3e-a1c2-59642e51c611.png",
             ],
           },
         ],
@@ -233,7 +233,7 @@ export async function GET(request: Request) {
             price: 7050,
             stock: 9,
             images: [
-              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961963/bibaz/products/0417aaaa-da0e-4170-9955-ce2a591954c6.png",
+              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961963/Sew In Style/products/0417aaaa-da0e-4170-9955-ce2a591954c6.png",
             ],
           },
         ],
@@ -252,7 +252,7 @@ export async function GET(request: Request) {
             price: 7050,
             stock: 11,
             images: [
-              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961968/bibaz/products/1ca3cc49-6152-4f4c-b11c-f44fd63b37dc.png",
+              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961968/Sew In Style/products/1ca3cc49-6152-4f4c-b11c-f44fd63b37dc.png",
             ],
           },
         ],
@@ -271,7 +271,7 @@ export async function GET(request: Request) {
             price: 7050,
             stock: 7,
             images: [
-              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961978/bibaz/products/72cd69a9-0f87-4b3e-b9a2-318c1f09538f.png",
+              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961978/Sew In Style/products/72cd69a9-0f87-4b3e-b9a2-318c1f09538f.png",
             ],
           },
         ],
@@ -290,7 +290,7 @@ export async function GET(request: Request) {
             price: 7050,
             stock: 10,
             images: [
-              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961972/bibaz/products/60224609-864e-45e5-a7e6-1f14b097f09f.png",
+              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961972/Sew In Style/products/60224609-864e-45e5-a7e6-1f14b097f09f.png",
             ],
           },
         ],
@@ -309,7 +309,7 @@ export async function GET(request: Request) {
             price: 8500,
             stock: 12,
             images: [
-              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961963/bibaz/products/0417aaaa-da0e-4170-9955-ce2a591954c6.png",
+              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961963/Sew In Style/products/0417aaaa-da0e-4170-9955-ce2a591954c6.png",
             ],
           },
         ],
@@ -328,7 +328,7 @@ export async function GET(request: Request) {
             price: 8500,
             stock: 8,
             images: [
-              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961964/bibaz/products/0bcafce4-8d43-4f3e-a1c2-59642e51c611.png",
+              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961964/Sew In Style/products/0bcafce4-8d43-4f3e-a1c2-59642e51c611.png",
             ],
           },
         ],
@@ -347,7 +347,7 @@ export async function GET(request: Request) {
             price: 9200,
             stock: 6,
             images: [
-              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961978/bibaz/products/72cd69a9-0f87-4b3e-b9a2-318c1f09538f.png",
+              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961978/Sew In Style/products/72cd69a9-0f87-4b3e-b9a2-318c1f09538f.png",
             ],
           },
         ],
@@ -366,7 +366,7 @@ export async function GET(request: Request) {
             price: 6500,
             stock: 10,
             images: [
-              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961978/bibaz/products/72cd69a9-0f87-4b3e-b9a2-318c1f09538f.png",
+              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961978/Sew In Style/products/72cd69a9-0f87-4b3e-b9a2-318c1f09538f.png",
             ],
           },
         ],
@@ -385,7 +385,7 @@ export async function GET(request: Request) {
             price: 7800,
             stock: 8,
             images: [
-              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961968/bibaz/products/1ca3cc49-6152-4f4c-b11c-f44fd63b37dc.png",
+              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961968/Sew In Style/products/1ca3cc49-6152-4f4c-b11c-f44fd63b37dc.png",
             ],
           },
         ],
@@ -404,7 +404,7 @@ export async function GET(request: Request) {
             price: 6800,
             stock: 10,
             images: [
-              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961972/bibaz/products/60224609-864e-45e5-a7e6-1f14b097f09f.png",
+              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961972/Sew In Style/products/60224609-864e-45e5-a7e6-1f14b097f09f.png",
             ],
           },
         ],
@@ -423,7 +423,7 @@ export async function GET(request: Request) {
             price: 12500,
             stock: 5,
             images: [
-              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961964/bibaz/products/0bcafce4-8d43-4f3e-a1c2-59642e51c611.png",
+              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961964/Sew In Style/products/0bcafce4-8d43-4f3e-a1c2-59642e51c611.png",
             ],
           },
         ],
@@ -442,7 +442,7 @@ export async function GET(request: Request) {
             price: 2800,
             stock: 15,
             images: [
-              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961968/bibaz/products/1ca3cc49-6152-4f4c-b11c-f44fd63b37dc.png",
+              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961968/Sew In Style/products/1ca3cc49-6152-4f4c-b11c-f44fd63b37dc.png",
             ],
           },
         ],
@@ -461,7 +461,7 @@ export async function GET(request: Request) {
             price: 1450,
             stock: 25,
             images: [
-              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961963/bibaz/products/0417aaaa-da0e-4170-9955-ce2a591954c6.png",
+              "https://res.cloudinary.com/dnbol4pey/image/upload/f_auto,q_auto/v1783961963/Sew In Style/products/0417aaaa-da0e-4170-9955-ce2a591954c6.png",
             ],
           },
         ],
@@ -489,7 +489,7 @@ export async function GET(request: Request) {
         await prisma.productVariant.create({
           data: {
             productId: createdProduct.id,
-            sku: `BIBAZ-${prod.slug.substring(0, 8).toUpperCase()}-${variant.size.substring(0, 2).toUpperCase()}`,
+            sku: `Sew In Style-${prod.slug.substring(0, 8).toUpperCase()}-${variant.size.substring(0, 2).toUpperCase()}`,
             size: variant.size,
             color: variant.color,
             price: variant.price,

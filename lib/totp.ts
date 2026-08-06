@@ -108,6 +108,6 @@ export function verifyTOTP(secret: string, token: string, timeStep = 30): boolea
 /**
  * Generate dynamic Google Authenticator provisioning URI (otpauth://)
  */
-export function getOTPAuthURI(label: string, secret: string, issuer = "Dressly By Nishat"): string {
+export function getOTPAuthURI(label: string, secret: string, issuer = "Sew In Style by Farzana"): string {
   return `otpauth://totp/${encodeURIComponent(issuer)}:${encodeURIComponent(label)}?secret=${secret}&issuer=${encodeURIComponent(issuer)}&algorithm=SHA1&digits=6&period=30`;
 }

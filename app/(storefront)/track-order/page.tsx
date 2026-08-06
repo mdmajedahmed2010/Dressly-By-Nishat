@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Order Tracking Page
+ * Sew In Style — Order Tracking Page
  * Public — no login required
  * SOP §২ — Guest-first: Order Number + Phone দিয়ে track
  */
@@ -9,7 +9,7 @@ import { TrackOrderForm } from "@/components/order/track-order-form";
 
 export const metadata: Metadata = {
   title: "Track Your Order",
-  description: "Track your BIBAZ order status with your order number and phone.",
+  description: "Track your Sew In Style order status with your order number and phone.",
 };
 
 export default function TrackOrderPage() {

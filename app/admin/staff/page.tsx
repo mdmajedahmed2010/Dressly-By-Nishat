@@ -4,7 +4,7 @@ import { ShieldAlert } from "lucide-react";
 import { auth } from "@/lib/auth";
 
 export const metadata = {
-  title: "Staff Management | BIBAZ Admin",
+  title: "Staff Management | Sew In Style Admin",
   description: "Manage staff roles and permissions",
 };
 

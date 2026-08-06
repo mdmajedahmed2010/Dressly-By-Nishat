@@ -13,7 +13,7 @@ import { AnimatedToastContainer } from "@/components/admin/animated-toast";
 import { SalesCelebration } from "@/components/admin/sales-celebration";
 
 export const metadata = {
-  title: "Admin Panel — Dressly By Nishat",
+  title: "Admin Panel — Sew In Style by Farzana",
   robots: "noindex, nofollow",
 };
 

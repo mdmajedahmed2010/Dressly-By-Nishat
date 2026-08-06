@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Scroll Reveal Animation Trigger
+ * Sew In Style — Scroll Reveal Animation Trigger
  * Robust client component that registers an IntersectionObserver & MutationObserver
  * to ensure all elements with 'reveal' class smoothly reveal on load and scroll.
  */

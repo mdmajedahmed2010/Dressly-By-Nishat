@@ -1,8 +1,8 @@
 "use client";
 
 /**
- * Dressly By Nishat — Brand Story Component
- * ড্রেসলি বাই নিশাত | Authentic Pakistani Luxury Suits & Designer Collections
+ * Sew In Style by Farzana — Brand Story Component
+ * Sew In Style by Farzana | Authentic Pakistani Luxury Suits & Designer Collections
  */
 
 import Link from "next/link";
@@ -16,8 +16,8 @@ export function BrandStory() {
           {/* Left Side: Photo */}
           <div className="lg:col-span-6 relative aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5] rounded-sm overflow-hidden shadow-sm group reveal">
             <Image
-              src="/images/dressly/image.jpg"
-              alt="ড্রেসলি বাই নিশাত — Authentic Pakistani Luxury Suits"
+              src="/images/Sew In Style/image.jpg"
+              alt="Sew In Style by Farzana — Authentic Pakistani Luxury Suits"
               fill
               className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -26,7 +26,7 @@ export function BrandStory() {
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(212,175,55,0.08),transparent_50%)]" />
             {/* Heritage badge */}
             <div className="absolute bottom-5 left-5 bg-[#7a1b38]/85 backdrop-blur-sm border border-[#d4af37]/40 px-4 py-2.5 rounded-sm">
-              <p className="text-[#d4af37] text-[9px] uppercase tracking-[0.25em] font-bold">ড্রেসলি বাই নিশাত</p>
+              <p className="text-[#d4af37] text-[9px] uppercase tracking-[0.25em] font-bold">Sew In Style by Farzana</p>
               <p className="text-white text-xs font-semibold mt-0.5">Elephant Road, Dhaka</p>
             </div>
           </div>
@@ -44,12 +44,12 @@ export function BrandStory() {
             </h2>
 
             <div className="border-l-2 border-[#d4af37]/50 pl-4 py-1 text-[#7a1b38]/80 italic text-sm">
-              &ldquo;Dressly By Nishat brings exclusive authentic Pakistani luxury 3-piece suits, organza, embroidered chiffon, and designer lawn collections to fashion lovers across Bangladesh.&rdquo;
+              &ldquo;Sew In Style by Farzana brings exclusive authentic Pakistani luxury 3-piece suits, organza, embroidered chiffon, and designer lawn collections to fashion lovers across Bangladesh.&rdquo;
             </div>
 
             <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
               <p>
-                ড্রেসলি বাই নিশাত বাংলাদেশের ফ্যাশনপ্রিয় নারীদের জন্য আসল পাকিস্তানি প্রিমিয়াম ড্রেস ও ডিজাইনার কালেকশনের বিশ্বাসযোগ্য নাম। আমাদের প্রিমিয়াম অরেঞ্জা, এম্ব্রয়ডার্ড শিফন এবং ডিজিটাল লন কালেকশন আপনাকে দেয় রাজকীয় পোশাকের অনুভূতি।
+                Sew In Style by Farzana বাংলাদেশের ফ্যাশনপ্রিয় নারীদের জন্য আসল পাকিস্তানি প্রিমিয়াম ড্রেস ও ডিজাইনার কালেকশনের বিশ্বাসযোগ্য নাম। আমাদের প্রিমিয়াম অরেঞ্জা, এম্ব্রয়ডার্ড শিফন এবং ডিজিটাল লন কালেকশন আপনাকে দেয় রাজকীয় পোশাকের অনুভূতি।
               </p>
               <p>
                 ঈদ, গায়ে হলুদ, রিসেপশন কিংবা যেকোনো বিশেষ পার্টি — আমাদের থ্রি-পিস ড্রেসগুলো সরাসরি ফেসবুক ইনবক্সের মাধ্যমে অর্ডার করে ঘরে বসেই ক্যাশ অন ডেলিভারিতে পেতে পারেন।

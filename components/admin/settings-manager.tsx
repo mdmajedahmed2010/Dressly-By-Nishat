@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Settings Manager (Advanced 5x)
+ * Sew In Style — Settings Manager (Advanced 5x)
  * Groups: Store Info, Branding, Shipping, Taxes, Email, Social, SEO
  */
 
@@ -145,13 +145,13 @@ const DEFAULTS: Record<string, { value: unknown; group: string; label: string; t
 
   // SEO
   seo_title: {
-    value: "Dressly By Nishat — Exclusive Authentic Pakistani Luxury Suits",
+    value: "Sew In Style by Farzana — Exclusive Authentic Pakistani Luxury Suits",
     group: "seo",
     label: "Default SEO Title",
     type: "text",
   },
   seo_description: {
-    value: "Discover authentic Pakistani luxury organza suits, embroidered chiffon, lawn 3-piece sets & bridal collections at Dressly By Nishat (ড্রেসলি বাই নিশাত).",
+    value: "Discover authentic Pakistani luxury organza suits, embroidered chiffon, lawn 3-piece sets & bridal collections at Sew In Style by Farzana (Sew In Style by Farzana).",
     group: "seo",
     label: "SEO Description",
     type: "textarea",

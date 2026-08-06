@@ -1,8 +1,8 @@
 "use client";
 
 /**
- * Dressly By Nishat — Hero Section
- * ড্রেসলি বাই নিশাত | Authentic Pakistani Luxury Suits & Designer Collections
+ * Sew In Style by Farzana — Hero Section
+ * Sew In Style by Farzana | Authentic Pakistani Luxury Suits & Designer Collections
  */
 
 import { useState, useEffect } from "react";
@@ -12,21 +12,21 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
   {
-    image: "/images/dressly/banner.jpg",
+    image: "/images/Sew In Style/banner.jpg",
     title: "EXQUISITE PAKISTANI LUXURY SUITS",
     subtitle: "Exclusive authentic Organza, Chiffon & Lawn 3-Piece collections — tailored for elegance.",
     link: "/collections/organza-luxury-suits",
     overline: "✦ Eid Couture Edit 2026 ✦",
   },
   {
-    image: "/images/dressly/image.jpg",
+    image: "/images/Sew In Style/image.jpg",
     title: "ROYAL CHIFFON & EMBROIDERED PRET",
     subtitle: "Heavy zari and thread needlework dupattas paired with fine embroidered kameez.",
     link: "/collections/chiffon-embroidered-edition",
     overline: "✦ Authentic Luxury Craftsmanship ✦",
   },
   {
-    image: "/images/dressly/753865484_122238524498097859_5700651935379609574_n.jpg",
+    image: "/images/Sew In Style/753865484_122238524498097859_5700651935379609574_n.jpg",
     title: "EXCLUSIVE BRIDAL & RECEPTION SUITS",
     subtitle: "Opulent Pakistani bridal suits with heavy hand embellishments and cutwork borders.",
     link: "/collections/bridal-special-collection",

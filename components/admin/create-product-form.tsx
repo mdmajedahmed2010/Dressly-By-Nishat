@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Create Product Form (Advanced)
+ * Sew In Style — Create Product Form (Advanced)
  * Now with image upload, multi-image support
  */
 

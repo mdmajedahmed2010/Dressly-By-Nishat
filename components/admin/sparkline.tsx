@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Stock Sparkline
+ * Sew In Style — Stock Sparkline
  * Animated SVG sparkline showing stock trend. Path draws itself in.
  * Red danger zone pulses when stock < 5.
  */

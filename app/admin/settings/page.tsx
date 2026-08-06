@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Admin Settings Page (Editable)
+ * Sew In Style — Admin Settings Page (Editable)
  * Dynamic settings stored in DB
  */
 

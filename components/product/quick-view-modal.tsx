@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Quick View Modal (Premium v4.1 - Production Ready)
+ * Sew In Style — Quick View Modal (Premium v4.1 - Production Ready)
  * Glassmorphism modal with REAL variant data fetched from DB.
  * Upgraded with 50+ color map support, modern Pill/Chip color swatches,
  * and robust auto-fallback for empty sizes/colors to prevent "No sizes available" bug.
@@ -270,6 +270,8 @@ function QuickViewModalInner({ product, onClose }: QuickViewModalInnerProps) {
             fill
             className="object-contain transition-transform duration-700 hover:scale-103 bg-[#f5f5f5]"
             sizes="(max-width: 768px) 100vw, 50vw"
+            quality={100}
+            unoptimized
             priority
           />
 
@@ -497,7 +499,7 @@ function QuickViewModalInner({ product, onClose }: QuickViewModalInnerProps) {
               className={`flex-1 flex items-center justify-center gap-2 h-11 text-xs font-bold uppercase tracking-[0.14em] transition-all rounded-sm cursor-pointer active:scale-[0.98] ${
                 !isInStock || isLoadingVariants
                   ? "bg-neutral-200 border border-neutral-300 text-neutral-500 font-bold cursor-not-allowed"
-                  : "bg-[#7a1b38] hover:bg-[#252320] text-[#d4af37] border border-[#d4af37]/40 shadow-luxury"
+                  : "bg-[#7a1b38] hover:bg-[#4a0516] text-[#d4af37] border border-[#d4af37]/50 shadow-md hover:shadow-lg hover:-translate-y-0.5"
               }`}
             >
               <ShoppingBag className="h-4 w-4 text-[#d4af37]" />
@@ -510,7 +512,7 @@ function QuickViewModalInner({ product, onClose }: QuickViewModalInnerProps) {
               className={`flex-1 flex items-center justify-center gap-2 h-11 text-xs font-bold uppercase tracking-[0.14em] transition-all rounded-sm cursor-pointer active:scale-[0.98] ${
                 !isInStock || isLoadingVariants
                   ? "bg-neutral-200 border border-neutral-300 text-neutral-500 font-bold cursor-not-allowed"
-                  : "bg-gradient-gold hover:opacity-95 text-[#7a1b38] shadow-gold-glow"
+                  : "bg-[#7a1b38] hover:bg-[#4a0516] text-[#d4af37] border border-[#d4af37]/50 shadow-md hover:shadow-lg hover:-translate-y-0.5"
               }`}
             >
               {isLoadingVariants ? "LOADING..." : !isInStock ? "OUT OF STOCK" : "✦ BUY NOW"}

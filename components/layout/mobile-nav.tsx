@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Mobile Navigation Overlay (Premium v2.0)
+ * Sew In Style — Mobile Navigation Overlay (Premium v2.0)
  * Full-screen visual experience with smooth animations, large touch targets,
  * expandable accordions, search integration, and persistent bag actions.
  */
@@ -67,15 +67,15 @@ export function MobileNav({ links }: MobileNavProps) {
                     <div className="flex h-16 items-center justify-between px-6 border-b border-border/50 bg-white">
                         <Link href="/" onClick={() => setOpen(false)} className="flex items-center gap-2.5">
                             <Image
-                                src="/images/dressly/logo.jpg"
-                                alt="Dressly By Nishat"
+                                src="/images/Sew In Style/logo.jpg"
+                                alt="Sew In Style by Farzana"
                                 width={36}
                                 height={36}
                                 className="h-9 w-9 object-cover rounded-full ring-2 ring-[#d4af37]/40"
                             />
                             <div className="flex flex-col">
-                                <span className="font-heading text-sm font-extrabold tracking-tight text-[#7a1b38] uppercase leading-none">Dressly By Nishat</span>
-                                <span className="text-[9px] font-medium tracking-widest text-[#7a1b38]/70 uppercase">ড্রেসলি বাই নিশাত</span>
+                                <span className="font-heading text-sm font-extrabold tracking-tight text-[#7a1b38] uppercase leading-none">Sew In Style by Farzana</span>
+                                <span className="text-[9px] font-medium tracking-widest text-[#7a1b38]/70 uppercase">Sew In Style by Farzana</span>
                             </div>
                         </Link>
                         

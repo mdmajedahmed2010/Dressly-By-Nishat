@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Create Category Page
+ * Sew In Style — Create Category Page
  * SOP §৬A — Structural Category Creation Container
  */
 

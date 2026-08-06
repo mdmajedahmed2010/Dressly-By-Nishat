@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Sticky Add to Cart Bar (Mobile)
+ * Sew In Style — Sticky Add to Cart Bar (Mobile)
  * Fixed bottom bar on mobile for quick add to cart
  * SOP §২ — Frontend Plan: "Mobile: Sticky Add to Cart bar at bottom"
  */
@@ -49,7 +49,7 @@ export function StickyAddToCart({
             className={`flex-1 flex items-center justify-center gap-1.5 h-11 text-[11px] font-bold uppercase tracking-[0.14em] transition-all rounded-sm cursor-pointer ${
               disabled
                 ? "bg-neutral-200 border border-neutral-300 text-neutral-500 font-bold opacity-100 cursor-not-allowed"
-                : "bg-[#7a1b38] hover:bg-[#252320] text-[#d4af37] border border-[#d4af37]/40 shadow-luxury"
+                : "bg-[#7a1b38] hover:bg-[#4a0516] text-[#d4af37] border border-[#d4af37]/50 shadow-md hover:shadow-lg hover:-translate-y-0.5"
             }`}
           >
             <ShoppingBag className="h-3.5 w-3.5 text-[#d4af37]" />
@@ -62,7 +62,7 @@ export function StickyAddToCart({
             className={`flex-1 flex items-center justify-center gap-1.5 h-11 text-[11px] font-bold uppercase tracking-[0.14em] transition-all rounded-sm cursor-pointer ${
               disabled
                 ? "bg-neutral-200 border border-neutral-300 text-neutral-500 font-bold opacity-100 cursor-not-allowed"
-                : "bg-gradient-gold hover:opacity-95 text-[#7a1b38] shadow-gold-glow"
+                : "bg-[#7a1b38] hover:bg-[#4a0516] text-[#d4af37] border border-[#d4af37]/50 shadow-md hover:shadow-lg hover:-translate-y-0.5"
             }`}
           >
             {disabled ? "OUT OF STOCK" : "✦ BUY NOW"}

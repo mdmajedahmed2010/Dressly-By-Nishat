@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Interactive Analytics Dashboard Charts
+ * Sew In Style — Interactive Analytics Dashboard Charts
  * Premium charting component using Recharts and Framer Motion.
  */
 

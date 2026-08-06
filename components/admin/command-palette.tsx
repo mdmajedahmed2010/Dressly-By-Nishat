@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Command Palette (⌘K / Ctrl+K)
+ * Sew In Style — Command Palette (⌘K / Ctrl+K)
  * Modal search across orders, products, customers, and quick actions.
  * Enhanced with Framer Motion typewriter and morphological animations.
  */

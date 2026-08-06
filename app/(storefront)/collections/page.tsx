@@ -1,5 +1,5 @@
 /**
- * Dressly By Nishat — All Collections Page
+ * Sew In Style by Farzana — All Collections Page
  * Route: /collections
  */
 
@@ -13,51 +13,51 @@ import { CATEGORIES } from "@/lib/demo-data";
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: "All Collections — Dressly By Nishat",
+  title: "All Collections — Sew In Style by Farzana",
   description:
-    "Explore exclusive Dressly By Nishat collections — Luxury Organza Suits, Chiffon Embroidered Edition, Premium Lawn 3-Piece, Festive & Bridal Couture.",
+    "Explore exclusive Sew In Style by Farzana collections — Luxury Organza Suits, Chiffon Embroidered Edition, Premium Lawn 3-Piece, Festive & Bridal Couture.",
 };
 
 export default async function CollectionsPage() {
   const curatedCollections = [
     {
       title: "Luxury Organza Suits",
-      image: "/images/dressly/738759155_122236921304097859_517106012241883883_n.jpg",
+      image: "/images/Sew In Style/738759155_122236921304097859_517106012241883883_n.jpg",
       href: "/collections/organza-luxury-suits",
       tag: "ORGANZA SPECIAL",
       desc: "Intricately embroidered Pakistani organza 3-piece luxury suits with handwork dupattas.",
     },
     {
       title: "Chiffon Embroidered Edition",
-      image: "/images/dressly/739118005_122236931624097859_3877426082371806523_n.jpg",
+      image: "/images/Sew In Style/739118005_122236931624097859_3877426082371806523_n.jpg",
       href: "/collections/chiffon-embroidered-edition",
       tag: "HEAVY ZARI WORK",
       desc: "Pure chiffon designer suites with heavy zari, sequin, and thread needlework.",
     },
     {
       title: "Premium Lawn 3-Piece",
-      image: "/images/dressly/743361783_122237467322097859_7772378286743424024_n.jpg",
+      image: "/images/Sew In Style/743361783_122237467322097859_7772378286743424024_n.jpg",
       href: "/collections/premium-lawn-3piece",
       tag: "SUMMER ESSENTIALS",
       desc: "Breezy luxury lawn collections featuring digital printed & embroidered lawn kameez.",
     },
     {
       title: "Festive & Party Wear",
-      image: "/images/dressly/741464699_122237170736097859_278617854425347317_n.jpg",
+      image: "/images/Sew In Style/741464699_122237170736097859_278617854425347317_n.jpg",
       href: "/collections/festive-party-wear",
       tag: "PARTY WEAR EDIT",
       desc: "Opulent festive 3-piece suits ideal for Holud, Receptions, and Wedding Party celebrations.",
     },
     {
       title: "Velvet & Silk Pret",
-      image: "/images/dressly/755332243_122238524504097859_5178805553998092524_n.jpg",
+      image: "/images/Sew In Style/755332243_122238524504097859_5178805553998092524_n.jpg",
       href: "/collections/velvet-silk-pret",
       tag: "ROYAL VELVET",
       desc: "Royal micro-velvet and pure silk unstitched & ready-to-wear designer suits.",
     },
     {
       title: "Bridal Special Collection",
-      image: "/images/dressly/753865484_122238524498097859_5700651935379609574_n.jpg",
+      image: "/images/Sew In Style/753865484_122238524498097859_5700651935379609574_n.jpg",
       href: "/collections/bridal-special-collection",
       tag: "BRIDAL COUTURE",
       desc: "Exclusive Pakistani bridal suits with heavy hand-embellished zari dupattas.",
@@ -94,7 +94,7 @@ export default async function CollectionsPage() {
         {/* Luxury Header */}
         <div className="mt-10 mb-14 text-center">
           <span className="inline-block px-3.5 py-1 rounded-full border border-[#7a1b38]/50 bg-[#7a1b38]/10 text-[#7a1b38] text-[10px] uppercase tracking-[0.28em] font-bold mb-4">
-            ✦ DRESSLY BY NISHAT CURATIONS ✦
+            ✦ Sew In Style by Farzana CURATIONS ✦
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#7a1b38] font-heading">
             All Collections

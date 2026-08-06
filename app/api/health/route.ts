@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Health Check Endpoint
+ * Sew In Style — Health Check Endpoint
  * Used by Better Uptime monitoring
  * GET /api/health
  */

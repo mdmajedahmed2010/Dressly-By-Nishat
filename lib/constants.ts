@@ -1,5 +1,5 @@
 /**
- * Dressly By Nishat — Application Constants
+ * Sew In Style by Farzana — Application Constants
  * Dhaka, Bangladesh — Premium Pakistani Luxury Suits & Designer Festive Wear
  */
 
@@ -74,20 +74,20 @@ export const AUTH = {
   PASSWORD_RESET_EXPIRY: 60 * 60,
 } as const;
 
-// Business Info — Dressly By Nishat
+// Business Info — Sew In Style by Farzana
 export const BUSINESS = {
-  NAME: "Dressly By Nishat",
-  NAME_BN: "ড্রেসলি বাই নিশাত",
-  TAGLINE: "Exclusive Authentic Pakistani Luxury Suits, Kaftans & Designer Festive Collections",
-  PHONE: "+880 1792-635996",
-  EMAIL: "info@dresslybynishat.com",
-  ADDRESS: "Shop 2/73, Eastern Mollika Shopping Complex, Elephant Road, Dhaka, Bangladesh",
-  FACEBOOK: "https://www.facebook.com/dresslybynishat/",
-  INSTAGRAM: "https://www.instagram.com/dresslybynishat",
-  YOUTUBE: "https://www.youtube.com/@DresslyByNishat-o2p",
-  WEBSITE: "https://dresslybynishat.com",
+  NAME: "Sew In Style by Farzana",
+  NAME_BN: "Sew In Style by Farzana",
+  TAGLINE: "A haven for saree lovers. Where elegance meets style.",
+  PHONE: "+880 1765-290018",
+  EMAIL: "info@sewinstylebyfarzana.com",
+  ADDRESS: "Shop No: 366, Level-2, Police Plaza Concord Shopping Mall, Road No-144, Gulshan-1, Dhaka-1212, Bangladesh",
+  FACEBOOK: "https://www.facebook.com/sewinstylebyfarzana1/",
+  INSTAGRAM: "https://www.instagram.com/sewin_styleee",
+  YOUTUBE: "",
+  WEBSITE: "https://sewinstylebyfarzana.com",
   ESTABLISHED: "Dhaka, Bangladesh",
-  FOLLOWERS: "52K+",
+  FOLLOWERS: "Premium",
   RECOMMEND_RATE: "100%",
 } as const;
 
@@ -103,8 +103,8 @@ export const COUPON_CODES: Record<
   string,
   { type: "percent" | "flat"; value: number; label: string }
 > = {
-  DRESSLY10: { type: "percent", value: 10, label: "10% off your order" },
-  DRESSLY15: { type: "percent", value: 15, label: "15% off your order" },
+  STYLE10: { type: "percent", value: 10, label: "10% off your order" },
+  STYLE15: { type: "percent", value: 15, label: "15% off your order" },
   EID2026: { type: "percent", value: 15, label: "15% Eid Special Discount" },
   WELCOME5: { type: "percent", value: 5, label: "5% Welcome Discount" },
   FLAT500: { type: "flat", value: 500, label: "৳500 flat discount" },

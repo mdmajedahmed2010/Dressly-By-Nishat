@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Breadcrumb Component
+ * Sew In Style — Breadcrumb Component
  * Dynamic path-based navigation breadcrumbs
  * SOP §২ — Frontend Plan F1.6
  */

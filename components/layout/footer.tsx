@@ -1,8 +1,8 @@
 "use client";
 
 /**
- * Dressly By Nishat — Footer Component
- * ড্রেসলি বাই নিশাত | Premium Authentic Pakistani Luxury Suits & Designer Collections
+ * Sew In Style by Farzana — Footer Component
+ * Sew In Style by Farzana | Premium Authentic Pakistani Luxury Suits & Designer Collections
  */
 
 import Link from "next/link";
@@ -40,21 +40,21 @@ export function Footer({ settings = {} }: { settings?: Record<string, any> }) {
           <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
             <div className="space-y-3 text-center md:text-left max-w-lg">
               <span className="inline-block px-3 py-1 rounded-full border border-[#d4af37]/40 bg-[#d4af37]/10 text-[#fcfaf6] text-[9.5px] uppercase tracking-[0.28em] font-bold">
-                ড্রেসলি বাই নিশাত ক্লায়েন্ট সার্কেল
+                Sew In Style by Farzana ক্লায়েন্ট সার্কেল
               </span>
               <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-white font-heading">
-                Join Dressly By Nishat VIPs
+                Join Sew In Style by Farzana VIPs
               </h3>
               <p className="text-xs md:text-sm text-neutral-200 leading-relaxed font-sans">
-                Subscribe to get early access to our newest Pakistani luxury suit releases, Eid drops,
-                and exclusive client discounts directly to your inbox.
+                Subscribe to get early access to our newest premium saree releases, exclusive drops,
+                and special client discounts directly to your inbox.
               </p>
             </div>
 
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                alert("ধন্যবাদ! আপনাকে Dressly By Nishat পরিবারে স্বাগতম!");
+                alert("ধন্যবাদ! আপনাকে Sew In Style by Farzana পরিবারে স্বাগতম!");
               }}
               className="w-full md:w-auto flex flex-col sm:flex-row gap-3 items-stretch max-w-md shrink-0"
             >
@@ -82,21 +82,21 @@ export function Footer({ settings = {} }: { settings?: Record<string, any> }) {
           <div className="col-span-2 md:col-span-1 lg:col-span-2 space-y-4">
             <Link href="/" className="inline-flex items-center gap-3">
               <Image
-                src={typeof settings.store_logo === "string" && settings.store_logo ? settings.store_logo : "/images/dressly/logo.jpg"}
-                alt="Dressly By Nishat"
+                src={typeof settings.store_logo === "string" && settings.store_logo ? settings.store_logo : "/images/logo.jpg"}
+                alt="Sew In Style by Farzana"
                 width={48}
                 height={48}
                 className="h-12 w-12 object-cover rounded-full ring-2 ring-[#d4af37]/40"
               />
               <div>
                 <p className="text-[13px] font-extrabold text-[#7a1b38] uppercase tracking-wide">
-                  Dressly By Nishat
+                  Sew In Style by Farzana
                 </p>
-                <p className="text-[10px] text-[#7a1b38]/70 font-medium">ড্রেসলি বাই নিশাত</p>
+                <p className="text-[10px] text-[#7a1b38]/70 font-medium">Sew In Style by Farzana</p>
               </div>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
-              Exclusive authentic Pakistani luxury 3-piece suits, organza, chiffon & designer lawn collections in Bangladesh. Trusted by 52K+ fashion lovers.
+              A haven for saree lovers. Premium quality traditional wear, exclusive Kanchipuram sarees, and elegant outfits in Dhaka, Bangladesh.
             </p>
             {/* Social Links */}
             <div className="flex items-center gap-4 pt-2">
@@ -196,7 +196,7 @@ export function Footer({ settings = {} }: { settings?: Record<string, any> }) {
       {/* Bottom Bar */}
       <div className="border-t border-[#7a1b38]/15">
         <div className="container mx-auto px-6 md:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground font-medium">
-          <p>© {new Date().getFullYear()} Dressly By Nishat (ড্রেসলি বাই নিশাত). All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Sew In Style by Farzana. All rights reserved.</p>
           <p>
             Cash on Delivery&nbsp;|&nbsp;Dhaka: ৳{settings.shipping_dhaka || 80}&nbsp;|&nbsp;
             Outside: ৳{settings.shipping_outside || 150}&nbsp;|&nbsp;100% Authentic Guaranteed

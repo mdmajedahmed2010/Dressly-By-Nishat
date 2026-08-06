@@ -1,5 +1,5 @@
 /**
- * BIBAZ — Image Upload API Route
+ * Sew In Style — Image Upload API Route
  * SOP §৬A — Product Image Upload (Cloudinary)
  *
  * POST /api/upload — Upload image to Cloudinary

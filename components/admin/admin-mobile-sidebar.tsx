@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Admin Mobile Sidebar
+ * Sew In Style — Admin Mobile Sidebar
  * Full slide-out navigation for mobile with role-based filtering.
  */
 
@@ -212,7 +212,7 @@ export function AdminMobileSidebar({
                   </div>
                   <div className="flex flex-col">
                     <span className="text-sm font-bold tracking-tight text-white">
-                      BIBAZ
+                      Sew In Style
                     </span>
                     <span className="text-[10px] font-medium text-gray-400">
                       Admin Panel
@@ -310,7 +310,7 @@ export function AdminMobileSidebar({
                 </Link>
                 <div className="rounded-lg bg-gray-900 p-3 border border-gray-800">
                   <p className="text-[11px] font-semibold text-gray-300">
-                    BIBAZ Admin
+                    Sew In Style Admin
                   </p>
                   <p className="text-[10px] text-gray-500">
                     v1.1 • Premium Suite Live

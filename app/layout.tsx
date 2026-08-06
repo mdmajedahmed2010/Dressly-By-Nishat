@@ -26,37 +26,36 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-// Global metadata — Dressly By Nishat
+// Global metadata — Sew In Style by Farzana
 export const metadata: Metadata = {
   title: {
-    default: "Dressly By Nishat — Luxury Authentic Pakistani Suits & Designer Collection",
-    template: "%s — Dressly By Nishat",
+    default: "Sew In Style by Farzana — Premium Traditional Wear & Exclusive Sarees",
+    template: "%s — Sew In Style by Farzana",
   },
   description:
-    "Dressly By Nishat (ড্রেসলি বাই নিশাত) — Premium authentic Pakistani luxury suits & designer festive wear in Bangladesh. Shop Luxury Organza 3-Piece, Embroidered Chiffon, Lawn Edition & Bridal Pret Collections. Fast Cash-on-Delivery nationwide.",
+    "Sew In Style by Farzana — A haven for saree lovers. Premium quality traditional wear, exclusive Kanchipuram sarees, and elegant outfits in Dhaka, Bangladesh.",
   keywords: [
-    "Dressly By Nishat",
-    "ড্রেসলি বাই নিশাত",
-    "Pakistani Dress",
-    "Pakistani Suit",
-    "Organza Luxury Suit",
-    "Chiffon Embroidered Three Piece",
-    "Lawn Collection BD",
-    "Party Wear Suit",
-    "Pakistani Bridal Suit",
-    "Pakistani Clothing Bangladesh",
-    "Dhaka Online Boutique",
+    "Sew In Style by Farzana",
+    "Sew In Style",
+    "Premium Saree",
+    "Kanchipuram Saree",
+    "Traditional Wear BD",
+    "Dhaka Fashion",
+    "Ladies Fashion BD",
+    "Desi Fashion",
+    "Premium Boutique Dhaka",
+    "Police Plaza Concord",
   ],
-  authors: [{ name: "Dressly By Nishat" }],
-  creator: "Dressly By Nishat",
+  authors: [{ name: "Sew In Style by Farzana" }],
+  creator: "Sew In Style by Farzana",
   openGraph: {
     type: "website",
     locale: "en_BD",
-    siteName: "Dressly By Nishat",
-    title: "Dressly By Nishat — Exclusive Authentic Pakistani Luxury Suits",
+    siteName: "Sew In Style by Farzana",
+    title: "Sew In Style by Farzana — Where Elegance Meets Style",
     description:
-      "Shop original Pakistani luxury organza suits, chiffon embroidered 3-piece sets & festive lawn collections across Bangladesh.",
-    images: ["/images/dressly/image.jpg"],
+      "Upgrade your wardrobe with style, confidence, and grace. Shop our premium collections of sarees and traditional wear.",
+    images: ["/images/banner.png"],
   },
   robots: {
     index: true,
@@ -67,7 +66,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "Dressly By Nishat",
+    title: "Sew In Style by Farzana",
   },
 };
 

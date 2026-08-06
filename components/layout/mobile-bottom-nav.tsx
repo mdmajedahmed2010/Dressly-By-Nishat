@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Mobile Bottom Navigation (Premium v3.0)
+ * Sew In Style — Mobile Bottom Navigation (Premium v3.0)
  * Glassmorphism backdrop, active route highlighting, cart badge,
  * spring animation on active tab, 5 tabs: Home, Categories, Search, Wishlist, Account.
  * Only visible on mobile (md:hidden).

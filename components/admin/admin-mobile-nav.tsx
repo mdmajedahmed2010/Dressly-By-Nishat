@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BIBAZ — Admin Mobile Bottom Navigation
+ * Sew In Style — Admin Mobile Bottom Navigation
  * Shows on mobile/tablet only — quick access to key admin sections
  */
 
